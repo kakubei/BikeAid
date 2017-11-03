@@ -13,6 +13,8 @@
 		CA1DCBF81FAA52A10049DAE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF71FAA52A10049DAE7 /* Assets.xcassets */; };
 		CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */; };
 		CA1DCC061FAA52A10049DAE7 /* BikeAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC051FAA52A10049DAE7 /* BikeAidTests.swift */; };
+		CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC101FAA52B60049DAE7 /* Bike.swift */; };
+		CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		CA1DCC011FAA52A10049DAE7 /* BikeAidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeAidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1DCC051FAA52A10049DAE7 /* BikeAidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeAidTests.swift; sourceTree = "<group>"; };
 		CA1DCC071FAA52A10049DAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1DCC101FAA52B60049DAE7 /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
+		CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				CA1DCBF71FAA52A10049DAE7 /* Assets.xcassets */,
 				CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */,
 				CA1DCBFC1FAA52A10049DAE7 /* Info.plist */,
+				CA1DCC101FAA52B60049DAE7 /* Bike.swift */,
+				CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */,
 			);
 			path = BikeAid;
 			sourceTree = "<group>";
@@ -201,6 +207,8 @@
 			files = (
 				CA1DCBF31FAA52A10049DAE7 /* ViewController.swift in Sources */,
 				CA1DCBF11FAA52A10049DAE7 /* AppDelegate.swift in Sources */,
+				CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */,
+				CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
