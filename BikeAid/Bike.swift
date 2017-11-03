@@ -44,8 +44,8 @@ enum BikeSuspension {
 
 protocol Bikeable {
     var bikeClass: BikeClass { get }
-    var wheelSize: WheelSize { get set }
-    var suspension: BikeSuspension { get set }
+    var wheelSize: WheelSize { get }
+    var suspension: BikeSuspension { get }
 }
 
 enum MotorType {
@@ -90,6 +90,7 @@ class Bike: Bikeable {
     }
 }
 
+// TODO: Is there a solution instead of using classes to not have to repeat the bike properties for EBikes?
 class EBike: Bike, Electricable {
     var motor: MotorType
     var batteryLife: Double

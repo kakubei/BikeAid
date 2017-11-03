@@ -19,8 +19,9 @@ struct BikeModel {
         let snake = Bike(name: "Snake", bikeClass: .mountain(subtype: .downhill), suspension: .full)
         let specialized = Bike(name: "Specialzed Hybrid", bikeClass: .hybrid)
         let kaku = Bike(name: "Kaku", bikeClass: .mountain(subtype: .enduro), wheelSize: .twentyNine, suspension: .hardTail)
+        let moustache = EBike(name: "Samedi", motor: .hub, battery: 2, mileage: 30)
         
-        self.bikes += [snake, specialized, kaku]
+        self.bikes += [snake, specialized, kaku, moustache]
     }
     
     func titleLabel(for indexpath: IndexPath) -> String {
