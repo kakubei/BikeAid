@@ -21,6 +21,7 @@ enum BikeClass {
     case hybrid
     case electric
     
+    //: By conforming to the CustomStringConvertible when you pring this object, it will use whatever is in the `description` var automatically!
     var description: String {
         switch self {
         // TODO: There must be a better way than using all bike types!!!
@@ -36,10 +37,14 @@ enum BikeType {
     case downhill, enduro, xc, freeride
 }
 
-enum BikeSuspension {
+enum BikeSuspension: CustomStringConvertible {
     case rigid
     case hardTail
     case full
+    
+    var description: String {
+        return String(describing: self).capitalized
+    }
 }
 
 protocol Bikeable {

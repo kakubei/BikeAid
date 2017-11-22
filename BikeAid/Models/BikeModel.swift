@@ -29,6 +29,7 @@ struct BikeModel {
     }
     
     func typeLabel(for indexpath: IndexPath) -> String {
+//        print(self.bikes[indexpath.row].suspension)
         return self.bikes[indexpath.row].bikeClass.description
     }
 }

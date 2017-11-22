@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1872CE0B91ECB94D7D8EDC /* Pods_BikeAid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8659485BB35FED0855CCFC1 /* Pods_BikeAid.framework */; };
+		B57D0C5C9CD7C96843B74C1A /* Pods_BikeAidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9164F2FD30AF94EE54C9FD /* Pods_BikeAidTests.framework */; };
 		CA1DCBF11FAA52A10049DAE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCBF01FAA52A10049DAE7 /* AppDelegate.swift */; };
 		CA1DCBF31FAA52A10049DAE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */; };
 		CA1DCBF61FAA52A10049DAE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF41FAA52A10049DAE7 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		CA1DCC061FAA52A10049DAE7 /* BikeAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC051FAA52A10049DAE7 /* BikeAidTests.swift */; };
 		CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC101FAA52B60049DAE7 /* Bike.swift */; };
 		CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */; };
+		CABE7E2D1FC5C4CD0097BEAE /* GoogleMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */; };
+		CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A57711FE6068544C8CCE783 /* Pods-BikeAidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAidTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F9164F2FD30AF94EE54C9FD /* Pods_BikeAidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeAidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D5226E7F0A14C6CB1708DB /* Pods-BikeAid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAid.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid.release.xcconfig"; sourceTree = "<group>"; };
+		91F56F96C0D61F863165359F /* Pods-BikeAid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid.debug.xcconfig"; sourceTree = "<group>"; };
+		B8B2D5BB3053393A2D8A17E4 /* Pods-BikeAidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1DCBED1FAA52A10049DAE7 /* BikeAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1DCBF01FAA52A10049DAE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +49,9 @@
 		CA1DCC071FAA52A10049DAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1DCC101FAA52B60049DAE7 /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModel.swift; sourceTree = "<group>"; };
+		CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsManager.swift; sourceTree = "<group>"; };
+		CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D8659485BB35FED0855CCFC1 /* Pods_BikeAid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeAid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1872CE0B91ECB94D7D8EDC /* Pods_BikeAid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57D0C5C9CD7C96843B74C1A /* Pods_BikeAidTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +80,8 @@
 				CA1DCBEF1FAA52A10049DAE7 /* BikeAid */,
 				CA1DCC041FAA52A10049DAE7 /* BikeAidTests */,
 				CA1DCBEE1FAA52A10049DAE7 /* Products */,
+				F59B2CF11A6E8F3F0729F06B /* Pods */,
+				F6AE786E8AFAC1268BBCBE7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,13 +98,12 @@
 			isa = PBXGroup;
 			children = (
 				CA1DCBF01FAA52A10049DAE7 /* AppDelegate.swift */,
-				CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */,
+				CABE7E2B1FC5C2270097BEAE /* View Controllers */,
 				CA1DCBF41FAA52A10049DAE7 /* Main.storyboard */,
 				CA1DCBF71FAA52A10049DAE7 /* Assets.xcassets */,
 				CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */,
 				CA1DCBFC1FAA52A10049DAE7 /* Info.plist */,
-				CA1DCC101FAA52B60049DAE7 /* Bike.swift */,
-				CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */,
+				CABE7E2A1FC5C21B0097BEAE /* Models */,
 			);
 			path = BikeAid;
 			sourceTree = "<group>";
@@ -102,6 +117,45 @@
 			path = BikeAidTests;
 			sourceTree = "<group>";
 		};
+		CABE7E2A1FC5C21B0097BEAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA1DCC101FAA52B60049DAE7 /* Bike.swift */,
+				CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */,
+				CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CABE7E2B1FC5C2270097BEAE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */,
+				CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F59B2CF11A6E8F3F0729F06B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91F56F96C0D61F863165359F /* Pods-BikeAid.debug.xcconfig */,
+				57D5226E7F0A14C6CB1708DB /* Pods-BikeAid.release.xcconfig */,
+				1A57711FE6068544C8CCE783 /* Pods-BikeAidTests.debug.xcconfig */,
+				B8B2D5BB3053393A2D8A17E4 /* Pods-BikeAidTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F6AE786E8AFAC1268BBCBE7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8659485BB35FED0855CCFC1 /* Pods_BikeAid.framework */,
+				4F9164F2FD30AF94EE54C9FD /* Pods_BikeAidTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA1DCC0A1FAA52A10049DAE7 /* Build configuration list for PBXNativeTarget "BikeAid" */;
 			buildPhases = (
+				5473A2CDDCA4F6F73D340D14 /* [CP] Check Pods Manifest.lock */,
 				CA1DCBE91FAA52A10049DAE7 /* Sources */,
 				CA1DCBEA1FAA52A10049DAE7 /* Frameworks */,
 				CA1DCBEB1FAA52A10049DAE7 /* Resources */,
+				87CCFB5B9ABBA214791DFC59 /* [CP] Embed Pods Frameworks */,
+				3BB3F8294C89D2ED463FE3F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA1DCC0D1FAA52A10049DAE7 /* Build configuration list for PBXNativeTarget "BikeAidTests" */;
 			buildPhases = (
+				8760031B3EAC2BDCF799029B /* [CP] Check Pods Manifest.lock */,
 				CA1DCBFD1FAA52A10049DAE7 /* Sources */,
 				CA1DCBFE1FAA52A10049DAE7 /* Frameworks */,
 				CA1DCBFF1FAA52A10049DAE7 /* Resources */,
+				EBECB1BF08C13952E7FF94F0 /* [CP] Embed Pods Frameworks */,
+				843FB3A560A3FD6CE8ADB597 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,11 +260,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3BB3F8294C89D2ED463FE3F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5473A2CDDCA4F6F73D340D14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BikeAid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		843FB3A560A3FD6CE8ADB597 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8760031B3EAC2BDCF799029B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BikeAidTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87CCFB5B9ABBA214791DFC59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBECB1BF08C13952E7FF94F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CA1DCBE91FAA52A10049DAE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABE7E2D1FC5C4CD0097BEAE /* GoogleMapsManager.swift in Sources */,
+				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
 				CA1DCBF31FAA52A10049DAE7 /* ViewController.swift in Sources */,
 				CA1DCBF11FAA52A10049DAE7 /* AppDelegate.swift in Sources */,
 				CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */,
@@ -359,6 +524,7 @@
 		};
 		CA1DCC0B1FAA52A10049DAE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F56F96C0D61F863165359F /* Pods-BikeAid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +540,7 @@
 		};
 		CA1DCC0C1FAA52A10049DAE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D5226E7F0A14C6CB1708DB /* Pods-BikeAid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,6 +556,7 @@
 		};
 		CA1DCC0E1FAA52A10049DAE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A57711FE6068544C8CCE783 /* Pods-BikeAidTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -406,6 +574,7 @@
 		};
 		CA1DCC0F1FAA52A10049DAE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8B2D5BB3053393A2D8A17E4 /* Pods-BikeAidTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
