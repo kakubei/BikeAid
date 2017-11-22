@@ -10,8 +10,6 @@ import UIKit
 import GoogleMaps
 
 class MapViewController: UIViewController {
-
-    @IBOutlet weak var mapView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +18,19 @@ class MapViewController: UIViewController {
     }
 
     private func configureMap() {
-        let camera = GMSCameraPosition.camera(withLatitude: 51.5074, longitude: 0.1278, zoom: 6.0)
-        self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        let londonLat: CLLocationDegrees = 51.5074
+        let londonLong: CLLocationDegrees = 0.1278
         
+        let camera = GMSCameraPosition.camera(withLatitude: londonLat, longitude: londonLong, zoom: 6.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        
+        // Creates a marker in the center of the map.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 51.5074, longitude: 0.1278)
+        marker.position = CLLocationCoordinate2D(latitude: londonLat, longitude: londonLong)
         marker.title = "London"
         marker.snippet = "United Kingdom"
-//        marker.map = mapView
-        self.view.layoutIfNeeded()
+        marker.map = mapView
     }
 
 }
