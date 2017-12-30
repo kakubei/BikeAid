@@ -13,6 +13,11 @@ enum WheelSize: Double {
     case twentyNine = 29
     case twentySeven = 27.5
     case twentySix = 26
+
+    // WARNING: if using String(describint: self) do NOT conform to CustomStringCovertible or it will cause and endless loop
+    var description: String {
+        return String(describing: self).capitalized
+    }
 }
 
 enum BikeClass {
@@ -21,7 +26,7 @@ enum BikeClass {
     case hybrid
     case electric
     
-    //: By conforming to the CustomStringConvertible when you pring this object, it will use whatever is in the `description` var automatically!
+    //: By conforming to the CustomStringConvertible when you print this object, it will use whatever is in the `description` var automatically!
     var description: String {
         switch self {
         // TODO: There must be a better way than using all bike types!!!
@@ -37,7 +42,7 @@ enum BikeType {
     case downhill, enduro, xc, freeride
 }
 
-enum BikeSuspension: CustomStringConvertible {
+enum BikeSuspension {
     case rigid
     case hardTail
     case full
@@ -50,30 +55,16 @@ enum BikeSuspension: CustomStringConvertible {
 protocol Bikeable {
     var bikeClass: BikeClass { get }
     var wheelSize: WheelSize { get }
-    var suspension: BikeSuspension { get }
-}
-
-enum MotorType {
-    case hub
-    case midDrive
-    case friction
-}
-
-protocol Electricable {
-    var motor: MotorType { get }
-    var batteryLife: Double { get }
-    var mileage: Int { get }
+    var suspension: BikeSuspension? { get }
 }
 
 // Default values for any bike
 // TODO: How to create editable default values?
 extension Bikeable {
     var suspension: BikeSuspension {
-        get {
-            return .rigid
-        }
+        return .rigid
     }
-    
+
     var wheelSize: WheelSize {
         get {
             return .twentySeven
@@ -81,13 +72,45 @@ extension Bikeable {
     }
 }
 
+
+enum MotorType {
+    case hub
+    case midDrive
+    case friction
+
+    var description: String {
+        return String(describing: self).capitalized
+    }
+}
+
+protocol Electricable {
+    var motor: MotorType? { get }
+    var batteryLife: Double? { get }
+    var mileage: Int? { get }
+}
+
+// Default values
+extension Electricable {
+    var motor: MotorType {
+        return .hub
+    }
+
+    var batteryLife: Double {
+        return 2
+    }
+
+    var mileage: Int {
+        return 50
+    }
+}
+
 class Bike: Bikeable {
     let name: String
     var bikeClass: BikeClass
-    var wheelSize: WheelSize = .twentySeven
-    var suspension: BikeSuspension = .rigid
+    var wheelSize: WheelSize
+    var suspension: BikeSuspension?
     
-    init(name: String, bikeClass: BikeClass, wheelSize: WheelSize = .twentySeven, suspension: BikeSuspension = .rigid) {
+    init(name: String, bikeClass: BikeClass, wheelSize: WheelSize = .twentySeven, suspension: BikeSuspension? = nil) {
         self.name = name
         self.bikeClass = bikeClass
         self.wheelSize = wheelSize
@@ -96,12 +119,12 @@ class Bike: Bikeable {
 }
 
 // TODO: Is there a solution instead of using classes to not have to repeat the bike properties for EBikes?
-class EBike: Bike, Electricable {
-    var motor: MotorType
-    var batteryLife: Double
-    var mileage: Int
+final class EBike: Bike, Electricable {
+    var motor: MotorType?
+    var batteryLife: Double?
+    var mileage: Int?
     
-    init(name: String, motor: MotorType, battery: Double, mileage: Int) {
+    init(name: String, motor: MotorType? = nil, battery: Double? = nil, mileage: Int? = nil) {
         self.motor = motor
         self.batteryLife = battery
         self.mileage = mileage

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D1872CE0B91ECB94D7D8EDC /* Pods_BikeAid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8659485BB35FED0855CCFC1 /* Pods_BikeAid.framework */; };
+		5898A6A6937E4E07E1ED892F /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898AD15E889E27338ACF6AA /* DetailsModel.swift */; };
 		B57D0C5C9CD7C96843B74C1A /* Pods_BikeAidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9164F2FD30AF94EE54C9FD /* Pods_BikeAidTests.framework */; };
 		CA1DCBF11FAA52A10049DAE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCBF01FAA52A10049DAE7 /* AppDelegate.swift */; };
 		CA1DCBF31FAA52A10049DAE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */; };
@@ -19,6 +20,8 @@
 		CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */; };
 		CABE7E2D1FC5C4CD0097BEAE /* GoogleMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */; };
 		CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */; };
+		CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC669111FD9855C008F8593 /* DetailsVC.swift */; };
+		CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD0185E1FC731E4001AEEB8 /* client_id.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 		1A57711FE6068544C8CCE783 /* Pods-BikeAidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAidTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F9164F2FD30AF94EE54C9FD /* Pods_BikeAidTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeAidTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D5226E7F0A14C6CB1708DB /* Pods-BikeAid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAid.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid.release.xcconfig"; sourceTree = "<group>"; };
+		5898AD15E889E27338ACF6AA /* DetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
 		91F56F96C0D61F863165359F /* Pods-BikeAid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid.debug.xcconfig"; sourceTree = "<group>"; };
 		B8B2D5BB3053393A2D8A17E4 /* Pods-BikeAidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1DCBED1FAA52A10049DAE7 /* BikeAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +55,8 @@
 		CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModel.swift; sourceTree = "<group>"; };
 		CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsManager.swift; sourceTree = "<group>"; };
 		CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CAC669111FD9855C008F8593 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		CAD0185E1FC731E4001AEEB8 /* client_id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = client_id.json; sourceTree = "<group>"; };
 		D8659485BB35FED0855CCFC1 /* Pods_BikeAid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeAid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,13 +103,14 @@
 		CA1DCBEF1FAA52A10049DAE7 /* BikeAid */ = {
 			isa = PBXGroup;
 			children = (
+				CAD0185E1FC731E4001AEEB8 /* client_id.json */,
 				CA1DCBF01FAA52A10049DAE7 /* AppDelegate.swift */,
+				CABE7E2A1FC5C21B0097BEAE /* Models */,
 				CABE7E2B1FC5C2270097BEAE /* View Controllers */,
 				CA1DCBF41FAA52A10049DAE7 /* Main.storyboard */,
 				CA1DCBF71FAA52A10049DAE7 /* Assets.xcassets */,
 				CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */,
 				CA1DCBFC1FAA52A10049DAE7 /* Info.plist */,
-				CABE7E2A1FC5C21B0097BEAE /* Models */,
 			);
 			path = BikeAid;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 				CA1DCC101FAA52B60049DAE7 /* Bike.swift */,
 				CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */,
 				CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */,
+				5898AD15E889E27338ACF6AA /* DetailsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 			children = (
 				CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */,
 				CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */,
+				CAC669111FD9855C008F8593 /* DetailsVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */,
+				CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */,
 				CA1DCBF81FAA52A10049DAE7 /* Assets.xcassets in Resources */,
 				CA1DCBF61FAA52A10049DAE7 /* Main.storyboard in Resources */,
 			);
@@ -372,8 +382,10 @@
 				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
 				CA1DCBF31FAA52A10049DAE7 /* ViewController.swift in Sources */,
 				CA1DCBF11FAA52A10049DAE7 /* AppDelegate.swift in Sources */,
+				CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */,
 				CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */,
 				CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */,
+				5898A6A6937E4E07E1ED892F /* DetailsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3LLJD45TH9;
+				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = BikeAid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAid;
@@ -544,7 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3LLJD45TH9;
+				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = BikeAid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAid;

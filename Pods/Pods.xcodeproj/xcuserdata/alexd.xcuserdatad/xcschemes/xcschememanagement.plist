@@ -4,24 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BikeAid.xcscheme</key>
+		<key>Pods-BikeAid.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false />
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
+		</dict>
+		<key>Pods-BikeAidTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>CA1DCBEC1FAA52A10049DAE7</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-		<key>CA1DCC001FAA52A10049DAE7</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-	</dict>
+	<dict />
 </dict>
 </plist>
