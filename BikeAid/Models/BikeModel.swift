@@ -38,6 +38,7 @@ class BikeModel {
         
         self.bikes += [snake, specialized, kaku, moustache, mysteryEbike]
         
+        // Store test bikes in Realm
         self.bikes.forEach { newBike in
             RealmDatabase().storeBike(newBike)
         }

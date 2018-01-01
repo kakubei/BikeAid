@@ -21,11 +21,11 @@ class BikeModelTests: XCTestCase {
         super.tearDown()
     }
     
-    // should not have any bikes objects
+    // should have test bike objects
     func testFirstTimeInit() {
         let bikeModel = BikeModel()
         
-        XCTAssertTrue(bikeModel.bikes.isEmpty, "Bikes array should be empty.")
+        XCTAssertFalse(bikeModel.bikes.isEmpty, "Bikes array should be empty.")
     }
     
 }
