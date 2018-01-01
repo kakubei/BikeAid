@@ -21,10 +21,9 @@ final class RealmBike: Object {
 }
 
 protocol DatabaseStoring {
-    var bikes: [Bike] { get }
     
     func storeBike(_ bike: Bike)
-    func retrieveBikes()
+    func retrieveBikes() -> [Bike]
     func deleteBike(_ bike: Bike)
     
     func deleteAll()
@@ -37,16 +36,14 @@ final class RealmDatabase: DatabaseStoring {
         let config = Realm.Configuration(
             schemaVersion: 1,
             migrationBlock: { migration, oldSchemaVersion in
-                migration.deleteData(forType: "LocationObject")
+                migration.deleteData(forType: "BikeObject")
         })
         
         Realm.Configuration.defaultConfiguration = config
         
         return try! Realm()
     }
-    
-    var bikes: [Bike] = []
-    
+        
     private func bikeToRealmBike(bike: Bike) -> RealmBike {
         let realmBike = RealmBike()
         
@@ -77,15 +74,18 @@ final class RealmDatabase: DatabaseStoring {
     }
     
     // Retrieve a RealmObject and then create Bike objects out of them.
-    func retrieveBikes() {
+    func retrieveBikes() -> [Bike] {
         
         let realmBikes: Results<RealmBike> = self.realm.objects(RealmBike.self)
         
+        var bikes = [Bike]()
+        
         realmBikes.forEach { realmBike in
             let newBike = self.realmBikeToBike(realmBike: realmBike)
-            
-            self.bikes.append(newBike)
+                bikes.append(newBike)
         }
+        
+        return bikes
     }
     
     func deleteBike(_ bike: Bike) {

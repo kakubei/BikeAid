@@ -22,9 +22,8 @@ class BikeModel {
     
     private func retrieveBikes() {
         let realmDatabase = RealmDatabase()
-        realmDatabase.retrieveBikes()
         
-        self.bikes = realmDatabase.bikes
+        self.bikes = realmDatabase.retrieveBikes()
     }
     
     private func generateTestBikes() {

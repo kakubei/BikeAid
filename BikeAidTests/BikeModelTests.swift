@@ -61,9 +61,41 @@ class BikeModelTests: QuickSpec {
                     expect(bikeType).to(equal(BikeClass.hybrid.description))
                 }
             }
-            
-            
         }
     }
 }
 
+class DatabaseTests: QuickSpec {
+    
+    override func spec() {
+        var realmDatabase: RealmDatabase!
+        var newBike: Bike!
+        let bikeName = "NewBike"
+        
+        beforeEach {
+            realmDatabase = RealmDatabase()
+            newBike = Bike(name: bikeName, bikeClass: .hybrid)
+        }
+        
+        context("When storing a RealmBike") {
+            it("should not throw an error") {
+                expect(realmDatabase.storeBike(newBike)).toNot(raiseException())
+            }
+            
+            it("should be able to retrieve the stored entry") {
+                let firstBike = realmDatabase.retrieveBikes().first
+                expect(firstBike?.name).to(equal(bikeName))
+            }
+        }
+        
+        context("When deleting a RealmBike") {
+            it("should not throw an error") {
+                expect(realmDatabase.deleteBike(realmDatabase.retrieveBikes().first!)).toNot(raiseException())
+            }
+            
+            it("should return 0 values for bikes") {
+                expect(realmDatabase.retrieveBikes().count).to(equal(0))
+            }
+        }
+    }
+}

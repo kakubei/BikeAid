@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "BikeAid/Models/BikeModel.swift"
-            timestampString = "536509314.152925"
+            timestampString = "536510707.723223"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "titleLabel(for:)"
             landmarkType = "7">
             <Actions>
@@ -34,11 +34,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BikeAid/Models/BikeModel.swift"
-            timestampString = "536509314.153534"
+            timestampString = "536510707.723859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "typeLabel(for:)"
             landmarkType = "7">
          </BreakpointContent>
