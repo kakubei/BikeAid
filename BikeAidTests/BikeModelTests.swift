@@ -6,26 +6,31 @@
 //  Copyright © 2018 Alex Dearden. All rights reserved.
 //
 
-import XCTest
+import UIKit
+import Quick
+import Nimble
+
 @testable import BikeAid
 
-class BikeModelTests: XCTestCase {
+class BikeModelTests: QuickSpec {
     
-    override func setUp() {
-        super.setUp()
-       
-    }
-    
-    override func tearDown() {
-       
-        super.tearDown()
-    }
-    
-    // should have test bike objects
-    func testFirstTimeInit() {
-        let bikeModel = BikeModel()
+    override func spec() {
         
-        XCTAssertFalse(bikeModel.bikes.isEmpty, "Bikes array should be empty.")
+        // Warning: Do not instantiate BikeModel() as a class variable or realm will throw a thread-safety error!
+        var bikeModel: BikeModel!
+        
+        describe("BikeModel") {
+            beforeEach {
+                bikeModel = BikeModel()
+            }
+            
+            context("when BikeModel is initialised") {
+                it("should have test bikes array") {
+                    expect(bikeModel.bikes.count).to(beGreaterThan(0))
+                }
+            }
+            
+        }
     }
-    
 }
+
