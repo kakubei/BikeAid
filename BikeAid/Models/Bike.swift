@@ -26,6 +26,23 @@ enum BikeClass {
     case hybrid
     case electric
     
+    init(rawValue: String) {
+        switch rawValue {
+        case "road":
+            self = .road
+        case "mountain":
+            self = .mountain(subtype: .enduro)
+        case "hybrid":
+            self = .hybrid
+        case "electric":
+            self = .electric
+            
+        // TODO: Handle error and not default value
+        default:
+            self = .hybrid
+        }
+    }
+    
     //: By conforming to the CustomStringConvertible when you print this object, it will use whatever is in the `description` var automatically!
     var description: String {
         switch self {
@@ -42,7 +59,7 @@ enum BikeType {
     case downhill, enduro, xc, freeride
 }
 
-enum BikeSuspension {
+enum BikeSuspension: String {
     case rigid
     case hardTail
     case full
