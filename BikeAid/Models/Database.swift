@@ -50,7 +50,6 @@ final class RealmDatabase: DatabaseStoring {
     private func bikeToRealmBike(bike: Bike) -> RealmBike {
         let realmBike = RealmBike()
         
-        // TODO: Create method to do this below, we use it more than once.
         realmBike.name = bike.name
         realmBike.bikeClass = bike.bikeClass.description
         realmBike.suspension = bike.bikeClass.description

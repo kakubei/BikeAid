@@ -8,14 +8,28 @@
 
 import Foundation
 
-struct BikeModel {
+class BikeModel {
     var bikes: [Bike] = []
     
     init() {
+        self.retrieveBikes()
+    }
+    
+    private func retrieveBikes() {
+        let realmDatabase = RealmDatabase()
+        realmDatabase.retrieveBikes()
+        
+        self.bikes = realmDatabase.bikes
+        
+        // Generate bikes if necessary
         self.generateTestBikes()
     }
     
-    private mutating func generateTestBikes() {
+    private func generateTestBikes() {
+        guard self.bikes.isEmpty else {
+            return
+        }
+        
         let snake = Bike(name: "Snake", bikeClass: .mountain(subtype: .downhill), suspension: .full)
         let specialized = Bike(name: "Specialzed Hybrid", bikeClass: .hybrid)
         let kaku = Bike(name: "Kaku", bikeClass: .mountain(subtype: .enduro), wheelSize: .twentyNine, suspension: .hardTail)
@@ -23,6 +37,10 @@ struct BikeModel {
         let mysteryEbike = EBike(name: "Mystery")
         
         self.bikes += [snake, specialized, kaku, moustache, mysteryEbike]
+        
+        self.bikes.forEach { newBike in
+            RealmDatabase().storeBike(newBike)
+        }
     }
     
     func titleLabel(for indexpath: IndexPath) -> String {
