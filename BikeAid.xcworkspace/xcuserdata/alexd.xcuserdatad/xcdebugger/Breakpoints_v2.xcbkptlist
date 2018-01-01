@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "BikeAid/Models/BikeModel.swift"
-            timestampString = "536505307.003603"
+            timestampString = "536509314.152925"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "titleLabel(for:)"
             landmarkType = "7">
             <Actions>
@@ -34,28 +34,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BikeAid/Models/BikeModel.swift"
-            timestampString = "536505307.004153"
+            timestampString = "536509314.153534"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "typeLabel(for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BikeAid/Models/BikeModel.swift"
-            timestampString = "536505307.004349"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "generateTestBikes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,8 +11,13 @@ import Foundation
 class BikeModel {
     var bikes: [Bike] = []
     
-    init() {
+    init(testBikes: Bool = false) {
         self.retrieveBikes()
+        
+        // Generate bikes if necessary
+        if testBikes {
+            self.generateTestBikes()
+        }
     }
     
     private func retrieveBikes() {
@@ -20,9 +25,6 @@ class BikeModel {
         realmDatabase.retrieveBikes()
         
         self.bikes = realmDatabase.bikes
-        
-        // Generate bikes if necessary
-        self.generateTestBikes()
     }
     
     private func generateTestBikes() {

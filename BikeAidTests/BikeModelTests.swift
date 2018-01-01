@@ -21,14 +21,47 @@ class BikeModelTests: QuickSpec {
         
         describe("BikeModel") {
             beforeEach {
+                RealmDatabase().deleteAll()
                 bikeModel = BikeModel()
             }
             
             context("when BikeModel is initialised") {
-                it("should have test bikes array") {
-                    expect(bikeModel.bikes.count).to(beGreaterThan(0))
+                it("should have empty bikes array") {
+                    expect(bikeModel.bikes.count).to(equal(0))
                 }
             }
+            
+            context("when BikeModel is initialised with testBikes = true") {
+                it("should NOT have empty bikes array") {
+                    bikeModel = BikeModel(testBikes: true)
+                    expect(bikeModel.bikes.count).toNot(equal(0))
+                }
+            }
+            
+            context("When we have an existing bike") {
+                it("should return its name") {
+                    let bikeName = "NewBike"
+                    let newBike = Bike(name: bikeName, bikeClass: BikeClass.hybrid)
+                    
+                    bikeModel.bikes.append(newBike)
+                    
+                    let title = bikeModel.titleLabel(for: IndexPath(row: 0, section: 0))
+                    
+                    expect(title).to(equal(bikeName))
+                }
+                
+                it("should return the bike type") {
+                    let bikeName = "NewBike"
+                    let newBike = Bike(name: bikeName, bikeClass: BikeClass.hybrid)
+                    
+                    bikeModel.bikes.append(newBike)
+                    
+                    let bikeType = bikeModel.typeLabel(for: IndexPath(row: 0, section: 0))
+                    
+                    expect(bikeType).to(equal(BikeClass.hybrid.description))
+                }
+            }
+            
             
         }
     }
