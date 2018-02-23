@@ -70,6 +70,7 @@ enum BikeSuspension: String {
 }
 
 protocol Bikeable {
+    var name: String { get set }
     var bikeClass: BikeClass { get }
     var wheelSize: WheelSize { get }
     var suspension: BikeSuspension? { get }
@@ -122,7 +123,7 @@ extension Electricable {
 }
 
 class Bike: Bikeable {
-    let name: String
+    var name: String    
     var bikeClass: BikeClass
     var wheelSize: WheelSize
     var suspension: BikeSuspension?

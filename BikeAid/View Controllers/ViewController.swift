@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     let bikeModel = BikeModel()
     let detailsSegue = "DetailsSegue"
-    var currentBike: Bike?
+    var currentBike: Bikeable?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,7 +20,7 @@ class DetailsVC: UIViewController {
 
 //    let model = DetailsModel()
 
-    var bike: Bike!
+    var bike: Bikeable!
 
     override func viewDidLoad() {
         super.viewDidLoad()

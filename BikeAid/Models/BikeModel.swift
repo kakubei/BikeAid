@@ -9,7 +9,7 @@
 import Foundation
 
 class BikeModel {
-    var bikes: [Bike] = []
+    var bikes: [Bikeable] = []
     
     init(testBikes: Bool = false) {
         self.retrieveBikes()

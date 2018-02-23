@@ -22,7 +22,7 @@ final class RealmBike: Object {
 
 protocol DatabaseStoring {
     
-    func storeBike(_ bike: Bike)
+    func storeBike(_ bike: Bikeable)
     func retrieveBikes() -> [Bike]
     func deleteBike(_ bike: Bike)
     
@@ -44,7 +44,7 @@ final class RealmDatabase: DatabaseStoring {
         return try! Realm()
     }
         
-    private func bikeToRealmBike(bike: Bike) -> RealmBike {
+    private func bikeToRealmBike(bike: Bikeable) -> RealmBike {
         let realmBike = RealmBike()
         
         realmBike.name = bike.name
@@ -65,7 +65,7 @@ final class RealmDatabase: DatabaseStoring {
         return bike
     }
     
-    func storeBike(_ bike: Bike) {
+    func storeBike(_ bike: Bikeable) {
         let realmBike = self.bikeToRealmBike(bike: bike)
         
         try! realm.write {
