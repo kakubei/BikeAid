@@ -34,8 +34,8 @@ class BikeModel {
         let snake = Bike(name: "Snake", bikeClass: .mountain(subtype: .downhill), suspension: .full)
         let specialized = Bike(name: "Specialzed Hybrid", bikeClass: .hybrid)
         let kaku = Bike(name: "Kaku", bikeClass: .mountain(subtype: .enduro), wheelSize: .twentyNine, suspension: .hardTail)
-        let moustache = EBike(name: "Samedi", motor: .hub, battery: 2, mileage: 30)
-        let mysteryEbike = EBike(name: "Mystery")
+        let moustache = Ebike(name: "Samedi", motor: .hub, battery: 2, mileage: 30)
+        let mysteryEbike = Ebike(name: "Mystery")
         
         self.bikes += [snake, specialized, kaku, moustache, mysteryEbike]
         

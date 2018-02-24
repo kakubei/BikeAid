@@ -137,7 +137,7 @@ class Bike: Bikeable {
 }
 
 // TODO: Is there a solution instead of using classes to not have to repeat the bike properties for EBikes?
-final class EBike: Bike, Electricable {
+final class Ebike: Bike, Electricable {
     var motor: MotorType?
     var batteryLife: Double?
     var mileage: Int?

@@ -39,7 +39,7 @@ class DetailsVC: UIViewController {
         self.wheelsizeLabel.text = bike.wheelSize.description
         self.suspensionLabel.text = bike.suspension.description
 
-        if let eBike = self.bike as? EBike {
+        if let eBike = self.bike as? Ebike {
             self.motorLabel.text = eBike.motor.description
             self.batteryLabel.text = eBike.batteryLife.description
             self.mileageLabel.text = eBike.mileage.description
