@@ -1,2 +1,4 @@
 Pods/
 Pods/*
+/packfile
+/BikeAid.xcworkspace/xcuserdata/alexd.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
