@@ -69,28 +69,6 @@ enum BikeSuspension: String {
     }
 }
 
-protocol Bikeable {
-    var name: String { get set }
-    var bikeClass: BikeClass { get }
-    var wheelSize: WheelSize { get }
-    var suspension: BikeSuspension? { get }
-}
-
-// Default values for any bike
-// TODO: How to create editable default values?
-extension Bikeable {
-    var suspension: BikeSuspension {
-        return .rigid
-    }
-
-    var wheelSize: WheelSize {
-        get {
-            return .twentySeven
-        }
-    }
-}
-
-
 enum MotorType {
     case hub
     case midDrive
@@ -119,6 +97,25 @@ extension Electricable {
 
     var mileage: Int {
         return 50
+    }
+}
+
+protocol Bikeable {
+    var name: String { get set }
+    var bikeClass: BikeClass { get }
+    var wheelSize: WheelSize { get }
+    var suspension: BikeSuspension? { get }
+}
+
+// Default values for any bike
+// TODO: How to create editable default values?
+extension Bikeable {
+    var suspension: BikeSuspension {
+        return .rigid
+    }
+    
+    var wheelSize: WheelSize {
+        return .twentySeven
     }
 }
 
