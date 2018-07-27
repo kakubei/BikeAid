@@ -9,6 +9,9 @@ target 'BikeAid' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'RealmSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'SnapKit'
 
   target 'BikeAidTests' do
     inherit! :search_paths

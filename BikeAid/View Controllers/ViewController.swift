@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
-    let bikeModel = BikeModel()
+    let bikeModel = BikeModel(testBikes: true)
     let detailsSegue = "DetailsSegue"
     var currentBike: Bikeable?
     

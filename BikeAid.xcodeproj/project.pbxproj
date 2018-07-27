@@ -22,6 +22,9 @@
 		CABE7E2D1FC5C4CD0097BEAE /* GoogleMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */; };
 		CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */; };
 		CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC669111FD9855C008F8593 /* DetailsVC.swift */; };
+		CAC794A1210BCB2200FB01A6 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A0210BCB2200FB01A6 /* CircularView.swift */; };
+		CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A3210BD60A00FB01A6 /* MainViewController.swift */; };
+		CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */; };
 		CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD0185E1FC731E4001AEEB8 /* client_id.json */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsManager.swift; sourceTree = "<group>"; };
 		CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CAC669111FD9855C008F8593 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		CAC794A0210BCB2200FB01A6 /* CircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
+		CAC794A3210BD60A00FB01A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
 		CAD0185E1FC731E4001AEEB8 /* client_id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = client_id.json; sourceTree = "<group>"; };
 		D8659485BB35FED0855CCFC1 /* Pods_BikeAid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeAid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +113,7 @@
 			children = (
 				CAD0185E1FC731E4001AEEB8 /* client_id.json */,
 				CA1DCBF01FAA52A10049DAE7 /* AppDelegate.swift */,
+				CAC794A5210BD9B700FB01A6 /* Utils */,
 				CABE7E2A1FC5C21B0097BEAE /* Models */,
 				CABE7E2B1FC5C2270097BEAE /* View Controllers */,
 				CA1DCBF41FAA52A10049DAE7 /* Main.storyboard */,
@@ -134,6 +141,7 @@
 				CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */,
 				5898AD15E889E27338ACF6AA /* DetailsModel.swift */,
 				CA411D891FF7D17B005A5C55 /* Database.swift */,
+				CAC794A0210BCB2200FB01A6 /* CircularView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,8 +152,17 @@
 				CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */,
 				CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */,
 				CAC669111FD9855C008F8593 /* DetailsVC.swift */,
+				CAC794A3210BD60A00FB01A6 /* MainViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CAC794A5210BD9B700FB01A6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F59B2CF11A6E8F3F0729F06B /* Pods */ = {
@@ -200,7 +217,6 @@
 				CA1DCBFE1FAA52A10049DAE7 /* Frameworks */,
 				CA1DCBFF1FAA52A10049DAE7 /* Resources */,
 				EBECB1BF08C13952E7FF94F0 /* [CP] Embed Pods Frameworks */,
-				843FB3A560A3FD6CE8ADB597 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,7 +303,8 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,21 +327,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		843FB3A560A3FD6CE8ADB597 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8760031B3EAC2BDCF799029B /* [CP] Check Pods Manifest.lock */ = {
@@ -354,11 +356,17 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -393,13 +401,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABE7E2D1FC5C4CD0097BEAE /* GoogleMapsManager.swift in Sources */,
+				CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */,
 				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
 				CA1DCBF31FAA52A10049DAE7 /* ViewController.swift in Sources */,
 				CA1DCBF11FAA52A10049DAE7 /* AppDelegate.swift in Sources */,
 				CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */,
+				CAC794A1210BCB2200FB01A6 /* CircularView.swift in Sources */,
 				CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */,
 				CA411D8A1FF7D17B005A5C55 /* Database.swift in Sources */,
 				CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */,
+				CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */,
 				5898A6A6937E4E07E1ED892F /* DetailsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,24 +12,24 @@ class BikeModel {
     var bikes: [Bikeable] = []
     
     init(testBikes: Bool = false) {
-        self.retrieveBikes()
-        
         // Generate bikes if necessary
         if testBikes {
-            self.generateTestBikes()
+            generateTestBikes()
         }
+        
+        retrieveBikes()
     }
     
     private func retrieveBikes() {
-        let realmDatabase = RealmDatabase()
-        
-        self.bikes = realmDatabase.retrieveBikes()
+        bikes = RealmDatabase().retrieveBikes()
     }
     
     private func generateTestBikes() {
-        guard self.bikes.isEmpty else {
-            return
-        }
+//        guard self.bikes.isEmpty else {
+//            return
+//        }
+        
+        RealmDatabase().deleteAll()
         
         let snake = Bike(name: "Snake", bikeClass: .mountain(subtype: .downhill), suspension: .full)
         let specialized = Bike(name: "Specialzed Hybrid", bikeClass: .hybrid)
@@ -37,10 +37,11 @@ class BikeModel {
         let moustache = Ebike(name: "Samedi", motor: .hub, battery: 2, mileage: 30)
         let mysteryEbike = Ebike(name: "Mystery")
         
-        self.bikes += [snake, specialized, kaku, moustache, mysteryEbike]
+        // Hacky way to shup up the compiler otherwise we get error. This smells like a bug
+        bikes += [snake, specialized, kaku, moustache, mysteryEbike]
         
         // Store test bikes in Realm
-        self.bikes.forEach { newBike in
+        bikes.forEach { newBike in
             RealmDatabase().storeBike(newBike)
         }
     }

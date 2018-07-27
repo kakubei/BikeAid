@@ -79,7 +79,7 @@ enum MotorType {
     }
 }
 
-protocol Electricable {
+protocol Electricable: Bikeable {
     var motor: MotorType? { get }
     var batteryLife: Double? { get }
     var mileage: Int? { get }
@@ -107,18 +107,6 @@ protocol Bikeable {
     var suspension: BikeSuspension? { get }
 }
 
-// Default values for any bike
-// TODO: How to create editable default values?
-extension Bikeable {
-    var suspension: BikeSuspension {
-        return .rigid
-    }
-    
-    var wheelSize: WheelSize {
-        return .twentySeven
-    }
-}
-
 class Bike: Bikeable {
     var name: String    
     var bikeClass: BikeClass
@@ -134,7 +122,7 @@ class Bike: Bikeable {
 }
 
 // TODO: Is there a solution instead of using classes to not have to repeat the bike properties for EBikes?
-final class Ebike: Bike, Electricable {
+final class Ebike: Bike, Electricable {    
     var motor: MotorType?
     var batteryLife: Double?
     var mileage: Int?
