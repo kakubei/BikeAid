@@ -47,6 +47,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-uc-pLt" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="244.5" y="222" width="95" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="tubeButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="KKw-xH-EsJ"/>
                                     <constraint firstAttribute="width" constant="95" id="umX-qt-GPI"/>
@@ -59,6 +60,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-L6-NRO" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="35.5" y="222" width="95" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="pumpButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="H6a-O2-9dC"/>
                                     <constraint firstAttribute="width" constant="95" id="K34-As-zjz"/>
@@ -68,6 +70,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-OC-XH4" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="244.5" y="527" width="95" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="helpButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="1kt-GP-E0K"/>
                                     <constraint firstAttribute="width" constant="95" id="bZu-ZA-s7K"/>
@@ -77,6 +80,7 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-8O-Ajn" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="35.5" y="527" width="95" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="patchButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="mXA-OL-5EY"/>
                                     <constraint firstAttribute="width" constant="95" id="zIN-wt-Sb7"/>
@@ -91,16 +95,17 @@
                             <constraint firstItem="RWT-6t-Ic5" firstAttribute="centerX" secondItem="eG3-vn-QqT" secondAttribute="centerX" id="TOS-u7-D9o"/>
                             <constraint firstItem="BNR-OC-XH4" firstAttribute="centerY" secondItem="XK1-8O-Ajn" secondAttribute="centerY" id="UpH-hj-aHy"/>
                             <constraint firstItem="XK1-8O-Ajn" firstAttribute="top" secondItem="RWT-6t-Ic5" secondAttribute="bottom" id="VFY-PF-qdd"/>
-                            <constraint firstItem="RWT-6t-Ic5" firstAttribute="top" secondItem="ygg-L6-NRO" secondAttribute="bottom" id="XHu-QN-EY6"/>
+                            <constraint firstItem="RWT-6t-Ic5" firstAttribute="top" secondItem="ygg-L6-NRO" secondAttribute="bottom" placeholder="YES" id="XHu-QN-EY6"/>
                             <constraint firstItem="iTg-Jl-N1x" firstAttribute="bottom" secondItem="RWT-6t-Ic5" secondAttribute="bottom" constant="140" id="auW-00-zUR"/>
                             <constraint firstItem="nO4-uc-pLt" firstAttribute="centerY" secondItem="ygg-L6-NRO" secondAttribute="centerY" id="d5Q-bB-yuZ"/>
-                            <constraint firstItem="ygg-L6-NRO" firstAttribute="leading" secondItem="RWT-6t-Ic5" secondAttribute="leading" constant="-47" id="r0U-O3-yS9"/>
+                            <constraint firstItem="ygg-L6-NRO" firstAttribute="leading" secondItem="RWT-6t-Ic5" secondAttribute="leading" constant="-47" placeholder="YES" id="r0U-O3-yS9"/>
                             <constraint firstItem="BNR-OC-XH4" firstAttribute="trailing" secondItem="nO4-uc-pLt" secondAttribute="trailing" id="rK4-42-o7t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iTg-Jl-N1x"/>
                     </view>
                     <connections>
                         <outlet property="helpButton" destination="BNR-OC-XH4" id="SF8-6M-rJd"/>
+                        <outlet property="mainButton" destination="RWT-6t-Ic5" id="wpd-MW-gRG"/>
                         <outlet property="patchButton" destination="XK1-8O-Ajn" id="91L-Dw-FC2"/>
                         <outlet property="pumpButton" destination="ygg-L6-NRO" id="Nc3-G9-UsC"/>
                         <outlet property="tubeButton" destination="nO4-uc-pLt" id="gsk-Dc-QDs"/>
