@@ -17,51 +17,115 @@ class MainViewController: UIViewController {
     @IBOutlet weak var patchButton: CircularButton!
     @IBOutlet weak var helpButton: CircularButton!
     
+    var leftButtons: [UIButton]!
+    var topButtons: [UIButton]!
+    var rightButtons: [UIButton]!
+    var bottomButtons: [UIButton]!
+    
     @IBOutlet var ancillaryButtons: [CircularButton]!
     
-    var centerConstraint: Constraint!
-    var leadingConstraint: Constraint!
-    var bottomConstraint: Constraint!
+    var centerConstraints: [Constraint] = []
+    var leadingConstraints: [Constraint] = []
+    var trailingConstraints: [Constraint] = []
+    var topConstraints: [Constraint] = []
+    var bottomConstraints: [Constraint] = []
+    
+    let offsetAmount: Double = 45
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        pumpButton.snp.makeConstraints { make in
-            centerConstraint = make.center.equalTo(mainButton.center).constraint
+        
+        leftButtons = [pumpButton, patchButton]
+        topButtons = [pumpButton, tubeButton]
+        rightButtons = [tubeButton, helpButton]
+        bottomButtons = [patchButton, helpButton]
+        
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
+        // Initial constraints
+        ancillaryButtons.forEach { button in
+            button.snp.makeConstraints { make in
+                centerConstraints.append(make.center.equalTo(mainButton.center).constraint)
+            }
         }
         
-        centerConstraint.activate()
+        centerConstraints.forEach { $0.activate() }
+        
+        // Show buttons constraints
+        leftButtons.forEach { button in
+            button.snp.makeConstraints { make in
+                leadingConstraints.append(make.leading.equalTo(mainButton.snp.leading).offset(-offsetAmount).constraint)
+            }
+        }
+        
+        rightButtons.forEach { button in
+            button.snp.makeConstraints { make in
+                trailingConstraints.append(make.trailing.equalTo(mainButton.snp.trailing).offset(offsetAmount).constraint)
+            }
+        }
+        
+        topButtons.forEach { button in
+            button.snp.makeConstraints { make in
+                topConstraints.append(make.bottom.equalTo(mainButton.snp.top).constraint)
+            }
+        }
+        
+        bottomButtons.forEach { button in
+            button.snp.makeConstraints { make in
+                bottomConstraints.append(make.top.equalTo(mainButton.snp.bottom).constraint)
+            }
+        }
+        
+        leadingConstraints.forEach { $0.deactivate() }
+        trailingConstraints.forEach { $0.deactivate() }
+        topConstraints.forEach { $0.deactivate() }
+        bottomConstraints.forEach { $0.deactivate() }
     }
 
-    private func animateShowButtons() {
-        pumpButton.snp.makeConstraints { make in
-            leadingConstraint = make.leading.equalTo(mainButton.snp.leading).offset(-45).constraint
-            bottomConstraint = make.bottom.equalTo(mainButton.snp.top).constraint
+    private func animateButtons(hide: Bool = false) {
+        
+        if hide {
+            hideButtons()
+        } else {
+            showButtons()
         }
         
-        centerConstraint.deactivate()
-        leadingConstraint.activate()
-        bottomConstraint.activate()
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1.2, options: [], animations: { [weak self] in
+            self?.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    private func showButtons() {
+        centerConstraints.forEach { $0.deactivate() }
+        leadingConstraints.forEach { $0.activate() }
+        trailingConstraints.forEach { $0.activate() }
+        topConstraints.forEach { $0.activate() }
+        bottomConstraints.forEach { $0.activate() }
         
-        UIView.animate(withDuration: 0.8) {
-            self.view.layoutIfNeeded()
-        }
+        ancillaryButtons.forEach { $0.show() }
+    }
+    
+    private func hideButtons() {
+        leadingConstraints.forEach { $0.deactivate() }
+        trailingConstraints.forEach { $0.deactivate() }
+        topConstraints.forEach { $0.deactivate() }
+        bottomConstraints.forEach { $0.deactivate() }
+        
+        centerConstraints.forEach { $0.activate() }
+        
+        ancillaryButtons.forEach { $0.hide() }
     }
     
     @IBAction func mainButtonTapped(_ sender: CircularButton) {
         if pumpButton.isHidden == false { return }
         
-        animateShowButtons()
-        
-        ancillaryButtons.forEach { $0.show() }
+        animateButtons()
     }
     
     @IBAction func tubeButtonPressed(_ sender: CircularButton) {
-        ancillaryButtons.forEach { $0.hide() }
-        
-        leadingConstraint.deactivate()
-        bottomConstraint.deactivate()
-        centerConstraint.activate()
+        animateButtons(hide: true)
     }
     
 }

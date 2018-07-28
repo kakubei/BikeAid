@@ -32,18 +32,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-6t-Ic5" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="82.5" y="317" width="210" height="210"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="210" id="fgf-OY-0Xp"/>
-                                    <constraint firstAttribute="width" constant="210" id="vF9-xg-qeH"/>
-                                </constraints>
-                                <state key="normal" image="cross"/>
-                                <connections>
-                                    <action selector="mainButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="JnS-3L-kJG"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-uc-pLt" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="244.5" y="222" width="95" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,19 +75,32 @@
                                 </constraints>
                                 <state key="normal" title="Patch"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-6t-Ic5" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="82" y="317" width="210" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="mainButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="fgf-OY-0Xp"/>
+                                    <constraint firstAttribute="width" constant="210" id="vF9-xg-qeH"/>
+                                </constraints>
+                                <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="mainButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="JnS-3L-kJG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96402994791666663" blue="0.96402994791666663" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="XK1-8O-Ajn" firstAttribute="leading" secondItem="ygg-L6-NRO" secondAttribute="leading" id="6Of-8Y-ccc"/>
-                            <constraint firstItem="nO4-uc-pLt" firstAttribute="trailing" secondItem="RWT-6t-Ic5" secondAttribute="trailing" constant="47" id="Exy-cm-bsS"/>
+                            <constraint firstItem="XK1-8O-Ajn" firstAttribute="leading" secondItem="ygg-L6-NRO" secondAttribute="leading" placeholder="YES" id="6Of-8Y-ccc"/>
+                            <constraint firstItem="nO4-uc-pLt" firstAttribute="trailing" secondItem="RWT-6t-Ic5" secondAttribute="trailing" constant="47" placeholder="YES" id="Exy-cm-bsS"/>
                             <constraint firstItem="RWT-6t-Ic5" firstAttribute="centerX" secondItem="eG3-vn-QqT" secondAttribute="centerX" id="TOS-u7-D9o"/>
-                            <constraint firstItem="BNR-OC-XH4" firstAttribute="centerY" secondItem="XK1-8O-Ajn" secondAttribute="centerY" id="UpH-hj-aHy"/>
-                            <constraint firstItem="XK1-8O-Ajn" firstAttribute="top" secondItem="RWT-6t-Ic5" secondAttribute="bottom" id="VFY-PF-qdd"/>
+                            <constraint firstItem="BNR-OC-XH4" firstAttribute="centerY" secondItem="XK1-8O-Ajn" secondAttribute="centerY" placeholder="YES" id="UpH-hj-aHy"/>
+                            <constraint firstItem="XK1-8O-Ajn" firstAttribute="top" secondItem="RWT-6t-Ic5" secondAttribute="bottom" placeholder="YES" id="VFY-PF-qdd"/>
                             <constraint firstItem="RWT-6t-Ic5" firstAttribute="top" secondItem="ygg-L6-NRO" secondAttribute="bottom" placeholder="YES" id="XHu-QN-EY6"/>
                             <constraint firstItem="iTg-Jl-N1x" firstAttribute="bottom" secondItem="RWT-6t-Ic5" secondAttribute="bottom" constant="140" id="auW-00-zUR"/>
-                            <constraint firstItem="nO4-uc-pLt" firstAttribute="centerY" secondItem="ygg-L6-NRO" secondAttribute="centerY" id="d5Q-bB-yuZ"/>
+                            <constraint firstItem="nO4-uc-pLt" firstAttribute="centerY" secondItem="ygg-L6-NRO" secondAttribute="centerY" placeholder="YES" id="d5Q-bB-yuZ"/>
                             <constraint firstItem="ygg-L6-NRO" firstAttribute="leading" secondItem="RWT-6t-Ic5" secondAttribute="leading" constant="-47" placeholder="YES" id="r0U-O3-yS9"/>
-                            <constraint firstItem="BNR-OC-XH4" firstAttribute="trailing" secondItem="nO4-uc-pLt" secondAttribute="trailing" id="rK4-42-o7t"/>
+                            <constraint firstItem="BNR-OC-XH4" firstAttribute="trailing" secondItem="nO4-uc-pLt" secondAttribute="trailing" placeholder="YES" id="rK4-42-o7t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iTg-Jl-N1x"/>
                     </view>
