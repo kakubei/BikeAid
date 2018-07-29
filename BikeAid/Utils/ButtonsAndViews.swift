@@ -1,5 +1,5 @@
 //
-//  CircularView.swift
+//  ButtonsAndViews.swift
 //  BikeAid
 //
 //  Created by Alex Dearden on 27/07/2018.
@@ -73,6 +73,21 @@ class CheckButton: CircularButton {
                 self.backgroundColor = .white
                 self.setImage(nil, for: .normal)
             }                      
+        }
+    }
+}
+
+class SendButton: CircularButton {
+    override func setup() {
+        super.setup()
+        backgroundColourForState()
+    }
+    
+    public func backgroundColourForState() {
+        if self.isEnabled {
+            self.backgroundColor = UIColor.lobsterRed
+        } else {
+            self.backgroundColor = UIColor.fadedLobsterRed
         }
     }
 }
