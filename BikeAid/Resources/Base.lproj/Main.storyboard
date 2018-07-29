@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lobster_1.3.otf">
+            <string>Lobster1.3</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="VEh-XS-lZq">
@@ -32,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-uc-pLt" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-uc-pLt" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="244" y="222.5" width="95" height="95"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="tubeButton"/>
@@ -45,7 +50,7 @@
                                     <action selector="tubeButtonPressed:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="PR3-sh-O3e"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-L6-NRO" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-L6-NRO" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="35" y="222" width="95" height="95"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="pumpButton"/>
@@ -55,7 +60,7 @@
                                 </constraints>
                                 <state key="normal" image="pump"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-OC-XH4" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-OC-XH4" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="244" y="527" width="95" height="95"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="helpButton"/>
@@ -65,7 +70,7 @@
                                 </constraints>
                                 <state key="normal" image="help"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-8O-Ajn" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-8O-Ajn" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="35" y="527" width="95" height="95"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="patchButton"/>
@@ -75,7 +80,7 @@
                                 </constraints>
                                 <state key="normal" image="patch"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-6t-Ic5" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-6t-Ic5" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="82" y="317" width="210" height="210"/>
                                 <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="mainButton"/>
@@ -114,11 +119,143 @@
                         <outletCollection property="ancillaryButtons" destination="nO4-uc-pLt" collectionClass="NSMutableArray" id="gs7-K9-pch"/>
                         <outletCollection property="ancillaryButtons" destination="XK1-8O-Ajn" collectionClass="NSMutableArray" id="G2b-qt-Xea"/>
                         <outletCollection property="ancillaryButtons" destination="BNR-OC-XH4" collectionClass="NSMutableArray" id="OMp-JE-bGS"/>
+                        <segue destination="hJ6-de-XgI" kind="showDetail" identifier="tubeSegue" id="OxL-er-ZTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAo-zL-CEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1087.2" y="841.52923538230891"/>
+        </scene>
+        <!--Tube View Controller-->
+        <scene sceneID="C0g-pR-4R1">
+            <objects>
+                <viewController id="hJ6-de-XgI" customClass="TubeViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GGM-CZ-flf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvF-eo-Z81" customClass="CircularView" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="139.5" y="82" width="95" height="95"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tube" translatesAutoresizingMaskIntoConstraints="NO" id="zJo-nx-bI8">
+                                        <rect key="frame" x="9.5" y="10" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="MFx-aO-Nf6"/>
+                                            <constraint firstAttribute="height" constant="75" id="vF3-pV-ONA"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.21176470588235294" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zJo-nx-bI8" firstAttribute="centerY" secondItem="DvF-eo-Z81" secondAttribute="centerY" id="2Ka-GH-jAo"/>
+                                    <constraint firstAttribute="width" constant="95" id="9i7-2Z-AoX"/>
+                                    <constraint firstAttribute="height" constant="95" id="WCc-EE-Gjn"/>
+                                    <constraint firstItem="zJo-nx-bI8" firstAttribute="centerX" secondItem="DvF-eo-Z81" secondAttribute="centerX" id="ibS-k6-hAa"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffL-vM-Ue9" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="16" y="40" width="52" height="52"/>
+                                <color key="backgroundColor" red="0.53000000000000003" green="0.53000000000000003" blue="0.53000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="mainButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="1ph-9Z-i3u"/>
+                                    <constraint firstAttribute="width" constant="52" id="QZY-we-b8L"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="crossWhite"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="hJ6-de-XgI" eventType="touchUpInside" id="Ybx-aX-b6w"/>
+                                    <action selector="mainButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="0Cl-Ge-BVz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Size?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-p1-UI0">
+                                <rect key="frame" x="79" y="221" width="217" height="48"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="48"/>
+                                <color key="textColor" red="0.53000000000000003" green="0.53000000000000003" blue="0.53000000000000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-rf-w2F">
+                                <rect key="frame" x="79" y="309" width="42" height="24"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="24"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tu-Me-r76" userLabel="27.5 Button" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="172" y="306" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Fd4-l5-8IR"/>
+                                    <constraint firstAttribute="height" constant="30" id="lTF-zn-SMZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="IcI-nS-yIp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHK-qR-ZJV">
+                                <rect key="frame" x="79" y="363" width="24" height="24"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="24"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ao-LD-Vbv" userLabel="29 Button" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="172" y="360" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dxW-99-h0q"/>
+                                    <constraint firstAttribute="width" constant="30" id="xWh-v3-iLX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="I6b-45-84b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m86-hI-Jsx">
+                                <rect key="frame" x="79" y="417" width="24" height="24"/>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="24"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5H-Hb-WDU" userLabel="26 Button" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="172" y="414" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fe5-78-SBZ"/>
+                                    <constraint firstAttribute="width" constant="30" id="J0a-qq-gdP"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="X1l-a0-u6K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95999999999999996" blue="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DvF-eo-Z81" firstAttribute="centerX" secondItem="GGM-CZ-flf" secondAttribute="centerX" id="0M2-Ni-PvI"/>
+                            <constraint firstItem="2Tu-Me-r76" firstAttribute="centerX" secondItem="DvF-eo-Z81" secondAttribute="centerX" id="3Sm-JF-kK9"/>
+                            <constraint firstItem="r5H-Hb-WDU" firstAttribute="centerY" secondItem="m86-hI-Jsx" secondAttribute="centerY" id="688-MI-yaI"/>
+                            <constraint firstItem="m86-hI-Jsx" firstAttribute="leading" secondItem="PHK-qR-ZJV" secondAttribute="leading" id="C6V-GL-3cL"/>
+                            <constraint firstItem="4Ao-LD-Vbv" firstAttribute="centerX" secondItem="2Tu-Me-r76" secondAttribute="centerX" id="CcW-aa-lLQ"/>
+                            <constraint firstItem="m86-hI-Jsx" firstAttribute="top" secondItem="PHK-qR-ZJV" secondAttribute="bottom" constant="30" id="Cwy-KJ-mCy"/>
+                            <constraint firstItem="4Ao-LD-Vbv" firstAttribute="centerY" secondItem="PHK-qR-ZJV" secondAttribute="centerY" id="HMe-ai-J7Q"/>
+                            <constraint firstItem="m4e-rf-w2F" firstAttribute="top" secondItem="QPI-p1-UI0" secondAttribute="bottom" constant="40" id="M07-qE-cKI"/>
+                            <constraint firstItem="PHK-qR-ZJV" firstAttribute="leading" secondItem="m4e-rf-w2F" secondAttribute="leading" id="MiK-gm-a2u"/>
+                            <constraint firstItem="QPI-p1-UI0" firstAttribute="centerX" secondItem="DvF-eo-Z81" secondAttribute="centerX" id="TEb-JO-0fK"/>
+                            <constraint firstItem="zJo-nx-bI8" firstAttribute="top" secondItem="ffL-vM-Ue9" secondAttribute="bottom" id="THk-ow-aJO"/>
+                            <constraint firstItem="r5H-Hb-WDU" firstAttribute="centerX" secondItem="4Ao-LD-Vbv" secondAttribute="centerX" id="TLS-Uw-QeZ"/>
+                            <constraint firstItem="ffL-vM-Ue9" firstAttribute="top" secondItem="PLF-jf-uXy" secondAttribute="top" constant="20" id="bV4-5e-Gy2"/>
+                            <constraint firstItem="PHK-qR-ZJV" firstAttribute="top" secondItem="m4e-rf-w2F" secondAttribute="bottom" constant="30" id="i0z-jI-6hN"/>
+                            <constraint firstItem="m4e-rf-w2F" firstAttribute="leading" secondItem="QPI-p1-UI0" secondAttribute="leading" id="k0i-6f-5H5"/>
+                            <constraint firstItem="2Tu-Me-r76" firstAttribute="centerY" secondItem="m4e-rf-w2F" secondAttribute="centerY" id="lra-8K-PPa"/>
+                            <constraint firstItem="ffL-vM-Ue9" firstAttribute="leading" secondItem="PLF-jf-uXy" secondAttribute="leading" constant="16" id="rIG-tz-IaM"/>
+                            <constraint firstItem="QPI-p1-UI0" firstAttribute="top" secondItem="DvF-eo-Z81" secondAttribute="bottom" constant="44" id="yCs-h8-1ZK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PLF-jf-uXy"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="ffL-vM-Ue9" id="jMh-my-Ip7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMX-wH-ccR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-366" y="842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

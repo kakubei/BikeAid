@@ -121,6 +121,9 @@ class MainViewController: UIViewController {
     
     @IBAction func tubeButtonPressed(_ sender: CircularButton) {
         animateButtons(hide: true)
+        
+        // TODO: Create segue constants
+        performSegue(withIdentifier: "tubeSegue", sender: nil)
     }
     
 }
