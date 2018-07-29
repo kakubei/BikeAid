@@ -39,7 +39,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-uc-pLt" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="244" y="222.5" width="95" height="95"/>
-                                <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="tubeButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="KKw-xH-EsJ"/>
@@ -52,7 +52,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-L6-NRO" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="35" y="222" width="95" height="95"/>
-                                <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="pumpButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="H6a-O2-9dC"/>
@@ -62,7 +62,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-OC-XH4" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="244" y="527" width="95" height="95"/>
-                                <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="helpButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="1kt-GP-E0K"/>
@@ -72,7 +72,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-8O-Ajn" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="35" y="527" width="95" height="95"/>
-                                <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="patchButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="mXA-OL-5EY"/>
@@ -82,7 +82,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-6t-Ic5" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="82" y="317" width="210" height="210"/>
-                                <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.81960784313725488" green="0.21176470588235294" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="mainButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="fgf-OY-0Xp"/>
@@ -145,7 +145,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.81960784313725488" green="0.21176470588235294" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="zJo-nx-bI8" firstAttribute="centerY" secondItem="DvF-eo-Z81" secondAttribute="centerY" id="2Ka-GH-jAo"/>
                                     <constraint firstAttribute="width" constant="95" id="9i7-2Z-AoX"/>
@@ -228,11 +228,25 @@
                                     <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="kTm-t0-7UX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ei-aE-Ciz" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="109.5" y="472" width="155" height="155"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="lEj-UV-4E4"/>
+                                    <constraint firstAttribute="width" constant="155" id="pSY-4t-Q5f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lobster1.3" family="Lobster 1.3" pointSize="60"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95999999999999996" blue="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DvF-eo-Z81" firstAttribute="centerX" secondItem="GGM-CZ-flf" secondAttribute="centerX" id="0M2-Ni-PvI"/>
+                            <constraint firstItem="7Ei-aE-Ciz" firstAttribute="centerX" secondItem="PLF-jf-uXy" secondAttribute="centerX" id="2GT-zt-rk6"/>
                             <constraint firstItem="2Tu-Me-r76" firstAttribute="centerX" secondItem="DvF-eo-Z81" secondAttribute="centerX" id="3Sm-JF-kK9"/>
+                            <constraint firstItem="PLF-jf-uXy" firstAttribute="bottom" secondItem="7Ei-aE-Ciz" secondAttribute="bottom" constant="40" id="4jJ-G1-zAv"/>
                             <constraint firstItem="r5H-Hb-WDU" firstAttribute="centerY" secondItem="m86-hI-Jsx" secondAttribute="centerY" id="688-MI-yaI"/>
                             <constraint firstItem="m86-hI-Jsx" firstAttribute="leading" secondItem="PHK-qR-ZJV" secondAttribute="leading" id="C6V-GL-3cL"/>
                             <constraint firstItem="4Ao-LD-Vbv" firstAttribute="centerX" secondItem="2Tu-Me-r76" secondAttribute="centerX" id="CcW-aa-lLQ"/>

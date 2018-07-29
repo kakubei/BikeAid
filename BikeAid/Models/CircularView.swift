@@ -8,7 +8,6 @@
 
 import UIKit
 
-let iconGreyBack = UIColor(white: 0.25, alpha: 1.0)
 
 class CircularView: UIView {
 
@@ -68,7 +67,7 @@ class CheckButton: CircularButton {
     public var wasSelected: Bool = false {
         didSet {
             if wasSelected == true {
-                self.backgroundColor = iconGreyBack
+                self.backgroundColor = UIColor.lobsterRed
                 self.setImage(#imageLiteral(resourceName: "checkWhite"), for: .normal)
             } else {
                 self.backgroundColor = .white
