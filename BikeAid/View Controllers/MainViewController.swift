@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
     var topConstraints: [Constraint] = []
     var bottomConstraints: [Constraint] = []
     
-    let offsetAmount: Double = 45
+    let offsetAmount: Double = 70
     
     override func viewDidLoad() {
         super.viewDidLoad()

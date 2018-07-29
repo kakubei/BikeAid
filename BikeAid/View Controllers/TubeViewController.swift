@@ -45,7 +45,7 @@ class TubeViewController: UIViewController {
     @IBAction func sizeSelected(_ sender: CheckButton) {
         let selectedButton: CheckButton = sizeButtons[sender.tag]
         animateTranstition(for: selectedButton)
-        sendButton.isEnabled = true // Maybe Rx this?
+        sendButton.isEnabled = true // Maybe Rx this, by binding it to a valid selection?
         sendButton.backgroundColourForState() // TODO: Find a way of executing this each time the state changes!
     }
     
