@@ -116,8 +116,6 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func mainButtonTapped(_ sender: CircularButton) {
-        if pumpButton.isHidden == false { return }
-        
         animateButtons()
     }
     
