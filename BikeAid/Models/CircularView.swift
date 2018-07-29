@@ -8,6 +8,8 @@
 
 import UIKit
 
+let iconGreyBack = UIColor(white: 0.25, alpha: 1.0)
+
 class CircularView: UIView {
 
     override init(frame: CGRect) {
@@ -53,6 +55,26 @@ class CircularButton: UIButton {
         self.layer.shadowOpacity = 0.3
         self.layer.shadowOffset = CGSize.zero
         self.layer.shadowRadius = 6
+    }
+}
+
+class CheckButton: CircularButton {
+    override func setup() {
+        super.setup()
+        self.backgroundColor = .white
+        self.tintColor = .white
+    }
+    
+    public var wasSelected: Bool = false {
+        didSet {
+            if wasSelected == true {
+                self.backgroundColor = iconGreyBack
+                self.setImage(#imageLiteral(resourceName: "checkWhite"), for: .normal)
+            } else {
+                self.backgroundColor = .white
+                self.setImage(nil, for: .normal)
+            }                      
+        }
     }
 }
 

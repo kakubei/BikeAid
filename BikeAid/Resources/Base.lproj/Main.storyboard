@@ -180,13 +180,14 @@
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tu-Me-r76" userLabel="27.5 Button" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tu-Me-r76" userLabel="27.5 Button" customClass="CheckButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="172" y="306" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Fd4-l5-8IR"/>
                                     <constraint firstAttribute="height" constant="30" id="lTF-zn-SMZ"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="IcI-nS-yIp"/>
                                 </connections>
@@ -197,15 +198,16 @@
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ao-LD-Vbv" userLabel="29 Button" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ao-LD-Vbv" userLabel="29 Button" customClass="CheckButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="172" y="360" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="dxW-99-h0q"/>
                                     <constraint firstAttribute="width" constant="30" id="xWh-v3-iLX"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="I6b-45-84b"/>
+                                    <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="NrN-1C-rq3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m86-hI-Jsx">
@@ -214,15 +216,16 @@
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5H-Hb-WDU" userLabel="26 Button" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5H-Hb-WDU" userLabel="26 Button" customClass="CheckButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="172" y="414" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Fe5-78-SBZ"/>
                                     <constraint firstAttribute="width" constant="30" id="J0a-qq-gdP"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="X1l-a0-u6K"/>
+                                    <action selector="sizeSelected:" destination="hJ6-de-XgI" eventType="touchUpInside" id="kTm-t0-7UX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -251,6 +254,9 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="ffL-vM-Ue9" id="jMh-my-Ip7"/>
+                        <outletCollection property="sizeButtons" destination="2Tu-Me-r76" collectionClass="NSMutableArray" id="3La-rr-RZL"/>
+                        <outletCollection property="sizeButtons" destination="4Ao-LD-Vbv" collectionClass="NSMutableArray" id="vaa-7Z-vv6"/>
+                        <outletCollection property="sizeButtons" destination="r5H-Hb-WDU" collectionClass="NSMutableArray" id="EjL-1o-Dal"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMX-wH-ccR" userLabel="First Responder" sceneMemberID="firstResponder"/>
