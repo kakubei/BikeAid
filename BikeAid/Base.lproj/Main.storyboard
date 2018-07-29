@@ -32,58 +32,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-uc-pLt" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="244.5" y="222" width="95" height="95"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-uc-pLt" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="244" y="222.5" width="95" height="95"/>
+                                <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="tubeButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="KKw-xH-EsJ"/>
                                     <constraint firstAttribute="width" constant="95" id="umX-qt-GPI"/>
                                 </constraints>
-                                <state key="normal" title="Tube"/>
+                                <state key="normal" image="tube"/>
                                 <connections>
                                     <action selector="tubeButtonPressed:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="PR3-sh-O3e"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-L6-NRO" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="35.5" y="222" width="95" height="95"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-L6-NRO" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="35" y="222" width="95" height="95"/>
+                                <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="pumpButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="H6a-O2-9dC"/>
                                     <constraint firstAttribute="width" constant="95" id="K34-As-zjz"/>
                                 </constraints>
-                                <state key="normal" title="Pump"/>
+                                <state key="normal" image="pump"/>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-OC-XH4" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="244.5" y="527" width="95" height="95"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-OC-XH4" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="244" y="527" width="95" height="95"/>
+                                <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="helpButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="1kt-GP-E0K"/>
                                     <constraint firstAttribute="width" constant="95" id="bZu-ZA-s7K"/>
                                 </constraints>
-                                <state key="normal" title="Help"/>
+                                <state key="normal" image="help"/>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-8O-Ajn" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="35.5" y="527" width="95" height="95"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-8O-Ajn" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="35" y="527" width="95" height="95"/>
+                                <color key="backgroundColor" red="0.29411764709999999" green="0.29411764709999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="patchButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="mXA-OL-5EY"/>
                                     <constraint firstAttribute="width" constant="95" id="zIN-wt-Sb7"/>
                                 </constraints>
-                                <state key="normal" title="Patch"/>
+                                <state key="normal" image="patch"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-6t-Ic5" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="82" y="317" width="210" height="210"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="mainButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="fgf-OY-0Xp"/>
                                     <constraint firstAttribute="width" constant="210" id="vF9-xg-qeH"/>
                                 </constraints>
-                                <state key="normal" image="cross"/>
+                                <state key="normal" image="crossWhite"/>
                                 <connections>
                                     <action selector="mainButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="JnS-3L-kJG"/>
                                 </connections>
@@ -276,6 +276,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cross" width="147" height="147"/>
+        <image name="crossWhite" width="147" height="147"/>
+        <image name="help" width="41" height="56"/>
+        <image name="patch" width="66" height="66"/>
+        <image name="pump" width="55" height="57"/>
+        <image name="tube" width="66" height="66"/>
     </resources>
 </document>

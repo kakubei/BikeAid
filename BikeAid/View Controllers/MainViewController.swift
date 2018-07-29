@@ -17,10 +17,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var patchButton: CircularButton!
     @IBOutlet weak var helpButton: CircularButton!
     
-    var leftButtons: [UIButton]!
     var topButtons: [UIButton]!
     var rightButtons: [UIButton]!
     var bottomButtons: [UIButton]!
+    var leftButtons: [UIButton]!
     
     @IBOutlet var ancillaryButtons: [CircularButton]!
     
@@ -35,10 +35,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        leftButtons = [pumpButton, patchButton]
         topButtons = [pumpButton, tubeButton]
         rightButtons = [tubeButton, helpButton]
         bottomButtons = [patchButton, helpButton]
+        leftButtons = [pumpButton, patchButton]
         
         setupConstraints()
     }
@@ -51,36 +51,33 @@ class MainViewController: UIViewController {
             }
         }
         
-        centerConstraints.forEach { $0.activate() }
-        
         // Show buttons constraints
         leftButtons.forEach { button in
             button.snp.makeConstraints { make in
                 leadingConstraints.append(make.leading.equalTo(mainButton.snp.leading).offset(-offsetAmount).constraint)
             }
         }
+        leadingConstraints.forEach { $0.deactivate() }
         
         rightButtons.forEach { button in
             button.snp.makeConstraints { make in
                 trailingConstraints.append(make.trailing.equalTo(mainButton.snp.trailing).offset(offsetAmount).constraint)
             }
         }
+        trailingConstraints.forEach { $0.deactivate() }
         
         topButtons.forEach { button in
             button.snp.makeConstraints { make in
                 topConstraints.append(make.bottom.equalTo(mainButton.snp.top).constraint)
             }
         }
+        topConstraints.forEach { $0.deactivate() }
         
         bottomButtons.forEach { button in
             button.snp.makeConstraints { make in
                 bottomConstraints.append(make.top.equalTo(mainButton.snp.bottom).constraint)
             }
         }
-        
-        leadingConstraints.forEach { $0.deactivate() }
-        trailingConstraints.forEach { $0.deactivate() }
-        topConstraints.forEach { $0.deactivate() }
         bottomConstraints.forEach { $0.deactivate() }
     }
 
@@ -104,7 +101,7 @@ class MainViewController: UIViewController {
         topConstraints.forEach { $0.activate() }
         bottomConstraints.forEach { $0.activate() }
         
-        ancillaryButtons.forEach { $0.show() }
+//        ancillaryButtons.forEach { $0.show() }
     }
     
     private func hideButtons() {
@@ -115,7 +112,7 @@ class MainViewController: UIViewController {
         
         centerConstraints.forEach { $0.activate() }
         
-        ancillaryButtons.forEach { $0.hide() }
+//        ancillaryButtons.forEach { $0.hide() }
     }
     
     @IBAction func mainButtonTapped(_ sender: CircularButton) {
