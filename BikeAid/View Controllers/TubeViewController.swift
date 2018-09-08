@@ -16,7 +16,7 @@ class TubeViewController: UIViewController {
     
     @IBOutlet weak var sendButton: SendButton! {
         didSet {
-            sendButton.isEnabled = false
+            sendButton.isEnabled = false            
         }
     }
     

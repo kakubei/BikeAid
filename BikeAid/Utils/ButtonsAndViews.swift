@@ -68,10 +68,8 @@ class CheckButton: CircularButton {
         didSet {
             if wasSelected == true {
                 self.backgroundColor = UIColor.lobsterRed
-                self.setImage(#imageLiteral(resourceName: "checkWhite"), for: .normal)
             } else {
-                self.backgroundColor = .white
-                self.setImage(nil, for: .normal)
+                self.backgroundColor = .white                
             }                      
         }
     }

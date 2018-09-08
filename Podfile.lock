@@ -1,19 +1,17 @@
 PODS:
-  - GoogleMaps (2.5.0):
-    - GoogleMaps/Maps (= 2.5.0)
-  - GoogleMaps/Base (2.5.0)
-  - GoogleMaps/Maps (2.5.0):
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
     - GoogleMaps/Base
-  - GooglePlaces (2.5.0):
-    - GoogleMaps/Base (= 2.5.0)
-  - Nimble (7.0.3)
-  - Quick (1.2.0)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
-  - RealmSwift (3.0.2):
-    - Realm (= 3.0.2)
-  - Reveal-SDK (15)
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
+  - Reveal-SDK (17)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
@@ -22,10 +20,8 @@ PODS:
 DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
-  - Nimble
-  - Quick
   - RealmSwift
-  - Reveal-SDK (~> 15)
+  - Reveal-SDK
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -34,8 +30,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GoogleMaps
     - GooglePlaces
-    - Nimble
-    - Quick
     - Realm
     - RealmSwift
     - Reveal-SDK
@@ -44,17 +38,15 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
-  GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
-  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
-  Reveal-SDK: 25e21896c478b60b948f876043f91570d368d23d
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
+  Reveal-SDK: a6df49f47319bd19a110c960c498af32df72c0af
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 2385a4039a87bf2658cda3fafed48c9652ed3347
+PODFILE CHECKSUM: c84f44dc68cd6ae2f254f72476321641ad2fe0c9
 
 COCOAPODS: 1.5.3

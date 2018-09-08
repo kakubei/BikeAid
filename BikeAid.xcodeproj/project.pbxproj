@@ -11,7 +11,7 @@
 		5898A6A6937E4E07E1ED892F /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898AD15E889E27338ACF6AA /* DetailsModel.swift */; };
 		B57D0C5C9CD7C96843B74C1A /* Pods_BikeAidTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9164F2FD30AF94EE54C9FD /* Pods_BikeAidTests.framework */; };
 		CA1DCBF11FAA52A10049DAE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCBF01FAA52A10049DAE7 /* AppDelegate.swift */; };
-		CA1DCBF31FAA52A10049DAE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */; };
+		CA1DCBF31FAA52A10049DAE7 /* BikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCBF21FAA52A10049DAE7 /* BikesViewController.swift */; };
 		CA1DCBF61FAA52A10049DAE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF41FAA52A10049DAE7 /* Main.storyboard */; };
 		CA1DCBF81FAA52A10049DAE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF71FAA52A10049DAE7 /* Assets.xcassets */; };
 		CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */; };
@@ -29,6 +29,7 @@
 		CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A3210BD60A00FB01A6 /* MainViewController.swift */; };
 		CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */; };
 		CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD0185E1FC731E4001AEEB8 /* client_id.json */; };
+		CAFA164E2143EE84007EC05D /* circular-font in Resources */ = {isa = PBXBuildFile; fileRef = CAFA164D2143EE83007EC05D /* circular-font */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,7 @@
 		B8B2D5BB3053393A2D8A17E4 /* Pods-BikeAidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeAidTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA1DCBED1FAA52A10049DAE7 /* BikeAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1DCBF01FAA52A10049DAE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA1DCBF21FAA52A10049DAE7 /* BikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewController.swift; sourceTree = "<group>"; };
 		CA1DCBF51FAA52A10049DAE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA1DCBF71FAA52A10049DAE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA1DCBFA1FAA52A10049DAE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		CAC794A3210BD60A00FB01A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
 		CAD0185E1FC731E4001AEEB8 /* client_id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = client_id.json; sourceTree = "<group>"; };
+		CAFA164D2143EE83007EC05D /* circular-font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "circular-font"; sourceTree = "<group>"; };
 		D8659485BB35FED0855CCFC1 /* Pods_BikeAid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeAid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 		CA6E2B2B210DBE170001F10B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CAFA164D2143EE83007EC05D /* circular-font */,
 				CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */,
 				CA1DCBF41FAA52A10049DAE7 /* Main.storyboard */,
 				CA1DCBF71FAA52A10049DAE7 /* Assets.xcassets */,
@@ -163,7 +166,7 @@
 		CABE7E2B1FC5C2270097BEAE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CA1DCBF21FAA52A10049DAE7 /* ViewController.swift */,
+				CA1DCBF21FAA52A10049DAE7 /* BikesViewController.swift */,
 				CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */,
 				CAC669111FD9855C008F8593 /* DetailsVC.swift */,
 				CAC794A3210BD60A00FB01A6 /* MainViewController.swift */,
@@ -233,7 +236,6 @@
 				CA1DCBFD1FAA52A10049DAE7 /* Sources */,
 				CA1DCBFE1FAA52A10049DAE7 /* Frameworks */,
 				CA1DCBFF1FAA52A10049DAE7 /* Resources */,
-				EBECB1BF08C13952E7FF94F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAFA164E2143EE84007EC05D /* circular-font in Resources */,
 				CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */,
 				CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */,
 				CA1DCBF81FAA52A10049DAE7 /* Assets.xcassets in Resources */,
@@ -374,7 +377,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-15/iOS/RevealServer.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -393,26 +396,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EBECB1BF08C13952E7FF94F0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -423,7 +406,7 @@
 				CABE7E2D1FC5C4CD0097BEAE /* GoogleMapsManager.swift in Sources */,
 				CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */,
 				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
-				CA1DCBF31FAA52A10049DAE7 /* ViewController.swift in Sources */,
+				CA1DCBF31FAA52A10049DAE7 /* BikesViewController.swift in Sources */,
 				CA1DCBF11FAA52A10049DAE7 /* AppDelegate.swift in Sources */,
 				CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */,
 				CAC794A1210BCB2200FB01A6 /* ButtonsAndViews.swift in Sources */,

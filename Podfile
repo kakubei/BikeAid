@@ -12,13 +12,13 @@ target 'BikeAid' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SnapKit'
-  pod 'Reveal-SDK', '~> 15', :configurations => ['Debug']
+  pod 'Reveal-SDK', :configurations => ['Debug']
 
   target 'BikeAidTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Quick'
-    pod 'Nimble'
+#    pod 'Quick'
+#    pod 'Nimble'
   end
 
 end

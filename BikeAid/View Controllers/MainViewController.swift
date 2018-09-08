@@ -47,9 +47,10 @@ class MainViewController: UIViewController {
         // Initial constraints
         ancillaryButtons.forEach { button in
             button.snp.makeConstraints { make in
-                centerConstraints.append(make.center.equalTo(mainButton.center).constraint)
+                centerConstraints.append(make.center.equalTo(mainButton.snp.center).constraint)
             }
         }
+        centerConstraints.forEach { $0.activate() }
         
         // Show buttons constraints
         leftButtons.forEach { button in
@@ -79,6 +80,7 @@ class MainViewController: UIViewController {
             }
         }
         bottomConstraints.forEach { $0.deactivate() }
+        
     }
 
     private func animateButtons(hide: Bool = false) {

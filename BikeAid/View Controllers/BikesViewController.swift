@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BikesViewController: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension BikesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.bikeModel.bikes.count
     }
@@ -52,7 +52,7 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension BikesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.currentBike = self.bikeModel.bikes[indexPath.row]
         performSegue(withIdentifier: self.detailsSegue, sender: self)
