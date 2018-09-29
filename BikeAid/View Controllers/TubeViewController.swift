@@ -14,8 +14,6 @@ class TubeViewController: UIViewController {
     
     @IBOutlet weak var backButton: CircularButton!
     
-    @IBOutlet var sizeButtons: [CheckButton]!
-    
     @IBOutlet weak var sendButton: SendButton! {
         didSet {
             sendButton.isEnabled = false
@@ -23,9 +21,10 @@ class TubeViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var button1: CheckButton!
-    @IBOutlet weak var button2: CheckButton!
-    @IBOutlet weak var button3: CheckButton!
+    @IBOutlet weak var tableView: UITableView!
+    
+    // TODO: Move this somewhere else
+    let tubesArray: [WheelSize] = [.twentySeven, .twentyNine, .twentySix]
     
     let bag = DisposeBag()
     
@@ -36,20 +35,20 @@ class TubeViewController: UIViewController {
     }
 
     internal func listenForRadioButtonTapped() {
-        let _ = sizeButtons.compactMap { button in
-            button.rx.tap.bind { [unowned self] _ in
-                // call a method with button tag and sort the rest out?
-                let selectedButton = self.sizeButtons[button.tag]
-                self.animateTranstition(for: selectedButton)
-                self.sendButton.isEnabled = true // TODO: Bind this to having one of the buttons tapped
-            }
-        }
+//        let _ = sizeButtons.compactMap { button in
+//            button.rx.tap.bind { [unowned self] _ in
+//                // call a method with button tag and sort the rest out?
+//                let selectedButton = self.sizeButtons[button.tag]
+//                self.animateTranstition(for: selectedButton)
+//                self.sendButton.isEnabled = true // TODO: Bind this to having one of the buttons tapped
+//            }
+//        }
     }
     
     private func animateTranstition(for selectedButton: CheckButton) {
         selectedButton.alpha = 0
         
-        sizeButtons.forEach { $0.wasSelected = false } // reset all buttons
+//        sizeButtons.forEach { $0.wasSelected = false } // reset all buttons
         
         selectedButton.wasSelected = true
         
@@ -66,4 +65,28 @@ class TubeViewController: UIViewController {
     @IBAction func sendButtonTapped(_ sender: CircularButton) {
     }
     
+}
+
+extension TubeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.Cell.tubeCell.rawValue, for: indexPath) as! TubeCell
+        animateTranstition(for: cell.tubeSizeButton)        
+    }
+
+}
+
+extension TubeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tubesArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.Cell.tubeCell.rawValue, for: indexPath) as! TubeCell
+        
+        let tube = tubesArray[indexPath.row]
+        
+        cell.tubeSizeLabel.text = tube.number
+        
+        return cell
+    }
 }

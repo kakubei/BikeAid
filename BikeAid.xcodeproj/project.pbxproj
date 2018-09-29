@@ -17,6 +17,8 @@
 		CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */; };
 		CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC101FAA52B60049DAE7 /* Bike.swift */; };
 		CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */; };
+		CA3BC6B121601BA900F12642 /* TubeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B021601BA900F12642 /* TubeCell.swift */; };
+		CA3BC6B32160211200F12642 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B22160211200F12642 /* StoryboardConstants.swift */; };
 		CA411D8A1FF7D17B005A5C55 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA411D891FF7D17B005A5C55 /* Database.swift */; };
 		CA411D941FFA6A8D005A5C55 /* BikeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA411D931FFA6A8D005A5C55 /* BikeModelTests.swift */; };
 		CA6E2B2D210DBE400001F10B /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */; };
@@ -62,6 +64,8 @@
 		CA1DCC071FAA52A10049DAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1DCC101FAA52B60049DAE7 /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModel.swift; sourceTree = "<group>"; };
+		CA3BC6B021601BA900F12642 /* TubeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeCell.swift; sourceTree = "<group>"; };
+		CA3BC6B22160211200F12642 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
 		CA411D891FF7D17B005A5C55 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CA411D931FFA6A8D005A5C55 /* BikeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModelTests.swift; sourceTree = "<group>"; };
 		CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster_1.3.otf; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				CABE7E2C1FC5C4CD0097BEAE /* GoogleMapsManager.swift */,
 				5898AD15E889E27338ACF6AA /* DetailsModel.swift */,
 				CA411D891FF7D17B005A5C55 /* Database.swift */,
+				CA3BC6B021601BA900F12642 /* TubeCell.swift */,
+				CA3BC6B22160211200F12642 /* StoryboardConstants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABE7E2D1FC5C4CD0097BEAE /* GoogleMapsManager.swift in Sources */,
+				CA3BC6B32160211200F12642 /* StoryboardConstants.swift in Sources */,
 				CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */,
 				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
 				CA1DCBF31FAA52A10049DAE7 /* BikesViewController.swift in Sources */,
@@ -448,6 +455,7 @@
 				CAC794A1210BCB2200FB01A6 /* ButtonsAndViews.swift in Sources */,
 				CA6E2B31210DD41F0001F10B /* UIColorUtils.swift in Sources */,
 				CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */,
+				CA3BC6B121601BA900F12642 /* TubeCell.swift in Sources */,
 				CA411D8A1FF7D17B005A5C55 /* Database.swift in Sources */,
 				CAFA16532143FDF0007EC05D /* SendAnimatedView.swift in Sources */,
 				CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */,

@@ -18,6 +18,10 @@ enum WheelSize: Double {
     var description: String {
         return String(describing: self).capitalized
     }
+    
+    var number: String {
+        return String(describing: self.rawValue)
+    }
 }
 
 enum BikeClass {
