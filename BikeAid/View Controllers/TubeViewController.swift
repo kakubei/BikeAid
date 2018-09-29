@@ -22,10 +22,9 @@ class TubeViewController: UIViewController {
             sendButton.backgroundColourForState()
         }
     }
-    
-    @IBOutlet weak var button1: CheckButton!
-    @IBOutlet weak var button2: CheckButton!
-    @IBOutlet weak var button3: CheckButton!
+
+    let allTubes: [WheelSize] = [.twentySeven, .twentyNine, .twentySix]
+    var selectedTube: WheelSize?
     
     let bag = DisposeBag()
     
@@ -38,12 +37,17 @@ class TubeViewController: UIViewController {
     internal func listenForRadioButtonTapped() {
         let _ = sizeButtons.compactMap { button in
             button.rx.tap.bind { [unowned self] _ in
-                // call a method with button tag and sort the rest out?
-                let selectedButton = self.sizeButtons[button.tag]
-                self.animateTranstition(for: selectedButton)
-                self.sendButton.isEnabled = true // TODO: Bind this to having one of the buttons tapped
+                self.tubeButtonTapped(button)
             }
         }
+    }
+    
+    internal func tubeButtonTapped(_ button: CheckButton) {
+        let selectedButton = self.sizeButtons[button.tag]
+        self.animateTranstition(for: selectedButton)
+        self.sendButton.isEnabled = true
+        // Yes, it's a bit dodgy to do it this way but don't want to use a tableView just for this
+        self.selectedTube = self.allTubes[button.tag] // Use this value for the notification
     }
     
     private func animateTranstition(for selectedButton: CheckButton) {
