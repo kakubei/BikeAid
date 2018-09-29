@@ -11,7 +11,7 @@ import UIKit
 
 extension UIView {
     
-    func fadeIn(duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, options: UIViewAnimationOptions = [.curveLinear], completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+    func fadeIn(duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, options: UIView.AnimationOptions = [.curveLinear], completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
         
         guard alpha != 1 else {
             completion(true)
@@ -23,7 +23,7 @@ extension UIView {
         }, completion: completion)
     }
     
-    func fadeOut(duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, options: UIViewAnimationOptions = [.curveLinear], completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
+    func fadeOut(duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, options: UIView.AnimationOptions = [.curveLinear], completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
         
         guard alpha != 0 else {
             completion(true)

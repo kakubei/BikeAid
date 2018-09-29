@@ -79,6 +79,13 @@ enum MotorType {
     }
 }
 
+protocol Bikeable {
+    var name: String { get set }
+    var bikeClass: BikeClass { get }
+    var wheelSize: WheelSize { get }
+    var suspension: BikeSuspension? { get }
+}
+
 protocol Electricable: Bikeable {
     var motor: MotorType? { get }
     var batteryLife: Double? { get }
@@ -98,13 +105,6 @@ extension Electricable {
     var mileage: Int {
         return 50
     }
-}
-
-protocol Bikeable {
-    var name: String { get set }
-    var bikeClass: BikeClass { get }
-    var wheelSize: WheelSize { get }
-    var suspension: BikeSuspension? { get }
 }
 
 class Bike: Bikeable {

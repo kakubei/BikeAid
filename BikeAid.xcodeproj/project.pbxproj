@@ -30,6 +30,8 @@
 		CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */; };
 		CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD0185E1FC731E4001AEEB8 /* client_id.json */; };
 		CAFA164E2143EE84007EC05D /* circular-font in Resources */ = {isa = PBXBuildFile; fileRef = CAFA164D2143EE83007EC05D /* circular-font */; };
+		CAFA16512143FBE3007EC05D /* SendAnimatedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFA16502143FBE3007EC05D /* SendAnimatedView.xib */; };
+		CAFA16532143FDF0007EC05D /* SendAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFA16522143FDF0007EC05D /* SendAnimatedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
 		CAD0185E1FC731E4001AEEB8 /* client_id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = client_id.json; sourceTree = "<group>"; };
 		CAFA164D2143EE83007EC05D /* circular-font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "circular-font"; sourceTree = "<group>"; };
+		CAFA16502143FBE3007EC05D /* SendAnimatedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendAnimatedView.xib; sourceTree = "<group>"; };
+		CAFA16522143FDF0007EC05D /* SendAnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAnimatedView.swift; sourceTree = "<group>"; };
 		D8659485BB35FED0855CCFC1 /* Pods_BikeAid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeAid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +128,7 @@
 				CAC794A5210BD9B700FB01A6 /* Utils */,
 				CABE7E2A1FC5C21B0097BEAE /* Models */,
 				CABE7E2B1FC5C2270097BEAE /* View Controllers */,
+				CAFA164F2143FBAD007EC05D /* Views */,
 				CA6E2B2B210DBE170001F10B /* Resources */,
 				CA1DCBFC1FAA52A10049DAE7 /* Info.plist */,
 			);
@@ -185,6 +190,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		CAFA164F2143FBAD007EC05D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAFA16502143FBE3007EC05D /* SendAnimatedView.xib */,
+				CAFA16522143FDF0007EC05D /* SendAnimatedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F59B2CF11A6E8F3F0729F06B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +250,7 @@
 				CA1DCBFD1FAA52A10049DAE7 /* Sources */,
 				CA1DCBFE1FAA52A10049DAE7 /* Frameworks */,
 				CA1DCBFF1FAA52A10049DAE7 /* Resources */,
+				E6FCE34F4301DCD7998876E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +310,7 @@
 			files = (
 				CAFA164E2143EE84007EC05D /* circular-font in Resources */,
 				CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */,
+				CAFA16512143FBE3007EC05D /* SendAnimatedView.xib in Resources */,
 				CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */,
 				CA1DCBF81FAA52A10049DAE7 /* Assets.xcassets in Resources */,
 				CA1DCBF61FAA52A10049DAE7 /* Main.storyboard in Resources */,
@@ -377,7 +393,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-18/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -394,6 +410,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAid/Pods-BikeAid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FCE34F4301DCD7998876E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BikeAidTests/Pods-BikeAidTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -413,6 +449,7 @@
 				CA6E2B31210DD41F0001F10B /* UIColorUtils.swift in Sources */,
 				CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */,
 				CA411D8A1FF7D17B005A5C55 /* Database.swift in Sources */,
+				CAFA16532143FDF0007EC05D /* SendAnimatedView.swift in Sources */,
 				CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */,
 				CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */,
 				CA6E2B2F210DC0B60001F10B /* TubeViewController.swift in Sources */,
@@ -576,7 +613,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -592,7 +629,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
