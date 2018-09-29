@@ -27,7 +27,7 @@ class CircularView: UIView {
     }
     
     func setup() {
-        self.layer.cornerRadius = self.bounds.height / 2
+        layer.cornerRadius = bounds.height / 2
     }
 
 }
@@ -49,28 +49,24 @@ class CircularButton: UIButton {
     }
     
     func setup() {
-        self.layer.cornerRadius = self.bounds.height / 2
-        self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOpacity = 0.3
-        self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 6
+        layer.cornerRadius = bounds.height / 2
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowOpacity = 0.3
+        layer.shadowOffset = CGSize.zero
+        layer.shadowRadius = 6
     }
 }
 
 class CheckButton: CircularButton {
     override func setup() {
         super.setup()
-        self.backgroundColor = .white
-        self.tintColor = .white
+        backgroundColor = .white
+        tintColor = .white
     }
     
     public var wasSelected: Bool = false {
         didSet {
-            if wasSelected == true {
-                self.backgroundColor = UIColor.lobsterRed
-            } else {
-                self.backgroundColor = .white                
-            }                      
+            backgroundColor = wasSelected ? .lobsterRed : .white
         }
     }
 }
@@ -82,21 +78,17 @@ class SendButton: CircularButton {
     }
     
     public func backgroundColourForState() {
-        if self.isEnabled {
-            self.backgroundColor = UIColor.lobsterRed
-        } else {
-            self.backgroundColor = UIColor.fadedLobsterRed
-        }
+        backgroundColor = isEnabled ? .lobsterRed : .fadedLobsterRed
     }
 }
 
 class CircularViewWithShadow: CircularView {
     // I forgot how the fuck to extend a UIView class!!!
     override func setup() {
-        self.layer.cornerRadius = self.bounds.height / 2
-        self.layer.shadowColor = UIColor.gray.cgColor
-        self.layer.shadowOpacity = 0.3
-        self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 6
+        layer.cornerRadius = bounds.height / 2
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowOpacity = 0.3
+        layer.shadowOffset = CGSize.zero
+        layer.shadowRadius = 6
     }
 }

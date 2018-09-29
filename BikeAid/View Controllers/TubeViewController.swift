@@ -37,21 +37,13 @@ class TubeViewController: UIViewController {
 
     internal func listenForRadioButtonTapped() {
         let _ = sizeButtons.compactMap { button in
-            button.rx.tap.bind {
-                print("tapped button's tag is:", button.tag)
+            button.rx.tap.bind { [unowned self] _ in
                 // call a method with button tag and sort the rest out?
-                let selectedButton: CheckButton = self.sizeButtons[button.tag]
+                let selectedButton = self.sizeButtons[button.tag]
                 self.animateTranstition(for: selectedButton)
-//                self.sendButton.isEnabled = true // TODO: Bind this to having one of the buttons tapped
+                self.sendButton.isEnabled = true // TODO: Bind this to having one of the buttons tapped
             }
         }
-        
-        // Not sure I like this, this would have to be in the scope of the method we call from inside the compactMap above. Might as well just enable it there.
-        // Or a separate observable for when a button is selected...
-        let hasSelection = Variable(false)
-        hasSelection.value = sizeButtons.filter { $0.isSelected } != []
-        hasSelection.asObservable().bind(to: sendButton.rx.isEnabled).disposed(by: bag)
-        
     }
     
     private func animateTranstition(for selectedButton: CheckButton) {
