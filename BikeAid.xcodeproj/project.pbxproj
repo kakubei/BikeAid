@@ -20,6 +20,7 @@
 		CA3BC6B32160211200F12642 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B22160211200F12642 /* StoryboardConstants.swift */; };
 		CA3BC6B62160E1A900F12642 /* TubeControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B52160E1A900F12642 /* TubeControllerViewModel.swift */; };
 		CA3BC6B82160EC0400F12642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B72160EC0400F12642 /* AppDelegate.swift */; };
+		CA3BC6BA2160F4BE00F12642 /* NumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B92160F4BE00F12642 /* NumberUtils.swift */; };
 		CA411D8A1FF7D17B005A5C55 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA411D891FF7D17B005A5C55 /* Database.swift */; };
 		CA411D941FFA6A8D005A5C55 /* BikeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA411D931FFA6A8D005A5C55 /* BikeModelTests.swift */; };
 		CA6E2B2D210DBE400001F10B /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */; };
@@ -68,6 +69,7 @@
 		CA3BC6B22160211200F12642 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
 		CA3BC6B52160E1A900F12642 /* TubeControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeControllerViewModel.swift; sourceTree = "<group>"; };
 		CA3BC6B72160EC0400F12642 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA3BC6B92160F4BE00F12642 /* NumberUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberUtils.swift; sourceTree = "<group>"; };
 		CA411D891FF7D17B005A5C55 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CA411D931FFA6A8D005A5C55 /* BikeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModelTests.swift; sourceTree = "<group>"; };
 		CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster_1.3.otf; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				CAC794A0210BCB2200FB01A6 /* ButtonsAndViews.swift */,
 				CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */,
 				CA6E2B30210DD41F0001F10B /* UIColorUtils.swift */,
+				CA3BC6B92160F4BE00F12642 /* NumberUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				CAFA16532143FDF0007EC05D /* SendAnimatedView.swift in Sources */,
 				CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */,
 				CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */,
+				CA3BC6BA2160F4BE00F12642 /* NumberUtils.swift in Sources */,
 				CA6E2B2F210DC0B60001F10B /* TubeViewController.swift in Sources */,
 				5898A6A6937E4E07E1ED892F /* DetailsModel.swift in Sources */,
 			);

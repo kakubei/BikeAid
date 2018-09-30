@@ -20,7 +20,7 @@ enum WheelSize: Double {
     }
     
     var number: String {
-        return String(describing: self.rawValue)
+        return self.rawValue.cleanString
     }
 }
 

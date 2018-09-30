@@ -23,15 +23,21 @@ class TubeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let viewModel = TubeVCModel()
+    var viewModel = TubeVCModel()
     
     let bag = DisposeBag()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    internal func tubeSizeAlert() {
+        let sizeTube = viewModel.requestedTubeSize ?? ""
+        let alert = UIAlertController(title: "Distress signal sent!", message: "You requested a \(String(describing: sizeTube)) size tube.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cool 😎", style: .default, handler: nil))
+
+        present(alert, animated: true) { Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: {_ in
+            self.dismiss(animated: true, completion: nil)
+        })
+        }
 
     }
-
     
     @IBAction func backButtonTapped(_ sender: CircularButton) {
         self.dismiss(animated: true, completion: nil)
@@ -39,13 +45,17 @@ class TubeViewController: UIViewController {
 
     
     @IBAction func sendButtonTapped(_ sender: CircularButton) {
+        tubeSizeAlert()
     }
+    
     
 }
 
 extension TubeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.setTubeSize(for: indexPath.row)
         let cell = tableView.cellForRow(at: indexPath) as! TubeCell
+        sendButton.isEnabled = true // TODO: Handle this through Rx
         cell.tubeSizeButton.wasSelected = true
     }
     

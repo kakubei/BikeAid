@@ -11,8 +11,10 @@ import Foundation
 protocol TubeModelable {
     var tubesArray: [WheelSize] { get }
     var rows: Int { get }
+    var requestedTubeSize: String? { get }
     
     func tubeSizeText(for row: Int) -> String
+    mutating func setTubeSize(for row: Int)
 }
 
 struct TubeVCModel: TubeModelable {
@@ -23,10 +25,16 @@ struct TubeVCModel: TubeModelable {
         return tubesArray.count
     }
     
+    var requestedTubeSize: String?
+    
     func tubeSizeText(for row: Int) -> String {
         let tube = tubesArray[row]
         
         return tube.number
+    }
+    
+    public mutating func setTubeSize(for row: Int) {
+        requestedTubeSize = tubeSizeText(for: row)
     }
     
 }
