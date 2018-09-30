@@ -31,20 +31,8 @@ class TubeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        listenForRadioButtonTapped()
     }
 
-    internal func listenForRadioButtonTapped() {
-//        let _ = sizeButtons.compactMap { button in
-//            button.rx.tap.bind { [unowned self] _ in
-//                // call a method with button tag and sort the rest out?
-//                let selectedButton = self.sizeButtons[button.tag]
-//                self.animateTranstition(for: selectedButton)
-//                self.sendButton.isEnabled = true // TODO: Bind this to having one of the buttons tapped
-//            }
-//        }
-    }
-    
     
     @IBAction func backButtonTapped(_ sender: CircularButton) {
         self.dismiss(animated: true, completion: nil)
@@ -59,10 +47,13 @@ class TubeViewController: UIViewController {
 extension TubeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! TubeCell
-//        animateTranstition(for: cell.tubeSizeButton)
-        cell.tubeSizeButton.wasSelected = true // Call the transition animation from the button itself, not the VC
+        cell.tubeSizeButton.wasSelected = true
     }
-
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! TubeCell
+        cell.tubeSizeButton.wasSelected = false
+    }
 }
 
 extension TubeViewController: UITableViewDataSource {
@@ -75,7 +66,7 @@ extension TubeViewController: UITableViewDataSource {
         
         let tube = tubesArray[indexPath.row]
         
-        cell.tubeSizeLabel.text = tube.number
+        cell.tubeSizeLabel.text = tube.number        
         
         return cell
     }

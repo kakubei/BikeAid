@@ -175,7 +175,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What size tube?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-p1-UI0">
-                                <rect key="frame" x="20" y="221" width="335" height="47"/>
+                                <rect key="frame" x="43.5" y="221" width="288" height="51"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="40"/>
                                 <color key="textColor" red="0.53000000000000003" green="0.53000000000000003" blue="0.53000000000000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -202,7 +202,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uqD-c3-tOj">
-                                <rect key="frame" x="20" y="276" width="335" height="196"/>
+                                <rect key="frame" x="20" y="280" width="335" height="192"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tubeCell" id="mE5-86-jQX" customClass="TubeCell" customModule="BikeAid" customModuleProvider="target">
@@ -212,14 +212,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="27.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-rf-w2F">
-                                                    <rect key="frame" x="15" y="7" width="56" height="31"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-rf-w2F">
+                                                    <rect key="frame" x="15" y="24.5" width="41.5" height="31"/>
                                                     <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="24"/>
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tu-Me-r76" userLabel="27.5 Button" customClass="CheckButton" customModule="BikeAid" customModuleProvider="target">
-                                                    <rect key="frame" x="152.5" y="7" width="30" height="30"/>
+                                                    <rect key="frame" x="152.5" y="25" width="30" height="30"/>
                                                     <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="Fd4-l5-8IR"/>
@@ -259,13 +259,13 @@
                             <constraint firstItem="zJo-nx-bI8" firstAttribute="top" secondItem="ffL-vM-Ue9" secondAttribute="bottom" id="THk-ow-aJO"/>
                             <constraint firstItem="uqD-c3-tOj" firstAttribute="leading" secondItem="PLF-jf-uXy" secondAttribute="leading" constant="20" id="Urb-1f-1Z3"/>
                             <constraint firstItem="uqD-c3-tOj" firstAttribute="top" secondItem="QPI-p1-UI0" secondAttribute="bottom" constant="8" id="bGB-qE-1hf"/>
-                            <constraint firstItem="QPI-p1-UI0" firstAttribute="leading" secondItem="PLF-jf-uXy" secondAttribute="leading" constant="20" id="bT0-U6-jCF"/>
+                            <constraint firstItem="QPI-p1-UI0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PLF-jf-uXy" secondAttribute="leading" id="bT0-U6-jCF"/>
                             <constraint firstItem="ffL-vM-Ue9" firstAttribute="top" secondItem="PLF-jf-uXy" secondAttribute="top" constant="20" id="bV4-5e-Gy2"/>
                             <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" secondItem="uqD-c3-tOj" secondAttribute="trailing" constant="20" id="cw3-MW-b9u"/>
                             <constraint firstItem="7Ei-aE-Ciz" firstAttribute="top" secondItem="uqD-c3-tOj" secondAttribute="bottom" id="eTP-zI-ifi"/>
                             <constraint firstAttribute="bottom" secondItem="Hzf-Pg-E9M" secondAttribute="bottom" constant="-40" id="gyr-bv-uOo"/>
                             <constraint firstItem="ffL-vM-Ue9" firstAttribute="leading" secondItem="PLF-jf-uXy" secondAttribute="leading" constant="16" id="rIG-tz-IaM"/>
-                            <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" secondItem="QPI-p1-UI0" secondAttribute="trailing" constant="20" id="umg-6c-HMT"/>
+                            <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QPI-p1-UI0" secondAttribute="trailing" id="umg-6c-HMT"/>
                             <constraint firstItem="QPI-p1-UI0" firstAttribute="top" secondItem="DvF-eo-Z81" secondAttribute="bottom" constant="44" id="yCs-h8-1ZK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PLF-jf-uXy"/>

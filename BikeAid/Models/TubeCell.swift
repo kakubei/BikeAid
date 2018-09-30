@@ -13,5 +13,10 @@ class TubeCell: UITableViewCell {
     @IBOutlet weak var tubeSizeLabel: UILabel!
     @IBOutlet weak var tubeSizeButton: CheckButton!   
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        backgroundColor = .clear
+    }
 
 }
