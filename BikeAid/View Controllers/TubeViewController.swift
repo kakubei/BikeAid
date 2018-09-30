@@ -23,8 +23,7 @@ class TubeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    // TODO: Move this somewhere else
-    let tubesArray: [WheelSize] = [.twentySeven, .twentyNine, .twentySix]
+    let viewModel = TubeVCModel()
     
     let bag = DisposeBag()
     
@@ -58,15 +57,13 @@ extension TubeViewController: UITableViewDelegate {
 
 extension TubeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tubesArray.count
+        return viewModel.rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.Cell.tubeCell.rawValue, for: indexPath) as! TubeCell
         
-        let tube = tubesArray[indexPath.row]
-        
-        cell.tubeSizeLabel.text = tube.number        
+        cell.tubeSizeLabel.text = viewModel.tubeSizeText(for: indexPath.row)
         
         return cell
     }
