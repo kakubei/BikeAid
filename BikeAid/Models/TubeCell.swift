@@ -13,10 +13,5 @@ class TubeCell: UITableViewCell {
     @IBOutlet weak var tubeSizeLabel: UILabel!
     @IBOutlet weak var tubeSizeButton: CheckButton!   
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }

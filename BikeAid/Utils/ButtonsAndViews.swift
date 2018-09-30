@@ -67,6 +67,15 @@ class CheckButton: CircularButton {
     public var wasSelected: Bool = false {
         didSet {
             backgroundColor = wasSelected ? .lobsterRed : .white
+            animateStateTransition()
+        }
+    }
+    
+    internal func animateStateTransition() {
+        alpha = 0
+        
+        UIView.animate(withDuration: 0.3) {
+            self.alpha = 1
         }
     }
 }

@@ -45,17 +45,6 @@ class TubeViewController: UIViewController {
 //        }
     }
     
-    private func animateTranstition(for selectedButton: CheckButton) {
-        selectedButton.alpha = 0
-        
-//        sizeButtons.forEach { $0.wasSelected = false } // reset all buttons
-        
-        selectedButton.wasSelected = true
-        
-        UIView.animate(withDuration: 0.3) {
-            selectedButton.alpha = 1
-        }
-    }
     
     @IBAction func backButtonTapped(_ sender: CircularButton) {
         self.dismiss(animated: true, completion: nil)
@@ -69,8 +58,9 @@ class TubeViewController: UIViewController {
 
 extension TubeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardConstants.Cell.tubeCell.rawValue, for: indexPath) as! TubeCell
-        animateTranstition(for: cell.tubeSizeButton)        
+        let cell = tableView.cellForRow(at: indexPath) as! TubeCell
+//        animateTranstition(for: cell.tubeSizeButton)
+        cell.tubeSizeButton.wasSelected = true // Call the transition animation from the button itself, not the VC
     }
 
 }
