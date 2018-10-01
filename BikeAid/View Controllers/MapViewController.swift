@@ -18,6 +18,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet var customMarkerView: CustomMarkerView!
     
     
     // TODO: Put all these into a model
@@ -100,13 +101,7 @@ class MapViewController: UIViewController {
 //        marker.snippet = "In the UK?"
         marker.map = mapView
         
-        let customMarker = UINib(nibName: StoryboardConstants.ViewController.View.CustomMarkerView.rawValue, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! CustomMarkerView
-        customMarker.snp.makeConstraints { constraint in
-            constraint.width.equalTo(50)
-            constraint.height.equalTo(30)
-        }
-        
-        marker.iconView = customMarker // custom view is not visible :(
+        marker.iconView = customMarkerView
     }
     
 }

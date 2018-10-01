@@ -10,6 +10,10 @@ import UIKit
 
 class CustomMarkerView: UIView {
 
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        frame.size.height = 30
+        frame.size.width = 30
+    }
 
 }

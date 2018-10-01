@@ -444,9 +444,36 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="jCk-n4-aRm" id="3nL-PL-hYX"/>
+                        <outlet property="customMarkerView" destination="8Sc-9s-cNU" id="Xb3-BV-iF9"/>
                         <outlet property="mapView" destination="bml-aS-LqY" id="eWf-rz-68g"/>
                     </connections>
                 </viewController>
+                <view contentMode="scaleToFill" id="8Sc-9s-cNU" customClass="CustomMarkerView" customModule="BikeAid" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-00-WFB" customClass="RoundedView" customModule="BikeAid" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                            <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="U1y-Cx-4IA">
+                            <rect key="frame" x="0.0" y="5" width="100" height="70"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="DcR-00-WFB" secondAttribute="trailing" id="8TY-YC-Fcl"/>
+                        <constraint firstItem="rxS-fD-3Yb" firstAttribute="bottom" secondItem="U1y-Cx-4IA" secondAttribute="bottom" constant="5" id="ESv-He-THg"/>
+                        <constraint firstAttribute="bottom" secondItem="DcR-00-WFB" secondAttribute="bottom" id="EtK-bi-IH3"/>
+                        <constraint firstItem="DcR-00-WFB" firstAttribute="top" secondItem="8Sc-9s-cNU" secondAttribute="top" id="LA4-FR-t9B"/>
+                        <constraint firstItem="U1y-Cx-4IA" firstAttribute="leading" secondItem="rxS-fD-3Yb" secondAttribute="leading" id="RYp-zR-koS"/>
+                        <constraint firstAttribute="trailing" secondItem="U1y-Cx-4IA" secondAttribute="trailing" id="Um1-Lk-qrb"/>
+                        <constraint firstItem="U1y-Cx-4IA" firstAttribute="leading" secondItem="rxS-fD-3Yb" secondAttribute="leading" id="X5q-GT-7hL"/>
+                        <constraint firstItem="U1y-Cx-4IA" firstAttribute="top" secondItem="rxS-fD-3Yb" secondAttribute="top" constant="5" id="pmR-r6-8Wf"/>
+                        <constraint firstItem="DcR-00-WFB" firstAttribute="leading" secondItem="8Sc-9s-cNU" secondAttribute="leading" id="yFz-9q-COE"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="rxS-fD-3Yb"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSO-Tg-Oew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1047.2" y="126.38680659670166"/>
@@ -489,6 +516,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bicycle" width="204.80000305175781" height="204.80000305175781"/>
         <image name="crossWhite" width="147" height="147"/>
         <image name="help" width="41" height="56"/>
         <image name="map-with-pin" width="48" height="48"/>
