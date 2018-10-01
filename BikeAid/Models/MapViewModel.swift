@@ -87,9 +87,9 @@ class MapViewModel: NSObject, MapViewModelable {
     func showMarker(position: CLLocationCoordinate2D) {
         marker.position = position
         
+        marker.title = "Nowhere"
         reverseGeocodeCoordinate(position)
         
-        marker.title = "Nowhere"
 //        marker.snippet = "In the UK?"
         marker.map = mapView
         
@@ -166,19 +166,17 @@ extension MapViewModel: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
-        reverseGeocodeCoordinate(position.target)
+        
     }
     
     func zoom(to coordinate: CLLocationCoordinate2D) {
         let newCameraPosition = GMSCameraPosition.camera(withTarget: coordinate, zoom: zoomLevel)
         
-//        guard !camera.isEqual(newCameraPosition) else { return }
-        
         mapView.animate(to: newCameraPosition)
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        reverseGeocodeCoordinate(marker.position)
+//        reverseGeocodeCoordinate(marker.position)
     
         return true
     }

@@ -34,8 +34,6 @@ extension UIView {
         }
     }
     
-    // end of Ray Wenderlich extension
-    
     func unlock() {
         if let lockView = viewWithTag(10) {
             UIView.animate(withDuration: 0.2, animations: {
@@ -44,6 +42,20 @@ extension UIView {
                 lockView.removeFromSuperview()
             })
         }
+    }
+    
+    // end of Ray Wenderlich extension
+
+    
+    public func renderToImage(afterScreenUpdates: Bool = false) -> UIImage {
+        let rendererFormat = UIGraphicsImageRendererFormat.default()
+        rendererFormat.opaque = false
+        let renderer = UIGraphicsImageRenderer(size: bounds.size, format: rendererFormat)
+        
+        let snapshotImage = renderer.image { _ in
+            drawHierarchy(in: bounds, afterScreenUpdates: afterScreenUpdates)
+        }
+        return snapshotImage
     }
     
     func fadeIn(duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, options: UIView.AnimationOptions = [.curveLinear], completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {

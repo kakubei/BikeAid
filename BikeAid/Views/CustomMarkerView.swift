@@ -12,8 +12,10 @@ class CustomMarkerView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        frame.size.height = 30
-        frame.size.width = 30
+        let iconSize: CGFloat = 30
+        
+        frame.size.height = iconSize
+        frame.size.width = iconSize
     }
 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDK-7r-b5e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGW-ST-K2o">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -402,10 +402,10 @@
             </objects>
             <point key="canvasLocation" x="1202.4000000000001" y="126.38680659670166"/>
         </scene>
-        <!--Delegate-->
+        <!--Map View Controller-->
         <scene sceneID="PCV-12-vty">
             <objects>
-                <viewController id="gGW-ST-K2o" customClass="MapViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gGW-ST-K2o" userLabel="Map View Controller" customClass="MapViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zeh-yG-pkf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
