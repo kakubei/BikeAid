@@ -8,15 +8,15 @@
 
 import Foundation
 import GoogleMaps
-import GooglePlaces
+//import GooglePlaces
 import RxSwift
 
 protocol MapViewModelable {
     var addressObservable: PublishSubject<String> { get }
 //    var mapView: GMSMapView! { get }
     
-    var likelyPlaces: [GMSPlace] { get }
-    var selectedPlace: GMSPlace? { get }
+//    var likelyPlaces: [GMSPlace] { get }
+//    var selectedPlace: GMSPlace? { get }
     
 //    func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D)
 }
@@ -25,13 +25,13 @@ class MapViewModel: NSObject, MapViewModelable {
     var mapView: GMSMapView!
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
-    var placesClient: GMSPlacesClient!
+//    var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 15.0
     
     var customMarkerView: CustomMarkerView!
     
-    var likelyPlaces: [GMSPlace] = []
-    var selectedPlace: GMSPlace?
+//    var likelyPlaces: [GMSPlace] = []
+//    var selectedPlace: GMSPlace?
     
     var marker = GMSMarker()
     
@@ -59,7 +59,7 @@ class MapViewModel: NSObject, MapViewModelable {
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         
-        placesClient = GMSPlacesClient.shared()
+//        placesClient = GMSPlacesClient.shared()
         
         customMarkerView = UINib(nibName: StoryboardConstants.ViewController.View.CustomMarkerView.rawValue, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? CustomMarkerView
     }
@@ -97,26 +97,26 @@ class MapViewModel: NSObject, MapViewModelable {
     }
     
     // Populate the array with the list of likely places.
-    func listLikelyPlaces() {
+//    func listLikelyPlaces() {
         // Clean up from previous sessions.
-        likelyPlaces.removeAll()
-
-        placesClient.currentPlace(callback: { (placeLikelihoods, error) -> Void in
-            if let error = error {
-                // TODO: Handle the error.
-                print("Current Place error: \(error.localizedDescription)")
-                return
-            }
-
-            // Get likely places and add to the list.
-            if let likelihoodList = placeLikelihoods {
-                for likelihood in likelihoodList.likelihoods {
-                    let place = likelihood.place
-                    self.likelyPlaces.append(place)
-                }
-            }
-        })
-    }
+//        likelyPlaces.removeAll()
+//
+//        placesClient.currentPlace(callback: { (placeLikelihoods, error) -> Void in
+//            if let error = error {
+//                // TODO: Handle the error.
+//                print("Current Place error: \(error.localizedDescription)")
+//                return
+//            }
+//
+//            // Get likely places and add to the list.
+//            if let likelihoodList = placeLikelihoods {
+//                for likelihood in likelihoodList.likelihoods {
+//                    let place = likelihood.place
+//                    self.likelyPlaces.append(place)
+//                }
+//            }
+//        })
+//    }
 }
 
 

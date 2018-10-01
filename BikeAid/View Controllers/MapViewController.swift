@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import GoogleMaps
-import GooglePlaces
 import RxSwift
 import RxCocoa
+import GoogleMaps
 
 class MapViewController: UIViewController {
     
