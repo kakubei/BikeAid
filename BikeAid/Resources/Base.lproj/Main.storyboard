@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hJ6-de-XgI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGW-ST-K2o">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,21 +15,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Map View Controller-->
-        <scene sceneID="VEh-XS-lZq">
-            <objects>
-                <viewController id="qTG-nj-YmP" customClass="MapViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EjX-3b-jm2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="hT3-nH-iY8"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14P-Nt-BPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1087" y="126"/>
-        </scene>
         <!--Main View Controller-->
         <scene sceneID="bwM-DJ-gwc">
             <objects>
@@ -175,7 +160,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What size tube?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-p1-UI0">
-                                <rect key="frame" x="43.5" y="221" width="288" height="51"/>
+                                <rect key="frame" x="43.5" y="221" width="288" height="47"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="40"/>
                                 <color key="textColor" red="0.53000000000000003" green="0.53000000000000003" blue="0.53000000000000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -202,7 +187,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uqD-c3-tOj">
-                                <rect key="frame" x="20" y="280" width="335" height="192"/>
+                                <rect key="frame" x="20" y="276" width="335" height="196"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tubeCell" id="mE5-86-jQX" customClass="TubeCell" customModule="BikeAid" customModuleProvider="target">
@@ -247,7 +232,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.95999999999999996" blue="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DvF-eo-Z81" firstAttribute="centerX" secondItem="GGM-CZ-flf" secondAttribute="centerX" id="0M2-Ni-PvI"/>
                             <constraint firstItem="7Ei-aE-Ciz" firstAttribute="centerX" secondItem="PLF-jf-uXy" secondAttribute="centerX" id="2GT-zt-rk6"/>
@@ -415,6 +400,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXH-Yg-ccu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1202.4000000000001" y="126.38680659670166"/>
+        </scene>
+        <!--Delegate-->
+        <scene sceneID="PCV-12-vty">
+            <objects>
+                <viewController id="gGW-ST-K2o" customClass="MapViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zeh-yG-pkf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bml-aS-LqY" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="1" green="0.99042291752602185" blue="0.95894837889068052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gGW-ST-K2o" id="NhP-b5-fNH"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bml-aS-LqY" firstAttribute="top" secondItem="niG-ni-N1u" secondAttribute="top" id="6GN-s1-MiP"/>
+                            <constraint firstItem="bml-aS-LqY" firstAttribute="leading" secondItem="niG-ni-N1u" secondAttribute="leading" id="E2L-ge-6SD"/>
+                            <constraint firstItem="niG-ni-N1u" firstAttribute="trailing" secondItem="bml-aS-LqY" secondAttribute="trailing" id="e5G-hP-1xL"/>
+                            <constraint firstItem="niG-ni-N1u" firstAttribute="bottom" secondItem="bml-aS-LqY" secondAttribute="bottom" id="ibG-03-SZX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="niG-ni-N1u"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="bml-aS-LqY" id="eWf-rz-68g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSO-Tg-Oew" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1046" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Czb-vI-zGw">
