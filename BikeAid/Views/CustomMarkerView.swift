@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurstomMarkerView: UIView {
+class CustomMarkerView: UIView {
 
     
 

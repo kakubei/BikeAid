@@ -11,6 +11,7 @@ import GoogleMaps
 import GooglePlaces
 import RxSwift
 import RxCocoa
+import SnapKit
 
 class MapViewController: UIViewController {
     
@@ -99,7 +100,11 @@ class MapViewController: UIViewController {
 //        marker.snippet = "In the UK?"
         marker.map = mapView
         
-        let customMarker = RoundedView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        let customMarker = UINib(nibName: StoryboardConstants.ViewController.View.CustomMarkerView.rawValue, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! CustomMarkerView
+        customMarker.snp.makeConstraints { constraint in
+            constraint.width.equalTo(50)
+            constraint.height.equalTo(30)
+        }
         
         marker.iconView = customMarker // custom view is not visible :(
     }

@@ -12,6 +12,10 @@ struct StoryboardConstants {
     
     enum ViewController: String {
         case TubeController
+        
+        enum View: String {
+            case CustomMarkerView
+        }
     }
     
     enum Cell: String {
