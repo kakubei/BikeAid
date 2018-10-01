@@ -18,7 +18,7 @@ protocol MapViewModelable {
     var likelyPlaces: [GMSPlace] { get }
     var selectedPlace: GMSPlace? { get }
     
-    func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D)
+//    func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D)
 }
 
 class MapViewModel: NSObject, MapViewModelable {
@@ -33,13 +33,18 @@ class MapViewModel: NSObject, MapViewModelable {
     var likelyPlaces: [GMSPlace] = []
     var selectedPlace: GMSPlace?
     
+    var marker = GMSMarker()
+    
     var addressObservable = PublishSubject<String>()
+    
+    let bag = DisposeBag()
     
     init(mapView: GMSMapView) {
         self.mapView = mapView
         
         super.init()
-        self.configureMap()
+        configureMap()
+        listenForAddress()
     }
     
     internal func configureMap() {
@@ -59,7 +64,15 @@ class MapViewModel: NSObject, MapViewModelable {
         customMarkerView = UINib(nibName: StoryboardConstants.ViewController.View.CustomMarkerView.rawValue, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? CustomMarkerView
     }
     
-    public func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
+    internal func listenForAddress() {
+        addressObservable.asObservable()
+            .subscribe(onNext: { [weak self] address in
+                self?.marker.title = address
+            })
+            .disposed(by: bag)
+    }
+    
+    func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
         let geocoder = GMSGeocoder()
         
         geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
@@ -72,10 +85,12 @@ class MapViewModel: NSObject, MapViewModelable {
     }
     
     func showMarker(position: CLLocationCoordinate2D) {
-        let marker = GMSMarker()
         marker.position = position
-        //        marker.title = "Somewhere"
-        //        marker.snippet = "In the UK?"
+        
+        reverseGeocodeCoordinate(position)
+        
+        marker.title = "Nowhere"
+//        marker.snippet = "In the UK?"
         marker.map = mapView
         
         marker.iconView = customMarkerView
@@ -147,16 +162,29 @@ extension MapViewModel: CLLocationManagerDelegate {
 extension MapViewModel: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
-//        addressLabel.lock()
+
     }
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         reverseGeocodeCoordinate(position.target)
     }
     
+    func zoom(to coordinate: CLLocationCoordinate2D) {
+        let newCameraPosition = GMSCameraPosition.camera(withTarget: coordinate, zoom: zoomLevel)
+        
+//        guard !camera.isEqual(newCameraPosition) else { return }
+        
+        mapView.animate(to: newCameraPosition)
+    }
+    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         reverseGeocodeCoordinate(marker.position)
-        
+    
+        return true
+    }
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        zoom(to: marker.position)
         return true
     }
     
