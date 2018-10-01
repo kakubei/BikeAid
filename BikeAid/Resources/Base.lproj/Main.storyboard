@@ -444,7 +444,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="jCk-n4-aRm" id="3nL-PL-hYX"/>
-                        <outlet property="customMarkerView" destination="8Sc-9s-cNU" id="Xb3-BV-iF9"/>
                         <outlet property="mapView" destination="bml-aS-LqY" id="eWf-rz-68g"/>
                     </connections>
                 </viewController>

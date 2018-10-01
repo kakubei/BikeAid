@@ -18,7 +18,6 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet var customMarkerView: CustomMarkerView!
     
     var viewModel: MapViewModelable?
 
@@ -48,8 +47,7 @@ class MapViewController: UIViewController {
     }
 
     private func configureModel() {
-        viewModel = MapViewModel(mapView: mapView, markerView: customMarkerView)
-        
+        viewModel = MapViewModel(mapView: mapView)        
     }
     
 }

@@ -13,17 +13,12 @@ import RxSwift
 
 protocol MapViewModelable {
     var addressObservable: PublishSubject<String> { get }
-    var mapView: GMSMapView! { get }
-    var locationManager: CLLocationManager { get }
-    var currentLocation: CLLocation? { get }
-    var placesClient: GMSPlacesClient! { get }
-    var zoomLevel: Float { get }
+//    var mapView: GMSMapView! { get }
     
     var likelyPlaces: [GMSPlace] { get }
     var selectedPlace: GMSPlace? { get }
     
     func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D)
-    func showMarker(position: CLLocationCoordinate2D)
 }
 
 class MapViewModel: NSObject, MapViewModelable {
@@ -40,11 +35,10 @@ class MapViewModel: NSObject, MapViewModelable {
     
     var addressObservable = PublishSubject<String>()
     
-    init(mapView: GMSMapView, markerView: CustomMarkerView) {
+    init(mapView: GMSMapView) {
         self.mapView = mapView
-        self.customMarkerView = markerView
         
-        super.init()        
+        super.init()
         self.configureMap()
     }
     
@@ -61,6 +55,8 @@ class MapViewModel: NSObject, MapViewModelable {
         locationManager.delegate = self
         
         placesClient = GMSPlacesClient.shared()
+        
+        customMarkerView = UINib(nibName: StoryboardConstants.ViewController.View.CustomMarkerView.rawValue, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? CustomMarkerView
     }
     
     public func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {

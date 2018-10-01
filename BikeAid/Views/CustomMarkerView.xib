@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="thK-Iq-mmd" customClass="CustomMarkerView" customModule="BikeAid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Wh-wl-SrI" customClass="RoundedView" customModule="BikeAid" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                    <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="xjN-IW-8lN">
+                    <rect key="frame" x="0.0" y="5" width="50" height="20"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5Wh-wl-SrI" secondAttribute="trailing" id="7PC-NF-bxX"/>
+                <constraint firstAttribute="trailing" secondItem="xjN-IW-8lN" secondAttribute="trailing" id="FOq-6f-1hf"/>
+                <constraint firstItem="xjN-IW-8lN" firstAttribute="top" secondItem="ivt-pE-81U" secondAttribute="top" constant="5" id="O5T-qM-U7H"/>
+                <constraint firstItem="5Wh-wl-SrI" firstAttribute="leading" secondItem="thK-Iq-mmd" secondAttribute="leading" id="OBu-N5-3OU"/>
+                <constraint firstItem="ivt-pE-81U" firstAttribute="bottom" secondItem="xjN-IW-8lN" secondAttribute="bottom" constant="5" id="cQJ-g3-t1u"/>
+                <constraint firstItem="xjN-IW-8lN" firstAttribute="leading" secondItem="ivt-pE-81U" secondAttribute="leading" id="cV6-3W-ecj"/>
+                <constraint firstAttribute="bottom" secondItem="5Wh-wl-SrI" secondAttribute="bottom" id="n1e-y5-hlf"/>
+                <constraint firstItem="5Wh-wl-SrI" firstAttribute="top" secondItem="thK-Iq-mmd" secondAttribute="top" id="qfu-rz-G1h"/>
+                <constraint firstItem="xjN-IW-8lN" firstAttribute="leading" secondItem="ivt-pE-81U" secondAttribute="leading" id="qiX-M6-6cq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ivt-pE-81U"/>
+            <point key="canvasLocation" x="-306.39999999999998" y="-454.27286356821594"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bicycle" width="204.80000305175781" height="204.80000305175781"/>
+    </resources>
+</document>
