@@ -9,6 +9,29 @@
 import UIKit
 
 
+class RoundedView: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
+    
+    func setup() {
+        layer.cornerRadius = 7
+    }
+    
+}
+
 class CircularView: UIView {
 
     override init(frame: CGRect) {

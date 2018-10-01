@@ -9,11 +9,14 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import RxSwift
+import RxCocoa
 
 class MapViewController: UIViewController {
     
     
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var addressLabel: UILabel!
     
     
     // TODO: Put all these into a model
@@ -24,15 +27,29 @@ class MapViewController: UIViewController {
     
     var likelyPlaces: [GMSPlace] = []
     var selectedPlace: GMSPlace?
+    
+    let viewModel: MapViewModelable = MapViewModel()
 
+    let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureMap()
+        listenForAddress()
+    }
+    
+    internal func listenForAddress() {
+        viewModel.addressObservable.asObservable().bind(to: addressLabel.rx.text).disposed(by: bag)
     }
 
     private func configureMap() {
+        mapView.delegate = self
+        
+        mapView.settings.myLocationButton = true
+        
+        addressLabel.text = ""
+        
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -68,9 +85,13 @@ class MapViewController: UIViewController {
     func showMarker(position: CLLocationCoordinate2D){
         let marker = GMSMarker()
         marker.position = position
-        marker.title = "Somewhere"
-        marker.snippet = "In the UK?"
+//        marker.title = "Somewhere"
+//        marker.snippet = "In the UK?"
         marker.map = mapView
+        
+        let customMarker = RoundedView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        
+        marker.iconView = customMarker // custom view is not visible :(
     }
     
 }
@@ -115,6 +136,16 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        viewModel.reverseGeocodeCoordinate(position.target)
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        viewModel.reverseGeocodeCoordinate(marker.position)
+        
+        return true
+    }
     
     //MARK - GMSMarker Dragging
     func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {

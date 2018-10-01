@@ -16,6 +16,9 @@
 		CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */; };
 		CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC101FAA52B60049DAE7 /* Bike.swift */; };
 		CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */; };
+		CA2C40A221623070001383BF /* CurstomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A121623070001383BF /* CurstomMarkerView.swift */; };
+		CA2C40A421623094001383BF /* CurstomMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2C40A321623094001383BF /* CurstomMarkerView.xib */; };
+		CA2C40A6216233A9001383BF /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A5216233A9001383BF /* MapViewModel.swift */; };
 		CA3BC6B121601BA900F12642 /* TubeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B021601BA900F12642 /* TubeCell.swift */; };
 		CA3BC6B32160211200F12642 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B22160211200F12642 /* StoryboardConstants.swift */; };
 		CA3BC6B62160E1A900F12642 /* TubeControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B52160E1A900F12642 /* TubeControllerViewModel.swift */; };
@@ -65,6 +68,9 @@
 		CA1DCC071FAA52A10049DAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1DCC101FAA52B60049DAE7 /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModel.swift; sourceTree = "<group>"; };
+		CA2C40A121623070001383BF /* CurstomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurstomMarkerView.swift; sourceTree = "<group>"; };
+		CA2C40A321623094001383BF /* CurstomMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurstomMarkerView.xib; sourceTree = "<group>"; };
+		CA2C40A5216233A9001383BF /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		CA3BC6B021601BA900F12642 /* TubeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeCell.swift; sourceTree = "<group>"; };
 		CA3BC6B22160211200F12642 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
 		CA3BC6B52160E1A900F12642 /* TubeControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeControllerViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 				CA3BC6B021601BA900F12642 /* TubeCell.swift */,
 				CA3BC6B22160211200F12642 /* StoryboardConstants.swift */,
 				CA3BC6B52160E1A900F12642 /* TubeControllerViewModel.swift */,
+				CA2C40A5216233A9001383BF /* MapViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +214,8 @@
 			children = (
 				CAFA16502143FBE3007EC05D /* SendAnimatedView.xib */,
 				CAFA16522143FDF0007EC05D /* SendAnimatedView.swift */,
+				CA2C40A121623070001383BF /* CurstomMarkerView.swift */,
+				CA2C40A321623094001383BF /* CurstomMarkerView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2C40A421623094001383BF /* CurstomMarkerView.xib in Resources */,
 				CAFA164E2143EE84007EC05D /* circular-font in Resources */,
 				CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */,
 				CAFA16512143FBE3007EC05D /* SendAnimatedView.xib in Resources */,
@@ -456,11 +466,13 @@
 				CA3BC6B82160EC0400F12642 /* AppDelegate.swift in Sources */,
 				CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */,
 				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
+				CA2C40A221623070001383BF /* CurstomMarkerView.swift in Sources */,
 				CA1DCBF31FAA52A10049DAE7 /* BikesViewController.swift in Sources */,
 				CA3BC6B62160E1A900F12642 /* TubeControllerViewModel.swift in Sources */,
 				CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */,
 				CAC794A1210BCB2200FB01A6 /* ButtonsAndViews.swift in Sources */,
 				CA6E2B31210DD41F0001F10B /* UIColorUtils.swift in Sources */,
+				CA2C40A6216233A9001383BF /* MapViewModel.swift in Sources */,
 				CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */,
 				CA3BC6B121601BA900F12642 /* TubeCell.swift in Sources */,
 				CA411D8A1FF7D17B005A5C55 /* Database.swift in Sources */,
