@@ -40,7 +40,17 @@ class MapViewController: UIViewController {
     }
     
     internal func listenForAddress() {
-        viewModel.addressObservable.asObservable().bind(to: addressLabel.rx.text).disposed(by: bag)
+//        viewModel.addressObservable.asObservable()
+//            .bind(to: addressLabel.rx.text)
+//            .disposed(by: bag)
+        
+        // TODO: Surely there's a way to add addressLabel.unlock() with the rx trick above?
+        viewModel.addressObservable.asObservable()
+            .subscribe(onNext: { [weak self] address in
+                self?.addressLabel.unlock()
+                self?.addressLabel.text = address
+            })
+        .disposed(by: bag)
     }
 
     private func configureMap() {
@@ -136,6 +146,10 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+                addressLabel.lock()
+    }
     
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         viewModel.reverseGeocodeCoordinate(position.target)
