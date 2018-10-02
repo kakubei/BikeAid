@@ -14,6 +14,12 @@
 		CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */; };
 		CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC101FAA52B60049DAE7 /* Bike.swift */; };
 		CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */; };
+		CA2665262163905F00A9746F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665242163905F00A9746F /* Quick.framework */; };
+		CA2665272163905F00A9746F /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665242163905F00A9746F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2665282163905F00A9746F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665252163905F00A9746F /* Nimble.framework */; };
+		CA2665292163905F00A9746F /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665252163905F00A9746F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA26652A2163916E00A9746F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665242163905F00A9746F /* Quick.framework */; };
+		CA26652B2163918500A9746F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665252163905F00A9746F /* Nimble.framework */; };
 		CA2C40A221623070001383BF /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A121623070001383BF /* CustomMarkerView.swift */; };
 		CA2C40A6216233A9001383BF /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A5216233A9001383BF /* MapViewModel.swift */; };
 		CA2C40A821625869001383BF /* CustomMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2C40A721625869001383BF /* CustomMarkerView.xib */; };
@@ -81,7 +87,9 @@
 				CA2C412721637759001383BF /* GoogleMapsCore.framework in Embed Frameworks */,
 				CA2C412521637759001383BF /* GoogleMapsBase.framework in Embed Frameworks */,
 				CA2C412D21637759001383BF /* RxBlocking.framework in Embed Frameworks */,
+				CA2665272163905F00A9746F /* Quick.framework in Embed Frameworks */,
 				CA2C413521637759001383BF /* SnapKit.framework in Embed Frameworks */,
+				CA2665292163905F00A9746F /* Nimble.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +123,8 @@
 		CA1DCC071FAA52A10049DAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1DCC101FAA52B60049DAE7 /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
 		CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModel.swift; sourceTree = "<group>"; };
+		CA2665242163905F00A9746F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = ../Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		CA2665252163905F00A9746F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		CA2C40A121623070001383BF /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
 		CA2C40A5216233A9001383BF /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		CA2C40A721625869001383BF /* CustomMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMarkerView.xib; sourceTree = "<group>"; };
@@ -162,7 +172,9 @@
 				CA2C412621637759001383BF /* GoogleMapsCore.framework in Frameworks */,
 				CA2C412421637759001383BF /* GoogleMapsBase.framework in Frameworks */,
 				CA2C412C21637759001383BF /* RxBlocking.framework in Frameworks */,
+				CA2665262163905F00A9746F /* Quick.framework in Frameworks */,
 				CA2C413421637759001383BF /* SnapKit.framework in Frameworks */,
+				CA2665282163905F00A9746F /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +182,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA26652A2163916E00A9746F /* Quick.framework in Frameworks */,
+				CA26652B2163918500A9746F /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +309,8 @@
 		CAE1BB322162900700BCA1DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA2665252163905F00A9746F /* Nimble.framework */,
+				CA2665242163905F00A9746F /* Quick.framework */,
 				CA2C4102216376E6001383BF /* GoogleMaps.framework */,
 				CA2C40FD216376E5001383BF /* GoogleMapsBase.framework */,
 				CA2C4101216376E6001383BF /* GoogleMapsCore.framework */,
@@ -331,6 +347,7 @@
 				CA1DCBEA1FAA52A10049DAE7 /* Frameworks */,
 				CA1DCBEB1FAA52A10049DAE7 /* Resources */,
 				CA2C413621637759001383BF /* Embed Frameworks */,
+				CA26652321638BC800A9746F /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -424,6 +441,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA26652321638BC800A9746F /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA1DCBE91FAA52A10049DAE7 /* Sources */ = {
@@ -650,6 +688,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6K396NRDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BikeAid",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BikeAidTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAidTests;
@@ -670,6 +713,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6K396NRDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BikeAid",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BikeAidTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAidTests;
