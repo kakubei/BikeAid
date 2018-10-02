@@ -1,3 +1,4 @@
 github "ReactiveX/RxSwift" "4.3.1"
 github "SnapKit/SnapKit" "4.0.1"
+github "leoneparise/GoogleMaps-Carthage" "2.7.0"
 github "realm/realm-cocoa" "v3.10.0"

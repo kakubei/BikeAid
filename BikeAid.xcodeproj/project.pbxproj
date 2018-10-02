@@ -8,23 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5898A6A6937E4E07E1ED892F /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898AD15E889E27338ACF6AA /* DetailsModel.swift */; };
-		CA0E97D621629B4000E5E75E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA0E97D521629B4000E5E75E /* GoogleMaps.bundle */; };
-		CA0E97DE21629C9300E5E75E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97D821629C9300E5E75E /* CoreData.framework */; };
-		CA0E97DF21629C9300E5E75E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97D921629C9300E5E75E /* CoreText.framework */; };
-		CA0E97E021629C9300E5E75E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97DA21629C9300E5E75E /* CoreTelephony.framework */; };
-		CA0E97E121629C9300E5E75E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97DB21629C9300E5E75E /* CoreLocation.framework */; };
-		CA0E97E221629C9300E5E75E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97DC21629C9300E5E75E /* CoreImage.framework */; };
-		CA0E97E321629C9300E5E75E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97DD21629C9300E5E75E /* CoreGraphics.framework */; };
-		CA0E97ED21629D0000E5E75E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97E421629D0000E5E75E /* libc++.tbd */; };
-		CA0E97EE21629D0000E5E75E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97E521629D0000E5E75E /* SystemConfiguration.framework */; };
-		CA0E97EF21629D0000E5E75E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97E621629D0000E5E75E /* OpenGLES.framework */; };
-		CA0E97F021629D0000E5E75E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97E721629D0000E5E75E /* QuartzCore.framework */; };
-		CA0E97F121629D0000E5E75E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97E821629D0000E5E75E /* ImageIO.framework */; };
-		CA0E97F221629D0000E5E75E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97E921629D0000E5E75E /* Accelerate.framework */; };
-		CA0E97F321629D0000E5E75E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97EA21629D0000E5E75E /* GLKit.framework */; };
-		CA0E97F421629D0000E5E75E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97EB21629D0000E5E75E /* libz.tbd */; };
-		CA0E97F521629D0000E5E75E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E97EC21629D0000E5E75E /* UIKit.framework */; };
-		CA0E97F621629D3100E5E75E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBFC1FAA52A10049DAE7 /* Info.plist */; };
 		CA1DCBF31FAA52A10049DAE7 /* BikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCBF21FAA52A10049DAE7 /* BikesViewController.swift */; };
 		CA1DCBF61FAA52A10049DAE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF41FAA52A10049DAE7 /* Main.storyboard */; };
 		CA1DCBF81FAA52A10049DAE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF71FAA52A10049DAE7 /* Assets.xcassets */; };
@@ -34,6 +17,24 @@
 		CA2C40A221623070001383BF /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A121623070001383BF /* CustomMarkerView.swift */; };
 		CA2C40A6216233A9001383BF /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A5216233A9001383BF /* MapViewModel.swift */; };
 		CA2C40A821625869001383BF /* CustomMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2C40A721625869001383BF /* CustomMarkerView.xib */; };
+		CA2C412221637759001383BF /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C4102216376E6001383BF /* GoogleMaps.framework */; };
+		CA2C412321637759001383BF /* GoogleMaps.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C4102216376E6001383BF /* GoogleMaps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2C412421637759001383BF /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FD216376E5001383BF /* GoogleMapsBase.framework */; };
+		CA2C412521637759001383BF /* GoogleMapsBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FD216376E5001383BF /* GoogleMapsBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2C412621637759001383BF /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C4101216376E6001383BF /* GoogleMapsCore.framework */; };
+		CA2C412721637759001383BF /* GoogleMapsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C4101216376E6001383BF /* GoogleMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2C412821637759001383BF /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FA216376E5001383BF /* Realm.framework */; };
+		CA2C412921637759001383BF /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FA216376E5001383BF /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2C412A21637759001383BF /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40F9216376E5001383BF /* RealmSwift.framework */; };
+		CA2C412B21637759001383BF /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40F9216376E5001383BF /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2C412C21637759001383BF /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FC216376E5001383BF /* RxBlocking.framework */; };
+		CA2C412D21637759001383BF /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FC216376E5001383BF /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2C412E21637759001383BF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FF216376E6001383BF /* RxCocoa.framework */; };
+		CA2C412F21637759001383BF /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FF216376E6001383BF /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2C413021637759001383BF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FE216376E6001383BF /* RxSwift.framework */; };
+		CA2C413121637759001383BF /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C40FE216376E6001383BF /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA2C413421637759001383BF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C4100216376E6001383BF /* SnapKit.framework */; };
+		CA2C413521637759001383BF /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2C4100216376E6001383BF /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA3BC6B121601BA900F12642 /* TubeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B021601BA900F12642 /* TubeCell.swift */; };
 		CA3BC6B32160211200F12642 /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B22160211200F12642 /* StoryboardConstants.swift */; };
 		CA3BC6B62160E1A900F12642 /* TubeControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B52160E1A900F12642 /* TubeControllerViewModel.swift */; };
@@ -50,26 +51,6 @@
 		CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A3210BD60A00FB01A6 /* MainViewController.swift */; };
 		CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */; };
 		CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD0185E1FC731E4001AEEB8 /* client_id.json */; };
-		CAE1BB552162905200BCA1DF /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3F2162902500BCA1DF /* GoogleMaps.framework */; };
-		CAE1BB562162905200BCA1DF /* GoogleMaps.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3F2162902500BCA1DF /* GoogleMaps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB572162905200BCA1DF /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB392162902500BCA1DF /* GoogleMapsBase.framework */; };
-		CAE1BB582162905200BCA1DF /* GoogleMapsBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB392162902500BCA1DF /* GoogleMapsBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB592162905200BCA1DF /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB422162902500BCA1DF /* GoogleMapsCore.framework */; };
-		CAE1BB5A2162905200BCA1DF /* GoogleMapsCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB422162902500BCA1DF /* GoogleMapsCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB5B2162905200BCA1DF /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB402162902500BCA1DF /* Realm.framework */; };
-		CAE1BB5C2162905200BCA1DF /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB402162902500BCA1DF /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB5D2162905200BCA1DF /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB332162902500BCA1DF /* RealmSwift.framework */; };
-		CAE1BB5E2162905200BCA1DF /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB332162902500BCA1DF /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB5F2162905200BCA1DF /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3C2162902500BCA1DF /* RxBlocking.framework */; };
-		CAE1BB602162905200BCA1DF /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3C2162902500BCA1DF /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB612162905200BCA1DF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3D2162902500BCA1DF /* RxCocoa.framework */; };
-		CAE1BB622162905200BCA1DF /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3D2162902500BCA1DF /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB632162905200BCA1DF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3B2162902500BCA1DF /* RxSwift.framework */; };
-		CAE1BB642162905200BCA1DF /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3B2162902500BCA1DF /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB652162905200BCA1DF /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB432162902500BCA1DF /* RxTest.framework */; };
-		CAE1BB662162905200BCA1DF /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB432162902500BCA1DF /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CAE1BB672162905200BCA1DF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3A2162902500BCA1DF /* SnapKit.framework */; };
-		CAE1BB682162905200BCA1DF /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAE1BB3A2162902500BCA1DF /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAFA164E2143EE84007EC05D /* circular-font in Resources */ = {isa = PBXBuildFile; fileRef = CAFA164D2143EE83007EC05D /* circular-font */; };
 		CAFA16512143FBE3007EC05D /* SendAnimatedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFA16502143FBE3007EC05D /* SendAnimatedView.xib */; };
 		CAFA16532143FDF0007EC05D /* SendAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFA16522143FDF0007EC05D /* SendAnimatedView.swift */; };
@@ -86,22 +67,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CAE1BB692162905300BCA1DF /* Embed Frameworks */ = {
+		CA2C413621637759001383BF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CAE1BB5C2162905200BCA1DF /* Realm.framework in Embed Frameworks */,
-				CAE1BB5E2162905200BCA1DF /* RealmSwift.framework in Embed Frameworks */,
-				CAE1BB662162905200BCA1DF /* RxTest.framework in Embed Frameworks */,
-				CAE1BB622162905200BCA1DF /* RxCocoa.framework in Embed Frameworks */,
-				CAE1BB562162905200BCA1DF /* GoogleMaps.framework in Embed Frameworks */,
-				CAE1BB642162905200BCA1DF /* RxSwift.framework in Embed Frameworks */,
-				CAE1BB5A2162905200BCA1DF /* GoogleMapsCore.framework in Embed Frameworks */,
-				CAE1BB582162905200BCA1DF /* GoogleMapsBase.framework in Embed Frameworks */,
-				CAE1BB602162905200BCA1DF /* RxBlocking.framework in Embed Frameworks */,
-				CAE1BB682162905200BCA1DF /* SnapKit.framework in Embed Frameworks */,
+				CA2C412921637759001383BF /* Realm.framework in Embed Frameworks */,
+				CA2C412B21637759001383BF /* RealmSwift.framework in Embed Frameworks */,
+				CA2C412F21637759001383BF /* RxCocoa.framework in Embed Frameworks */,
+				CA2C412321637759001383BF /* GoogleMaps.framework in Embed Frameworks */,
+				CA2C413121637759001383BF /* RxSwift.framework in Embed Frameworks */,
+				CA2C412721637759001383BF /* GoogleMapsCore.framework in Embed Frameworks */,
+				CA2C412521637759001383BF /* GoogleMapsBase.framework in Embed Frameworks */,
+				CA2C412D21637759001383BF /* RxBlocking.framework in Embed Frameworks */,
+				CA2C413521637759001383BF /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +90,6 @@
 
 /* Begin PBXFileReference section */
 		5898AD15E889E27338ACF6AA /* DetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
-		CA0E97D521629B4000E5E75E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Carthage/Build/iOS/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = SOURCE_ROOT; };
 		CA0E97D821629C9300E5E75E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CA0E97D921629C9300E5E75E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		CA0E97DA21629C9300E5E75E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -139,6 +118,16 @@
 		CA2C40A121623070001383BF /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
 		CA2C40A5216233A9001383BF /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		CA2C40A721625869001383BF /* CustomMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMarkerView.xib; sourceTree = "<group>"; };
+		CA2C40F9216376E5001383BF /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		CA2C40FA216376E5001383BF /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
+		CA2C40FB216376E5001383BF /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = SOURCE_ROOT; };
+		CA2C40FC216376E5001383BF /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = SOURCE_ROOT; };
+		CA2C40FD216376E5001383BF /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Carthage/Build/iOS/GoogleMapsBase.framework; sourceTree = SOURCE_ROOT; };
+		CA2C40FE216376E6001383BF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
+		CA2C40FF216376E6001383BF /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
+		CA2C4100216376E6001383BF /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
+		CA2C4101216376E6001383BF /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = SOURCE_ROOT; };
+		CA2C4102216376E6001383BF /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Carthage/Build/iOS/GoogleMaps.framework; sourceTree = SOURCE_ROOT; };
 		CA3BC6B021601BA900F12642 /* TubeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeCell.swift; sourceTree = "<group>"; };
 		CA3BC6B22160211200F12642 /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
 		CA3BC6B52160E1A900F12642 /* TubeControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeControllerViewModel.swift; sourceTree = "<group>"; };
@@ -155,23 +144,6 @@
 		CAC794A3210BD60A00FB01A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
 		CAD0185E1FC731E4001AEEB8 /* client_id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = client_id.json; sourceTree = "<group>"; };
-		CAE1BB332162902500BCA1DF /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB342162902500BCA1DF /* SnapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SnapKit.framework.dSYM; path = Carthage/Build/iOS/SnapKit.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		CAE1BB352162902500BCA1DF /* RealmSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RealmSwift.framework.dSYM; path = Carthage/Build/iOS/RealmSwift.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		CAE1BB362162902500BCA1DF /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/iOS/RxBlocking.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		CAE1BB372162902500BCA1DF /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/iOS/RxSwift.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		CAE1BB382162902500BCA1DF /* RxTest.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxTest.framework.dSYM; path = Carthage/Build/iOS/RxTest.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		CAE1BB392162902500BCA1DF /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Carthage/Build/iOS/GoogleMapsBase.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB3A2162902500BCA1DF /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB3B2162902500BCA1DF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB3C2162902500BCA1DF /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB3D2162902500BCA1DF /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB3E2162902500BCA1DF /* Realm.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Realm.framework.dSYM; path = Carthage/Build/iOS/Realm.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		CAE1BB3F2162902500BCA1DF /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Carthage/Build/iOS/GoogleMaps.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB402162902500BCA1DF /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB412162902500BCA1DF /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/iOS/RxCocoa.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		CAE1BB422162902500BCA1DF /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Carthage/Build/iOS/GoogleMapsCore.framework; sourceTree = SOURCE_ROOT; };
-		CAE1BB432162902500BCA1DF /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = SOURCE_ROOT; };
 		CAFA164D2143EE83007EC05D /* circular-font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "circular-font"; sourceTree = "<group>"; };
 		CAFA16502143FBE3007EC05D /* SendAnimatedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendAnimatedView.xib; sourceTree = "<group>"; };
 		CAFA16522143FDF0007EC05D /* SendAnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAnimatedView.swift; sourceTree = "<group>"; };
@@ -182,31 +154,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA0E97ED21629D0000E5E75E /* libc++.tbd in Frameworks */,
-				CA0E97EE21629D0000E5E75E /* SystemConfiguration.framework in Frameworks */,
-				CA0E97EF21629D0000E5E75E /* OpenGLES.framework in Frameworks */,
-				CA0E97F021629D0000E5E75E /* QuartzCore.framework in Frameworks */,
-				CA0E97F121629D0000E5E75E /* ImageIO.framework in Frameworks */,
-				CA0E97F221629D0000E5E75E /* Accelerate.framework in Frameworks */,
-				CA0E97F321629D0000E5E75E /* GLKit.framework in Frameworks */,
-				CA0E97F421629D0000E5E75E /* libz.tbd in Frameworks */,
-				CA0E97F521629D0000E5E75E /* UIKit.framework in Frameworks */,
-				CA0E97DE21629C9300E5E75E /* CoreData.framework in Frameworks */,
-				CA0E97DF21629C9300E5E75E /* CoreText.framework in Frameworks */,
-				CA0E97E021629C9300E5E75E /* CoreTelephony.framework in Frameworks */,
-				CA0E97E121629C9300E5E75E /* CoreLocation.framework in Frameworks */,
-				CA0E97E221629C9300E5E75E /* CoreImage.framework in Frameworks */,
-				CA0E97E321629C9300E5E75E /* CoreGraphics.framework in Frameworks */,
-				CAE1BB5B2162905200BCA1DF /* Realm.framework in Frameworks */,
-				CAE1BB5D2162905200BCA1DF /* RealmSwift.framework in Frameworks */,
-				CAE1BB652162905200BCA1DF /* RxTest.framework in Frameworks */,
-				CAE1BB612162905200BCA1DF /* RxCocoa.framework in Frameworks */,
-				CAE1BB552162905200BCA1DF /* GoogleMaps.framework in Frameworks */,
-				CAE1BB632162905200BCA1DF /* RxSwift.framework in Frameworks */,
-				CAE1BB592162905200BCA1DF /* GoogleMapsCore.framework in Frameworks */,
-				CAE1BB572162905200BCA1DF /* GoogleMapsBase.framework in Frameworks */,
-				CAE1BB5F2162905200BCA1DF /* RxBlocking.framework in Frameworks */,
-				CAE1BB672162905200BCA1DF /* SnapKit.framework in Frameworks */,
+				CA2C412821637759001383BF /* Realm.framework in Frameworks */,
+				CA2C412A21637759001383BF /* RealmSwift.framework in Frameworks */,
+				CA2C412E21637759001383BF /* RxCocoa.framework in Frameworks */,
+				CA2C412221637759001383BF /* GoogleMaps.framework in Frameworks */,
+				CA2C413021637759001383BF /* RxSwift.framework in Frameworks */,
+				CA2C412621637759001383BF /* GoogleMapsCore.framework in Frameworks */,
+				CA2C412421637759001383BF /* GoogleMapsBase.framework in Frameworks */,
+				CA2C412C21637759001383BF /* RxBlocking.framework in Frameworks */,
+				CA2C413421637759001383BF /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,24 +295,16 @@
 		CAE1BB322162900700BCA1DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CA0E97D521629B4000E5E75E /* GoogleMaps.bundle */,
-				CAE1BB3F2162902500BCA1DF /* GoogleMaps.framework */,
-				CAE1BB392162902500BCA1DF /* GoogleMapsBase.framework */,
-				CAE1BB422162902500BCA1DF /* GoogleMapsCore.framework */,
-				CAE1BB402162902500BCA1DF /* Realm.framework */,
-				CAE1BB3E2162902500BCA1DF /* Realm.framework.dSYM */,
-				CAE1BB332162902500BCA1DF /* RealmSwift.framework */,
-				CAE1BB352162902500BCA1DF /* RealmSwift.framework.dSYM */,
-				CAE1BB3C2162902500BCA1DF /* RxBlocking.framework */,
-				CAE1BB362162902500BCA1DF /* RxBlocking.framework.dSYM */,
-				CAE1BB3D2162902500BCA1DF /* RxCocoa.framework */,
-				CAE1BB412162902500BCA1DF /* RxCocoa.framework.dSYM */,
-				CAE1BB3B2162902500BCA1DF /* RxSwift.framework */,
-				CAE1BB372162902500BCA1DF /* RxSwift.framework.dSYM */,
-				CAE1BB432162902500BCA1DF /* RxTest.framework */,
-				CAE1BB382162902500BCA1DF /* RxTest.framework.dSYM */,
-				CAE1BB3A2162902500BCA1DF /* SnapKit.framework */,
-				CAE1BB342162902500BCA1DF /* SnapKit.framework.dSYM */,
+				CA2C4102216376E6001383BF /* GoogleMaps.framework */,
+				CA2C40FD216376E5001383BF /* GoogleMapsBase.framework */,
+				CA2C4101216376E6001383BF /* GoogleMapsCore.framework */,
+				CA2C40FA216376E5001383BF /* Realm.framework */,
+				CA2C40F9216376E5001383BF /* RealmSwift.framework */,
+				CA2C40FC216376E5001383BF /* RxBlocking.framework */,
+				CA2C40FF216376E6001383BF /* RxCocoa.framework */,
+				CA2C40FE216376E6001383BF /* RxSwift.framework */,
+				CA2C40FB216376E5001383BF /* RxTest.framework */,
+				CA2C4100216376E6001383BF /* SnapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -382,7 +330,7 @@
 				CA1DCBE91FAA52A10049DAE7 /* Sources */,
 				CA1DCBEA1FAA52A10049DAE7 /* Frameworks */,
 				CA1DCBEB1FAA52A10049DAE7 /* Resources */,
-				CAE1BB692162905300BCA1DF /* Embed Frameworks */,
+				CA2C413621637759001383BF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -457,7 +405,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA0E97D621629B4000E5E75E /* GoogleMaps.bundle in Resources */,
 				CAFA164E2143EE84007EC05D /* circular-font in Resources */,
 				CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */,
 				CAFA16512143FBE3007EC05D /* SendAnimatedView.xib in Resources */,
@@ -465,7 +412,6 @@
 				CA1DCBF81FAA52A10049DAE7 /* Assets.xcassets in Resources */,
 				CA2C40A821625869001383BF /* CustomMarkerView.xib in Resources */,
 				CA1DCBF61FAA52A10049DAE7 /* Main.storyboard in Resources */,
-				CA0E97F621629D3100E5E75E /* Info.plist in Resources */,
 				CA6E2B2D210DBE400001F10B /* Lobster_1.3.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
