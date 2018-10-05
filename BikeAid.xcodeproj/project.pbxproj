@@ -14,10 +14,6 @@
 		CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */; };
 		CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC101FAA52B60049DAE7 /* Bike.swift */; };
 		CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */; };
-		CA2665262163905F00A9746F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665242163905F00A9746F /* Quick.framework */; };
-		CA2665272163905F00A9746F /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665242163905F00A9746F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CA2665282163905F00A9746F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665252163905F00A9746F /* Nimble.framework */; };
-		CA2665292163905F00A9746F /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665252163905F00A9746F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA26652A2163916E00A9746F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665242163905F00A9746F /* Quick.framework */; };
 		CA26652B2163918500A9746F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665252163905F00A9746F /* Nimble.framework */; };
 		CA2C40A221623070001383BF /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A121623070001383BF /* CustomMarkerView.swift */; };
@@ -87,9 +83,7 @@
 				CA2C412721637759001383BF /* GoogleMapsCore.framework in Embed Frameworks */,
 				CA2C412521637759001383BF /* GoogleMapsBase.framework in Embed Frameworks */,
 				CA2C412D21637759001383BF /* RxBlocking.framework in Embed Frameworks */,
-				CA2665272163905F00A9746F /* Quick.framework in Embed Frameworks */,
 				CA2C413521637759001383BF /* SnapKit.framework in Embed Frameworks */,
-				CA2665292163905F00A9746F /* Nimble.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,9 +166,7 @@
 				CA2C412621637759001383BF /* GoogleMapsCore.framework in Frameworks */,
 				CA2C412421637759001383BF /* GoogleMapsBase.framework in Frameworks */,
 				CA2C412C21637759001383BF /* RxBlocking.framework in Frameworks */,
-				CA2665262163905F00A9746F /* Quick.framework in Frameworks */,
 				CA2C413421637759001383BF /* SnapKit.framework in Frameworks */,
-				CA2665282163905F00A9746F /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,13 +9,13 @@
 import UIKit
 
 class CustomMarkerView: UIView {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        let iconSize: CGFloat = 30
+        let iconSize: CGFloat = 50
         
         frame.size.height = iconSize
-        frame.size.width = iconSize
+        frame.size.width = iconSize            
     }
 
 }
