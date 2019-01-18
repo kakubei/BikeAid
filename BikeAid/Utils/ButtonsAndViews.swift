@@ -55,6 +55,29 @@ class CircularView: UIView {
 
 }
 
+class CloseButton: UIButton {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
+    
+    func setup() {
+        self.setImage(UIImage(named: "closeIcon"), for: .normal)
+        self.frame.size.width = 28
+        self.frame.size.height = 28
+    }
+}
+
 class CircularButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)

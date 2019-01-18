@@ -18,34 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJn-Db-73J" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJn-Db-73J" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="220" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="HCx-vs-09Y"/>
                                     <constraint firstAttribute="width" constant="100" id="cUa-jv-c7g"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
+                                <state key="normal" title="Tyre">
+                                    <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
                                 <connections>
                                     <action selector="optionButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="cmb-Gc-Qvt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-8v-ER6" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-8v-ER6" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="340" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
+                                <state key="normal" title="Brakes">
+                                    <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
                                 <connections>
                                     <action selector="optionButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="zJr-BT-s6w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-Rh-at1" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-Rh-at1" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="460" width="100" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
+                                <state key="normal" title="Other">
+                                    <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
                                 <connections>
                                     <action selector="optionButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="cUG-Vh-aMi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjl-JS-8pW">
-                                <rect key="frame" x="325" y="30" width="30" height="30"/>
-                                <state key="normal" title="X">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjl-JS-8pW" customClass="CloseButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="338" y="30" width="22" height="22"/>
+                                <state key="normal" image="closeIcon">
                                     <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -58,7 +70,7 @@
                             <constraint firstItem="yKK-Rh-at1" firstAttribute="width" secondItem="fNa-8v-ER6" secondAttribute="width" id="7TJ-Xw-SIt"/>
                             <constraint firstItem="UJn-Db-73J" firstAttribute="centerX" secondItem="eG3-vn-QqT" secondAttribute="centerX" id="9Bh-lm-fE3"/>
                             <constraint firstItem="Qjl-JS-8pW" firstAttribute="top" secondItem="iTg-Jl-N1x" secondAttribute="top" constant="10" id="AnZ-jR-PFg"/>
-                            <constraint firstItem="iTg-Jl-N1x" firstAttribute="trailing" secondItem="Qjl-JS-8pW" secondAttribute="trailing" constant="20" id="CFp-0O-EBm"/>
+                            <constraint firstItem="iTg-Jl-N1x" firstAttribute="trailing" secondItem="Qjl-JS-8pW" secondAttribute="trailing" constant="15" id="CFp-0O-EBm"/>
                             <constraint firstItem="yKK-Rh-at1" firstAttribute="height" secondItem="fNa-8v-ER6" secondAttribute="height" id="P4f-j3-N8J"/>
                             <constraint firstItem="fNa-8v-ER6" firstAttribute="width" secondItem="UJn-Db-73J" secondAttribute="width" id="cEh-yo-sxQ"/>
                             <constraint firstItem="fNa-8v-ER6" firstAttribute="top" secondItem="UJn-Db-73J" secondAttribute="bottom" constant="20" id="fkj-5N-b1x"/>
@@ -90,9 +102,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huB-RD-mEe">
-                                <rect key="frame" x="325" y="30" width="30" height="30"/>
-                                <state key="normal" title="X">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huB-RD-mEe" customClass="CloseButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="338" y="30" width="22" height="22"/>
+                                <state key="normal" image="closeIcon">
                                     <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
@@ -112,7 +124,7 @@
                         <color key="backgroundColor" red="0.94509803921568625" green="0.69803921568627447" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zjz-av-RTx" firstAttribute="centerX" secondItem="GGM-CZ-flf" secondAttribute="centerX" id="7kV-uz-uVa"/>
-                            <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" secondItem="huB-RD-mEe" secondAttribute="trailing" constant="20" id="UsO-7P-JOL"/>
+                            <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" secondItem="huB-RD-mEe" secondAttribute="trailing" constant="15" id="UsO-7P-JOL"/>
                             <constraint firstItem="zjz-av-RTx" firstAttribute="top" secondItem="PLF-jf-uXy" secondAttribute="top" constant="40" id="nyS-zP-V9P"/>
                             <constraint firstItem="huB-RD-mEe" firstAttribute="top" secondItem="PLF-jf-uXy" secondAttribute="top" constant="10" id="w8r-Uz-aMO"/>
                         </constraints>
@@ -268,7 +280,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bml-aS-LqY" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="1" green="0.99042291752602185" blue="0.95894837889068052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="gGW-ST-K2o" id="NhP-b5-fNH"/>
@@ -298,11 +310,24 @@
                                     <constraint firstItem="tVq-sg-kwe" firstAttribute="top" secondItem="A70-WE-8EV" secondAttribute="top" constant="10" id="uIs-9B-ctE"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avj-qB-CJY">
+                                <rect key="frame" x="332" y="30" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="4Q0-cW-Y6c"/>
+                                    <constraint firstAttribute="width" constant="28" id="iKF-cv-Gnr"/>
+                                </constraints>
+                                <state key="normal" image="accountIcon"/>
+                                <connections>
+                                    <segue destination="1zR-WL-5Wa" kind="show" id="hpg-Fo-0K1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bml-aS-LqY" firstAttribute="top" secondItem="niG-ni-N1u" secondAttribute="top" id="6GN-s1-MiP"/>
+                            <constraint firstItem="niG-ni-N1u" firstAttribute="trailing" secondItem="Avj-qB-CJY" secondAttribute="trailing" constant="15" id="2yk-VM-Pbw"/>
+                            <constraint firstItem="bml-aS-LqY" firstAttribute="top" secondItem="Zeh-yG-pkf" secondAttribute="top" id="6GN-s1-MiP"/>
                             <constraint firstItem="niG-ni-N1u" firstAttribute="bottom" secondItem="A70-WE-8EV" secondAttribute="bottom" id="6eG-9u-9Iv"/>
+                            <constraint firstItem="Avj-qB-CJY" firstAttribute="top" secondItem="niG-ni-N1u" secondAttribute="top" constant="10" id="9gy-KC-Zyy"/>
                             <constraint firstItem="bml-aS-LqY" firstAttribute="leading" secondItem="niG-ni-N1u" secondAttribute="leading" id="E2L-ge-6SD"/>
                             <constraint firstItem="A70-WE-8EV" firstAttribute="leading" secondItem="niG-ni-N1u" secondAttribute="leading" id="Np9-qc-Dee"/>
                             <constraint firstItem="A70-WE-8EV" firstAttribute="trailing" secondItem="niG-ni-N1u" secondAttribute="trailing" id="PfX-DB-fii"/>
@@ -311,7 +336,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="niG-ni-N1u"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map-with-pin" id="lca-ds-ocy"/>
+                    <tabBarItem key="tabBarItem" title="" image="attentionIcon" id="lca-ds-ocy"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="bml-aS-LqY" id="eWf-rz-68g"/>
@@ -339,10 +364,45 @@
             </objects>
             <point key="canvasLocation" x="-270" y="126"/>
         </scene>
+        <!--Save Bike View Controller-->
+        <scene sceneID="jA0-JH-auc">
+            <objects>
+                <viewController id="1zR-WL-5Wa" customClass="SaveBikeViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dGL-33-bOB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRH-PN-o3E" customClass="CloseButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="338" y="30" width="22" height="22"/>
+                                <state key="normal" image="closeIcon">
+                                    <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="Gwj-GJ-1dN"/>
+                                    <action selector="closeButtonTapped:" destination="I61-Bg-gTw" eventType="touchUpInside" id="qj6-NL-D7V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.69803921570000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gRH-PN-o3E" firstAttribute="top" secondItem="kwY-Ti-Xnd" secondAttribute="top" constant="10" id="EM9-bT-iND"/>
+                            <constraint firstItem="kwY-Ti-Xnd" firstAttribute="trailing" secondItem="gRH-PN-o3E" secondAttribute="trailing" constant="15" id="Grq-8k-kQ4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kwY-Ti-Xnd"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="accountIcon" selectedImage="accountIcon" id="z75-Us-esh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVg-kT-6PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="I61-Bg-gTw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1001" y="1576"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="accountIcon" width="28" height="28"/>
+        <image name="attentionIcon" width="32" height="28"/>
         <image name="attentionIconEmpty" width="34" height="30"/>
-        <image name="map-with-pin" width="48" height="48"/>
+        <image name="closeIcon" width="22" height="22"/>
         <image name="messagBubble-tabBar" width="72" height="70.800003051757812"/>
         <image name="orangeBottom" width="320" height="62"/>
     </resources>

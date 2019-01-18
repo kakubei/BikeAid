@@ -44,6 +44,7 @@
 		CA3BC6BA2160F4BE00F12642 /* NumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3BC6B92160F4BE00F12642 /* NumberUtils.swift */; };
 		CA411D8A1FF7D17B005A5C55 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA411D891FF7D17B005A5C55 /* Database.swift */; };
 		CA411D941FFA6A8D005A5C55 /* BikeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA411D931FFA6A8D005A5C55 /* BikeModelTests.swift */; };
+		CA56BDE321F23A18006C7E1B /* SaveBikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56BDE221F23A18006C7E1B /* SaveBikeViewController.swift */; };
 		CA6E2B2D210DBE400001F10B /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */; };
 		CA6E2B2F210DC0B60001F10B /* OptionSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E2B2E210DC0B60001F10B /* OptionSelectedVC.swift */; };
 		CA6E2B31210DD41F0001F10B /* UIColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E2B30210DD41F0001F10B /* UIColorUtils.swift */; };
@@ -139,6 +140,7 @@
 		CA3BC6B92160F4BE00F12642 /* NumberUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberUtils.swift; sourceTree = "<group>"; };
 		CA411D891FF7D17B005A5C55 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CA411D931FFA6A8D005A5C55 /* BikeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModelTests.swift; sourceTree = "<group>"; };
+		CA56BDE221F23A18006C7E1B /* SaveBikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBikeViewController.swift; sourceTree = "<group>"; };
 		CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster_1.3.otf; sourceTree = "<group>"; };
 		CA6E2B2E210DC0B60001F10B /* OptionSelectedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectedVC.swift; sourceTree = "<group>"; };
 		CA6E2B30210DD41F0001F10B /* UIColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorUtils.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				CAC669111FD9855C008F8593 /* DetailsVC.swift */,
 				CAC794A3210BD60A00FB01A6 /* OptionsViewController.swift */,
 				CA6E2B2E210DC0B60001F10B /* OptionSelectedVC.swift */,
+				CA56BDE221F23A18006C7E1B /* SaveBikeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA3BC6B32160211200F12642 /* StoryboardConstants.swift in Sources */,
+				CA56BDE321F23A18006C7E1B /* SaveBikeViewController.swift in Sources */,
 				CA3BC6B82160EC0400F12642 /* AppDelegate.swift in Sources */,
 				CAC794A4210BD60A00FB01A6 /* OptionsViewController.swift in Sources */,
 				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
