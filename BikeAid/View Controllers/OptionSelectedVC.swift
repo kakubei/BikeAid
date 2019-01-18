@@ -10,19 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class TubeViewController: UIViewController {
+class OptionSelectedVC: UIViewController {
     
-    @IBOutlet weak var backButton: CircularButton!
-    
-    @IBOutlet weak var sendButton: SendButton! {
-        didSet {
-            sendButton.isEnabled = false
-            sendButton.backgroundColourForState()
-        }
-    }
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+   
     var viewModel = TubeVCModel()
     
     let bag = DisposeBag()
@@ -38,24 +28,23 @@ class TubeViewController: UIViewController {
         }
 
     }
-    
-    @IBAction func backButtonTapped(_ sender: CircularButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-
+   
     
     @IBAction func sendButtonTapped(_ sender: CircularButton) {
         tubeSizeAlert()
     }
     
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
     
 }
 
-extension TubeViewController: UITableViewDelegate {
+extension OptionSelectedVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.setTubeSize(for: indexPath.row)
         let cell = tableView.cellForRow(at: indexPath) as! TubeCell
-        sendButton.isEnabled = true // TODO: Handle this through Rx
+//        sendButton.isEnabled = true // TODO: Handle this through Rx
         cell.tubeSizeButton.wasSelected = true
     }
     
@@ -65,7 +54,7 @@ extension TubeViewController: UITableViewDelegate {
     }
 }
 
-extension TubeViewController: UITableViewDataSource {
+extension OptionSelectedVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.rows
     }

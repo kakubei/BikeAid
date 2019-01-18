@@ -73,10 +73,10 @@ class CircularButton: UIButton {
     
     func setup() {
         layer.cornerRadius = bounds.height / 2
-        layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOpacity = 0.3
-        layer.shadowOffset = CGSize.zero
-        layer.shadowRadius = 6
+//        layer.shadowColor = UIColor.white.cgColor
+//        layer.shadowOpacity = 0.3
+//        layer.shadowOffset = CGSize.zero
+//        layer.shadowRadius = 6
     }
 }
 

@@ -21,4 +21,12 @@ extension UIColor {
     static var iconGreyBack: UIColor {
         return UIColor(white: 0.25, alpha: 1.0)
     }
+    
+    static var lightYellow: UIColor {
+        return UIColor(red:0.97, green:0.78, blue:0.33, alpha:1.00)
+    }
+    
+    static var darkYellow: UIColor {
+        return UIColor(red:0.89, green:0.53, blue:0.21, alpha:1.00)
+    }
 }

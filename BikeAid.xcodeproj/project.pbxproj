@@ -45,12 +45,12 @@
 		CA411D8A1FF7D17B005A5C55 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA411D891FF7D17B005A5C55 /* Database.swift */; };
 		CA411D941FFA6A8D005A5C55 /* BikeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA411D931FFA6A8D005A5C55 /* BikeModelTests.swift */; };
 		CA6E2B2D210DBE400001F10B /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */; };
-		CA6E2B2F210DC0B60001F10B /* TubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E2B2E210DC0B60001F10B /* TubeViewController.swift */; };
+		CA6E2B2F210DC0B60001F10B /* OptionSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E2B2E210DC0B60001F10B /* OptionSelectedVC.swift */; };
 		CA6E2B31210DD41F0001F10B /* UIColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E2B30210DD41F0001F10B /* UIColorUtils.swift */; };
 		CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */; };
 		CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC669111FD9855C008F8593 /* DetailsVC.swift */; };
 		CAC794A1210BCB2200FB01A6 /* ButtonsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A0210BCB2200FB01A6 /* ButtonsAndViews.swift */; };
-		CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A3210BD60A00FB01A6 /* MainViewController.swift */; };
+		CAC794A4210BD60A00FB01A6 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A3210BD60A00FB01A6 /* OptionsViewController.swift */; };
 		CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */; };
 		CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD0185E1FC731E4001AEEB8 /* client_id.json */; };
 		CAFA164E2143EE84007EC05D /* circular-font in Resources */ = {isa = PBXBuildFile; fileRef = CAFA164D2143EE83007EC05D /* circular-font */; };
@@ -140,12 +140,12 @@
 		CA411D891FF7D17B005A5C55 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CA411D931FFA6A8D005A5C55 /* BikeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeModelTests.swift; sourceTree = "<group>"; };
 		CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster_1.3.otf; sourceTree = "<group>"; };
-		CA6E2B2E210DC0B60001F10B /* TubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeViewController.swift; sourceTree = "<group>"; };
+		CA6E2B2E210DC0B60001F10B /* OptionSelectedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectedVC.swift; sourceTree = "<group>"; };
 		CA6E2B30210DD41F0001F10B /* UIColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorUtils.swift; sourceTree = "<group>"; };
 		CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CAC669111FD9855C008F8593 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		CAC794A0210BCB2200FB01A6 /* ButtonsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsAndViews.swift; sourceTree = "<group>"; };
-		CAC794A3210BD60A00FB01A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CAC794A3210BD60A00FB01A6 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		CAC794A6210BD9D800FB01A6 /* UIViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewUtils.swift; sourceTree = "<group>"; };
 		CAD0185E1FC731E4001AEEB8 /* client_id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = client_id.json; sourceTree = "<group>"; };
 		CAFA164D2143EE83007EC05D /* circular-font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "circular-font"; sourceTree = "<group>"; };
@@ -281,8 +281,8 @@
 				CA1DCBF21FAA52A10049DAE7 /* BikesViewController.swift */,
 				CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */,
 				CAC669111FD9855C008F8593 /* DetailsVC.swift */,
-				CAC794A3210BD60A00FB01A6 /* MainViewController.swift */,
-				CA6E2B2E210DC0B60001F10B /* TubeViewController.swift */,
+				CAC794A3210BD60A00FB01A6 /* OptionsViewController.swift */,
+				CA6E2B2E210DC0B60001F10B /* OptionSelectedVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -462,7 +462,7 @@
 			files = (
 				CA3BC6B32160211200F12642 /* StoryboardConstants.swift in Sources */,
 				CA3BC6B82160EC0400F12642 /* AppDelegate.swift in Sources */,
-				CAC794A4210BD60A00FB01A6 /* MainViewController.swift in Sources */,
+				CAC794A4210BD60A00FB01A6 /* OptionsViewController.swift in Sources */,
 				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
 				CA2C40A221623070001383BF /* CustomMarkerView.swift in Sources */,
 				CA1DCBF31FAA52A10049DAE7 /* BikesViewController.swift in Sources */,
@@ -478,7 +478,7 @@
 				CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */,
 				CAC794A7210BD9D800FB01A6 /* UIViewUtils.swift in Sources */,
 				CA3BC6BA2160F4BE00F12642 /* NumberUtils.swift in Sources */,
-				CA6E2B2F210DC0B60001F10B /* TubeViewController.swift in Sources */,
+				CA6E2B2F210DC0B60001F10B /* OptionSelectedVC.swift in Sources */,
 				5898A6A6937E4E07E1ED892F /* DetailsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

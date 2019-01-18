@@ -1,270 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDK-7r-b5e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGW-ST-K2o">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="CircularStd-Book.otf">
-            <string>CircularStd-Book</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--Main-->
+        <!--Options View Controller-->
         <scene sceneID="bwM-DJ-gwc">
             <objects>
-                <viewController id="YDB-ir-Z1d" customClass="MainViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YDB-ir-Z1d" userLabel="Options View Controller" customClass="OptionsViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eG3-vn-QqT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-uc-pLt" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="224.5" y="288" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="tubeButton"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJn-Db-73J" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="220" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="KKw-xH-EsJ"/>
-                                    <constraint firstAttribute="width" constant="80" id="umX-qt-GPI"/>
+                                    <constraint firstAttribute="height" constant="100" id="HCx-vs-09Y"/>
+                                    <constraint firstAttribute="width" constant="100" id="cUa-jv-c7g"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                <state key="normal" image="tube"/>
                                 <connections>
-                                    <action selector="tubeButtonPressed:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="PR3-sh-O3e"/>
+                                    <action selector="optionButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="cmb-Gc-Qvt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygg-L6-NRO" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="70.5" y="288" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="pumpButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="H6a-O2-9dC"/>
-                                    <constraint firstAttribute="width" constant="80" id="K34-As-zjz"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                <state key="normal" image="pump"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNR-OC-XH4" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="224.5" y="508" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="helpButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="1kt-GP-E0K"/>
-                                    <constraint firstAttribute="width" constant="80" id="bZu-ZA-s7K"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                <state key="normal" image="help"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-8O-Ajn" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="70.5" y="508" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="patchButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="mXA-OL-5EY"/>
-                                    <constraint firstAttribute="width" constant="80" id="zIN-wt-Sb7"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                <state key="normal" image="patch"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-6t-Ic5" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="117.5" y="368" width="140" height="140"/>
-                                <color key="backgroundColor" red="0.81960784313725488" green="0.21176470588235294" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="mainButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="fgf-OY-0Xp"/>
-                                    <constraint firstAttribute="width" constant="140" id="vF9-xg-qeH"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
-                                <state key="normal" image="crossWhite"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-8v-ER6" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="340" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="mainButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="JnS-3L-kJG"/>
+                                    <action selector="optionButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="zJr-BT-s6w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-Rh-at1" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="460" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="optionButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="cUG-Vh-aMi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjl-JS-8pW">
+                                <rect key="frame" x="325" y="30" width="30" height="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="zr5-JX-B17"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.96402994791666663" blue="0.96402994791666663" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.69803921568627447" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="XK1-8O-Ajn" firstAttribute="leading" secondItem="ygg-L6-NRO" secondAttribute="leading" placeholder="YES" id="6Of-8Y-ccc"/>
-                            <constraint firstItem="nO4-uc-pLt" firstAttribute="trailing" secondItem="RWT-6t-Ic5" secondAttribute="trailing" constant="47" placeholder="YES" id="Exy-cm-bsS"/>
-                            <constraint firstItem="RWT-6t-Ic5" firstAttribute="centerX" secondItem="eG3-vn-QqT" secondAttribute="centerX" id="TOS-u7-D9o"/>
-                            <constraint firstItem="BNR-OC-XH4" firstAttribute="centerY" secondItem="XK1-8O-Ajn" secondAttribute="centerY" placeholder="YES" id="UpH-hj-aHy"/>
-                            <constraint firstItem="XK1-8O-Ajn" firstAttribute="top" secondItem="RWT-6t-Ic5" secondAttribute="bottom" placeholder="YES" id="VFY-PF-qdd"/>
-                            <constraint firstItem="RWT-6t-Ic5" firstAttribute="top" secondItem="ygg-L6-NRO" secondAttribute="bottom" placeholder="YES" id="XHu-QN-EY6"/>
-                            <constraint firstItem="iTg-Jl-N1x" firstAttribute="bottom" secondItem="RWT-6t-Ic5" secondAttribute="bottom" constant="110" id="auW-00-zUR"/>
-                            <constraint firstItem="nO4-uc-pLt" firstAttribute="centerY" secondItem="ygg-L6-NRO" secondAttribute="centerY" placeholder="YES" id="d5Q-bB-yuZ"/>
-                            <constraint firstItem="ygg-L6-NRO" firstAttribute="leading" secondItem="RWT-6t-Ic5" secondAttribute="leading" constant="-47" placeholder="YES" id="r0U-O3-yS9"/>
-                            <constraint firstItem="BNR-OC-XH4" firstAttribute="trailing" secondItem="nO4-uc-pLt" secondAttribute="trailing" placeholder="YES" id="rK4-42-o7t"/>
+                            <constraint firstItem="yKK-Rh-at1" firstAttribute="width" secondItem="fNa-8v-ER6" secondAttribute="width" id="7TJ-Xw-SIt"/>
+                            <constraint firstItem="UJn-Db-73J" firstAttribute="centerX" secondItem="eG3-vn-QqT" secondAttribute="centerX" id="9Bh-lm-fE3"/>
+                            <constraint firstItem="Qjl-JS-8pW" firstAttribute="top" secondItem="iTg-Jl-N1x" secondAttribute="top" constant="10" id="AnZ-jR-PFg"/>
+                            <constraint firstItem="iTg-Jl-N1x" firstAttribute="trailing" secondItem="Qjl-JS-8pW" secondAttribute="trailing" constant="20" id="CFp-0O-EBm"/>
+                            <constraint firstItem="yKK-Rh-at1" firstAttribute="height" secondItem="fNa-8v-ER6" secondAttribute="height" id="P4f-j3-N8J"/>
+                            <constraint firstItem="fNa-8v-ER6" firstAttribute="width" secondItem="UJn-Db-73J" secondAttribute="width" id="cEh-yo-sxQ"/>
+                            <constraint firstItem="fNa-8v-ER6" firstAttribute="top" secondItem="UJn-Db-73J" secondAttribute="bottom" constant="20" id="fkj-5N-b1x"/>
+                            <constraint firstItem="yKK-Rh-at1" firstAttribute="centerX" secondItem="fNa-8v-ER6" secondAttribute="centerX" id="gXu-aU-REx"/>
+                            <constraint firstItem="fNa-8v-ER6" firstAttribute="centerX" secondItem="UJn-Db-73J" secondAttribute="centerX" id="ib6-Jl-5wd"/>
+                            <constraint firstItem="UJn-Db-73J" firstAttribute="top" secondItem="iTg-Jl-N1x" secondAttribute="top" constant="200" id="ji0-a2-iI7"/>
+                            <constraint firstItem="fNa-8v-ER6" firstAttribute="height" secondItem="UJn-Db-73J" secondAttribute="height" id="mcm-iv-hY1"/>
+                            <constraint firstItem="yKK-Rh-at1" firstAttribute="top" secondItem="fNa-8v-ER6" secondAttribute="bottom" constant="20" id="tjD-SX-exp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iTg-Jl-N1x"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" image="messagBubble-tabBar" id="Rti-o9-g3a"/>
                     <connections>
-                        <outlet property="helpButton" destination="BNR-OC-XH4" id="SF8-6M-rJd"/>
-                        <outlet property="mainButton" destination="RWT-6t-Ic5" id="wpd-MW-gRG"/>
-                        <outlet property="patchButton" destination="XK1-8O-Ajn" id="91L-Dw-FC2"/>
-                        <outlet property="pumpButton" destination="ygg-L6-NRO" id="Nc3-G9-UsC"/>
-                        <outlet property="tubeButton" destination="nO4-uc-pLt" id="gsk-Dc-QDs"/>
-                        <outletCollection property="ancillaryButtons" destination="ygg-L6-NRO" collectionClass="NSMutableArray" id="yWI-CL-hGB"/>
-                        <outletCollection property="ancillaryButtons" destination="nO4-uc-pLt" collectionClass="NSMutableArray" id="gs7-K9-pch"/>
-                        <outletCollection property="ancillaryButtons" destination="XK1-8O-Ajn" collectionClass="NSMutableArray" id="G2b-qt-Xea"/>
-                        <outletCollection property="ancillaryButtons" destination="BNR-OC-XH4" collectionClass="NSMutableArray" id="OMp-JE-bGS"/>
-                        <segue destination="hJ6-de-XgI" kind="showDetail" identifier="tubeSegue" id="OxL-er-ZTc"/>
+                        <outletCollection property="optionButtons" destination="UJn-Db-73J" collectionClass="NSMutableArray" id="IXr-HJ-yzZ"/>
+                        <outletCollection property="optionButtons" destination="fNa-8v-ER6" collectionClass="NSMutableArray" id="meN-Jt-XNZ"/>
+                        <outletCollection property="optionButtons" destination="yKK-Rh-at1" collectionClass="NSMutableArray" id="kvc-Wg-gyc"/>
+                        <segue destination="hJ6-de-XgI" kind="show" identifier="optionSelectedSegue" id="CDr-79-Vws"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAo-zL-CEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="841.52923538230891"/>
+            <point key="canvasLocation" x="-148" y="830"/>
         </scene>
-        <!--Tube View Controller-->
+        <!--Option SelectedVC-->
         <scene sceneID="C0g-pR-4R1">
             <objects>
-                <viewController id="hJ6-de-XgI" customClass="TubeViewController" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hJ6-de-XgI" customClass="OptionSelectedVC" customModule="BikeAid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GGM-CZ-flf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvF-eo-Z81" customClass="CircularView" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="140" y="82" width="95" height="95"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tube" translatesAutoresizingMaskIntoConstraints="NO" id="zJo-nx-bI8">
-                                        <rect key="frame" x="10" y="10" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="MFx-aO-Nf6"/>
-                                            <constraint firstAttribute="height" constant="75" id="vF3-pV-ONA"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="zJo-nx-bI8" firstAttribute="centerY" secondItem="DvF-eo-Z81" secondAttribute="centerY" id="2Ka-GH-jAo"/>
-                                    <constraint firstAttribute="width" constant="95" id="9i7-2Z-AoX"/>
-                                    <constraint firstAttribute="height" constant="95" id="WCc-EE-Gjn"/>
-                                    <constraint firstItem="zJo-nx-bI8" firstAttribute="centerX" secondItem="DvF-eo-Z81" secondAttribute="centerX" id="ibS-k6-hAa"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffL-vM-Ue9" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="16" y="40" width="52" height="52"/>
-                                <color key="backgroundColor" red="0.53000000000000003" green="0.53000000000000003" blue="0.53000000000000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="mainButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="1ph-9Z-i3u"/>
-                                    <constraint firstAttribute="width" constant="52" id="QZY-we-b8L"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" image="crossWhite"/>
-                                <connections>
-                                    <action selector="backButtonTapped:" destination="hJ6-de-XgI" eventType="touchUpInside" id="Ybx-aX-b6w"/>
-                                    <action selector="mainButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="0Cl-Ge-BVz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What size tube?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-p1-UI0">
-                                <rect key="frame" x="43.5" y="221" width="288" height="51"/>
-                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="40"/>
-                                <color key="textColor" red="0.53000000000000003" green="0.53000000000000003" blue="0.53000000000000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-Pg-E9M" userLabel="animatedSend" customClass="SenSendAnimatedView">
-                                <rect key="frame" x="0.0" y="579" width="375" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="dZe-Xe-NPW"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ei-aE-Ciz" customClass="SendButton" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="110" y="472" width="155" height="155"/>
-                                <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="155" id="lEj-UV-4E4"/>
-                                    <constraint firstAttribute="width" constant="155" id="pSY-4t-Q5f"/>
-                                </constraints>
-                                <state key="normal" image="messagBubble">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huB-RD-mEe">
+                                <rect key="frame" x="325" y="30" width="30" height="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendButtonTapped:" destination="hJ6-de-XgI" eventType="touchUpInside" id="kcc-oS-9Ve"/>
+                                    <action selector="closeButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="9hO-uV-h88"/>
+                                    <action selector="closeButtonTapped:" destination="hJ6-de-XgI" eventType="touchUpInside" id="XTo-kC-vPs"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uqD-c3-tOj">
-                                <rect key="frame" x="20" y="280" width="335" height="192"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tubeCell" id="mE5-86-jQX" customClass="TubeCell" customModule="BikeAid" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="80"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mE5-86-jQX" id="TzC-I1-GAt">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-rf-w2F">
-                                                    <rect key="frame" x="15" y="24.5" width="41.5" height="31"/>
-                                                    <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="24"/>
-                                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tu-Me-r76" userLabel="27.5 Button" customClass="CheckButton" customModule="BikeAid" customModuleProvider="target">
-                                                    <rect key="frame" x="152.5" y="25" width="30" height="30"/>
-                                                    <color key="backgroundColor" red="0.81960784310000001" green="0.21176470589999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="Fd4-l5-8IR"/>
-                                                        <constraint firstAttribute="height" constant="30" id="lTF-zn-SMZ"/>
-                                                    </constraints>
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="2Tu-Me-r76" firstAttribute="centerX" secondItem="TzC-I1-GAt" secondAttribute="centerX" id="aSy-CT-iUO"/>
-                                                <constraint firstItem="m4e-rf-w2F" firstAttribute="leading" secondItem="TzC-I1-GAt" secondAttribute="leading" constant="15" id="dQX-pG-hgr"/>
-                                                <constraint firstItem="m4e-rf-w2F" firstAttribute="centerY" secondItem="TzC-I1-GAt" secondAttribute="centerY" id="rxE-MY-dFt"/>
-                                                <constraint firstItem="2Tu-Me-r76" firstAttribute="centerY" secondItem="TzC-I1-GAt" secondAttribute="centerY" id="uPH-jd-9X0"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="tubeSizeButton" destination="2Tu-Me-r76" id="6To-0n-Mqw"/>
-                                            <outlet property="tubeSizeLabel" destination="m4e-rf-w2F" id="reu-qU-Fov"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="hJ6-de-XgI" id="EKm-W6-L1i"/>
-                                    <outlet property="delegate" destination="hJ6-de-XgI" id="9mA-CE-D8l"/>
-                                </connections>
-                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjz-av-RTx" customClass="CircularButton" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="60" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FAR-gd-qii"/>
+                                    <constraint firstAttribute="height" constant="100" id="byT-Hm-cU5"/>
+                                </constraints>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.69803921568627447" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DvF-eo-Z81" firstAttribute="centerX" secondItem="GGM-CZ-flf" secondAttribute="centerX" id="0M2-Ni-PvI"/>
-                            <constraint firstItem="7Ei-aE-Ciz" firstAttribute="centerX" secondItem="PLF-jf-uXy" secondAttribute="centerX" id="2GT-zt-rk6"/>
-                            <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" secondItem="Hzf-Pg-E9M" secondAttribute="trailing" id="4QI-Bq-qC5"/>
-                            <constraint firstItem="PLF-jf-uXy" firstAttribute="bottom" secondItem="7Ei-aE-Ciz" secondAttribute="bottom" constant="40" id="4jJ-G1-zAv"/>
-                            <constraint firstItem="Hzf-Pg-E9M" firstAttribute="centerX" secondItem="GGM-CZ-flf" secondAttribute="centerX" id="Abl-wu-Y29"/>
-                            <constraint firstItem="Hzf-Pg-E9M" firstAttribute="leading" secondItem="PLF-jf-uXy" secondAttribute="leading" id="CAH-3V-fK1"/>
-                            <constraint firstItem="QPI-p1-UI0" firstAttribute="centerX" secondItem="DvF-eo-Z81" secondAttribute="centerX" id="TEb-JO-0fK"/>
-                            <constraint firstItem="zJo-nx-bI8" firstAttribute="top" secondItem="ffL-vM-Ue9" secondAttribute="bottom" id="THk-ow-aJO"/>
-                            <constraint firstItem="uqD-c3-tOj" firstAttribute="leading" secondItem="PLF-jf-uXy" secondAttribute="leading" constant="20" id="Urb-1f-1Z3"/>
-                            <constraint firstItem="uqD-c3-tOj" firstAttribute="top" secondItem="QPI-p1-UI0" secondAttribute="bottom" constant="8" id="bGB-qE-1hf"/>
-                            <constraint firstItem="QPI-p1-UI0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PLF-jf-uXy" secondAttribute="leading" id="bT0-U6-jCF"/>
-                            <constraint firstItem="ffL-vM-Ue9" firstAttribute="top" secondItem="PLF-jf-uXy" secondAttribute="top" constant="20" id="bV4-5e-Gy2"/>
-                            <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" secondItem="uqD-c3-tOj" secondAttribute="trailing" constant="20" id="cw3-MW-b9u"/>
-                            <constraint firstItem="7Ei-aE-Ciz" firstAttribute="top" secondItem="uqD-c3-tOj" secondAttribute="bottom" id="eTP-zI-ifi"/>
-                            <constraint firstAttribute="bottom" secondItem="Hzf-Pg-E9M" secondAttribute="bottom" constant="-40" id="gyr-bv-uOo"/>
-                            <constraint firstItem="ffL-vM-Ue9" firstAttribute="leading" secondItem="PLF-jf-uXy" secondAttribute="leading" constant="16" id="rIG-tz-IaM"/>
-                            <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QPI-p1-UI0" secondAttribute="trailing" id="umg-6c-HMT"/>
-                            <constraint firstItem="QPI-p1-UI0" firstAttribute="top" secondItem="DvF-eo-Z81" secondAttribute="bottom" constant="44" id="yCs-h8-1ZK"/>
+                            <constraint firstItem="zjz-av-RTx" firstAttribute="centerX" secondItem="GGM-CZ-flf" secondAttribute="centerX" id="7kV-uz-uVa"/>
+                            <constraint firstItem="PLF-jf-uXy" firstAttribute="trailing" secondItem="huB-RD-mEe" secondAttribute="trailing" constant="20" id="UsO-7P-JOL"/>
+                            <constraint firstItem="zjz-av-RTx" firstAttribute="top" secondItem="PLF-jf-uXy" secondAttribute="top" constant="40" id="nyS-zP-V9P"/>
+                            <constraint firstItem="huB-RD-mEe" firstAttribute="top" secondItem="PLF-jf-uXy" secondAttribute="top" constant="10" id="w8r-Uz-aMO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PLF-jf-uXy"/>
                     </view>
-                    <connections>
-                        <outlet property="backButton" destination="ffL-vM-Ue9" id="jMh-my-Ip7"/>
-                        <outlet property="sendButton" destination="7Ei-aE-Ciz" id="mT3-yg-xJB"/>
-                        <outlet property="tableView" destination="uqD-c3-tOj" id="5tY-Cn-Cgp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMX-wH-ccR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648.79999999999995" y="841.52923538230891"/>
+            <point key="canvasLocation" x="642" y="830"/>
         </scene>
         <!--Bikes View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -411,17 +268,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bml-aS-LqY" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="1" green="0.99042291752602185" blue="0.95894837889068052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="gGW-ST-K2o" id="NhP-b5-fNH"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A70-WE-8EV" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeBottom" translatesAutoresizingMaskIntoConstraints="NO" id="TdM-F0-0mM">
+                                        <rect key="frame" x="0.0" y="-12" width="375" height="62"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVq-sg-kwe">
+                                        <rect key="frame" x="170.5" y="10" width="34" height="30"/>
+                                        <state key="normal" image="attentionIconEmpty"/>
+                                        <connections>
+                                            <segue destination="YDB-ir-Z1d" kind="showDetail" id="gts-Wr-VBx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Naz-gb-QAk"/>
+                                    <constraint firstAttribute="trailing" secondItem="TdM-F0-0mM" secondAttribute="trailing" id="Pyp-JV-TjR"/>
+                                    <constraint firstItem="tVq-sg-kwe" firstAttribute="centerX" secondItem="TdM-F0-0mM" secondAttribute="centerX" id="ZZz-7O-Afa"/>
+                                    <constraint firstAttribute="bottom" secondItem="TdM-F0-0mM" secondAttribute="bottom" id="f1h-Ly-cuK"/>
+                                    <constraint firstItem="TdM-F0-0mM" firstAttribute="leading" secondItem="A70-WE-8EV" secondAttribute="leading" id="gR6-Wo-OGE"/>
+                                    <constraint firstItem="tVq-sg-kwe" firstAttribute="top" secondItem="A70-WE-8EV" secondAttribute="top" constant="10" id="uIs-9B-ctE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bml-aS-LqY" firstAttribute="top" secondItem="niG-ni-N1u" secondAttribute="top" id="6GN-s1-MiP"/>
+                            <constraint firstItem="niG-ni-N1u" firstAttribute="bottom" secondItem="A70-WE-8EV" secondAttribute="bottom" id="6eG-9u-9Iv"/>
                             <constraint firstItem="bml-aS-LqY" firstAttribute="leading" secondItem="niG-ni-N1u" secondAttribute="leading" id="E2L-ge-6SD"/>
+                            <constraint firstItem="A70-WE-8EV" firstAttribute="leading" secondItem="niG-ni-N1u" secondAttribute="leading" id="Np9-qc-Dee"/>
+                            <constraint firstItem="A70-WE-8EV" firstAttribute="trailing" secondItem="niG-ni-N1u" secondAttribute="trailing" id="PfX-DB-fii"/>
                             <constraint firstItem="niG-ni-N1u" firstAttribute="trailing" secondItem="bml-aS-LqY" secondAttribute="trailing" id="e5G-hP-1xL"/>
                             <constraint firstItem="niG-ni-N1u" firstAttribute="bottom" secondItem="bml-aS-LqY" secondAttribute="bottom" id="ibG-03-SZX"/>
                         </constraints>
@@ -435,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSO-Tg-Oew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1047.2" y="126.38680659670166"/>
+            <point key="canvasLocation" x="-1000.8" y="829.83508245877067"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Czb-vI-zGw">
@@ -455,34 +339,11 @@
             </objects>
             <point key="canvasLocation" x="-270" y="126"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="4xw-b9-rvw">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UDK-7r-b5e" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y0g-jL-PbS">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="YDB-ir-Z1d" kind="relationship" relationship="viewControllers" id="JDW-Uo-tvW"/>
-                        <segue destination="gGW-ST-K2o" kind="relationship" relationship="viewControllers" id="WRC-Uh-35s"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9qa-nj-g25" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1737" y="842"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="crossWhite" width="147" height="147"/>
-        <image name="help" width="41" height="56"/>
+        <image name="attentionIconEmpty" width="34" height="30"/>
         <image name="map-with-pin" width="48" height="48"/>
-        <image name="messagBubble" width="48" height="47"/>
         <image name="messagBubble-tabBar" width="72" height="70.800003051757812"/>
-        <image name="patch" width="66" height="66"/>
-        <image name="pump" width="55" height="57"/>
-        <image name="tube" width="66" height="66"/>
+        <image name="orangeBottom" width="320" height="62"/>
     </resources>
 </document>
