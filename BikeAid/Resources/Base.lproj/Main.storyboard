@@ -111,7 +111,7 @@
                         <outletCollection property="ancillaryButtons" destination="nO4-uc-pLt" collectionClass="NSMutableArray" id="gs7-K9-pch"/>
                         <outletCollection property="ancillaryButtons" destination="XK1-8O-Ajn" collectionClass="NSMutableArray" id="G2b-qt-Xea"/>
                         <outletCollection property="ancillaryButtons" destination="BNR-OC-XH4" collectionClass="NSMutableArray" id="OMp-JE-bGS"/>
-                        <segue destination="hJ6-de-XgI" kind="showDetail" identifier="tubeSegue" id="OxL-er-ZTc"/>
+                        <segue destination="hJ6-de-XgI" kind="show" identifier="tubeSegue" id="OxL-er-ZTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAo-zL-CEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
