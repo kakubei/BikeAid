@@ -4,3 +4,4 @@ github "SnapKit/SnapKit"
 github "leoneparise/GoogleMaps-Carthage"
 github "Quick/Quick"
 github "Quick/Nimble"
+github "RxSwiftCommunity/RxGesture" ~> 1.1.1

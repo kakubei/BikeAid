@@ -48,6 +48,11 @@
 		CA6E2B2D210DBE400001F10B /* Lobster_1.3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */; };
 		CA6E2B2F210DC0B60001F10B /* OptionSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E2B2E210DC0B60001F10B /* OptionSelectedVC.swift */; };
 		CA6E2B31210DD41F0001F10B /* UIColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E2B30210DD41F0001F10B /* UIColorUtils.swift */; };
+		CA7E3C0C21F7BDD30091AFCB /* ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7E3C0B21F7BDD30091AFCB /* ButtonView.xib */; };
+		CA7E3C0E21F7BF480091AFCB /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7E3C0D21F7BF480091AFCB /* ButtonView.swift */; };
+		CA7E3C1321F7C48F0091AFCB /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7E3C1221F7C48F0091AFCB /* RxGesture.framework */; };
+		CA7E3C1421F7C4940091AFCB /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7E3C1221F7C48F0091AFCB /* RxGesture.framework */; };
+		CA7E3C1521F7C4940091AFCB /* RxGesture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA7E3C1221F7C48F0091AFCB /* RxGesture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */; };
 		CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC669111FD9855C008F8593 /* DetailsVC.swift */; };
 		CAC794A1210BCB2200FB01A6 /* ButtonsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC794A0210BCB2200FB01A6 /* ButtonsAndViews.swift */; };
@@ -82,6 +87,7 @@
 				CA2C412321637759001383BF /* GoogleMaps.framework in Embed Frameworks */,
 				CA2C413121637759001383BF /* RxSwift.framework in Embed Frameworks */,
 				CA2C412721637759001383BF /* GoogleMapsCore.framework in Embed Frameworks */,
+				CA7E3C1521F7C4940091AFCB /* RxGesture.framework in Embed Frameworks */,
 				CA2C412521637759001383BF /* GoogleMapsBase.framework in Embed Frameworks */,
 				CA2C412D21637759001383BF /* RxBlocking.framework in Embed Frameworks */,
 				CA2C413521637759001383BF /* SnapKit.framework in Embed Frameworks */,
@@ -144,6 +150,9 @@
 		CA6E2B2C210DBE400001F10B /* Lobster_1.3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster_1.3.otf; sourceTree = "<group>"; };
 		CA6E2B2E210DC0B60001F10B /* OptionSelectedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectedVC.swift; sourceTree = "<group>"; };
 		CA6E2B30210DD41F0001F10B /* UIColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorUtils.swift; sourceTree = "<group>"; };
+		CA7E3C0B21F7BDD30091AFCB /* ButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonView.xib; sourceTree = "<group>"; };
+		CA7E3C0D21F7BF480091AFCB /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		CA7E3C1221F7C48F0091AFCB /* RxGesture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxGesture.framework; path = Carthage/Build/iOS/RxGesture.framework; sourceTree = SOURCE_ROOT; };
 		CABE7E2E1FC5C5B60097BEAE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CAC669111FD9855C008F8593 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		CAC794A0210BCB2200FB01A6 /* ButtonsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsAndViews.swift; sourceTree = "<group>"; };
@@ -166,8 +175,10 @@
 				CA2C412221637759001383BF /* GoogleMaps.framework in Frameworks */,
 				CA2C413021637759001383BF /* RxSwift.framework in Frameworks */,
 				CA2C412621637759001383BF /* GoogleMapsCore.framework in Frameworks */,
+				CA7E3C1321F7C48F0091AFCB /* RxGesture.framework in Frameworks */,
 				CA2C412421637759001383BF /* GoogleMapsBase.framework in Frameworks */,
 				CA2C412C21637759001383BF /* RxBlocking.framework in Frameworks */,
+				CA7E3C1421F7C4940091AFCB /* RxGesture.framework in Frameworks */,
 				CA2C413421637759001383BF /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +239,7 @@
 		CA1DCBEF1FAA52A10049DAE7 /* BikeAid */ = {
 			isa = PBXGroup;
 			children = (
+				CA7E3C0821F7BCAD0091AFCB /* New Group */,
 				CAE1BB322162900700BCA1DF /* Frameworks */,
 				CAD0185E1FC731E4001AEEB8 /* client_id.json */,
 				CA3BC6B72160EC0400F12642 /* AppDelegate.swift */,
@@ -260,6 +272,13 @@
 				CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA7E3C0821F7BCAD0091AFCB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CABE7E2A1FC5C21B0097BEAE /* Models */ = {
@@ -304,6 +323,7 @@
 		CAE1BB322162900700BCA1DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA7E3C1221F7C48F0091AFCB /* RxGesture.framework */,
 				CA2665252163905F00A9746F /* Nimble.framework */,
 				CA2665242163905F00A9746F /* Quick.framework */,
 				CA2C4102216376E6001383BF /* GoogleMaps.framework */,
@@ -327,6 +347,8 @@
 				CAFA16522143FDF0007EC05D /* SendAnimatedView.swift */,
 				CA2C40A121623070001383BF /* CustomMarkerView.swift */,
 				CA2C40A721625869001383BF /* CustomMarkerView.xib */,
+				CA7E3C0B21F7BDD30091AFCB /* ButtonView.xib */,
+				CA7E3C0D21F7BF480091AFCB /* ButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -422,6 +444,7 @@
 				CAFA16512143FBE3007EC05D /* SendAnimatedView.xib in Resources */,
 				CAD0185F1FC731E4001AEEB8 /* client_id.json in Resources */,
 				CA1DCBF81FAA52A10049DAE7 /* Assets.xcassets in Resources */,
+				CA7E3C0C21F7BDD30091AFCB /* ButtonView.xib in Resources */,
 				CA2C40A821625869001383BF /* CustomMarkerView.xib in Resources */,
 				CA1DCBF61FAA52A10049DAE7 /* Main.storyboard in Resources */,
 				CA6E2B2D210DBE400001F10B /* Lobster_1.3.otf in Resources */,
@@ -469,6 +492,7 @@
 				CAC794A4210BD60A00FB01A6 /* OptionsViewController.swift in Sources */,
 				CABE7E2F1FC5C5B60097BEAE /* MapViewController.swift in Sources */,
 				CA2C40A221623070001383BF /* CustomMarkerView.swift in Sources */,
+				CA7E3C0E21F7BF480091AFCB /* ButtonView.swift in Sources */,
 				CA1DCBF31FAA52A10049DAE7 /* BikesViewController.swift in Sources */,
 				CA3BC6B62160E1A900F12642 /* TubeControllerViewModel.swift in Sources */,
 				CAC669121FD9855C008F8593 /* DetailsVC.swift in Sources */,

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="3Re-5a-8gR" id="bJP-iT-HzC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RoundedView" customModule="BikeAid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="456" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Road Bike" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Re-5a-8gR">
+                    <rect key="frame" x="25" y="14.5" width="65" height="16.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRightBlack" translatesAutoresizingMaskIntoConstraints="NO" id="Nf1-uQ-TQO">
+                    <rect key="frame" x="419" y="11.5" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="9Ot-q7-6Yf"/>
+                        <constraint firstAttribute="height" constant="22" id="ThP-Et-nOI"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3Re-5a-8gR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Lk-LJ-Ca9"/>
+                <constraint firstItem="3Re-5a-8gR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="fUX-TH-TPj"/>
+                <constraint firstItem="Nf1-uQ-TQO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uoi-NC-9T5"/>
+                <constraint firstAttribute="trailing" secondItem="Nf1-uQ-TQO" secondAttribute="trailing" constant="15" id="yIz-6X-iK8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="203.19999999999999" y="-111.0944527736132"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowRightBlack" width="32" height="32"/>
+    </resources>
+</document>
