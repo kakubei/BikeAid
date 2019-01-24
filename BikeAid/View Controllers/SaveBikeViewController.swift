@@ -26,18 +26,22 @@ class SaveBikeViewController: UIViewController, ButtonViewDelegate {
     }
     
     private func setupButtonViews() {
-        roadBikeView.label.text = "Road Bike"
         roadBikeView.name = .roadBike
         roadBikeView.delegate = self
         
-        mountainBikeView.label.text = "Mountain Bike"
         mountainBikeView.name = .mountainBike
         mountainBikeView.delegate = self
+        
+        hybridBikeView.name = .hybridBike
+        hybridBikeView.delegate = self
+        
+        foldingBikeView.name = .foldingBike
+        foldingBikeView.delegate = self
         
     }
     
     func viewButtonTapped(_ name: ViewButton?) {
-        debugPrint("ViewButton:", name, "tapped")
+        debugPrint("ViewButton:", name as Any, "tapped")
     }
     
     @IBAction func closeButtonTapped(_ sender: CloseButton) {

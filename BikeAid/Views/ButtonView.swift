@@ -15,6 +15,19 @@ public enum ViewButton {
     case mountainBike
     case hybridBike
     case foldingBike
+    
+    var title: String {
+        switch self {
+        case .roadBike:
+            return "Road Bike"
+        case .mountainBike:
+            return "Mountain Bike"
+        case .hybridBike:
+            return "Hybrid Bike"
+        case .foldingBike:
+            return "Folding Bike"
+        }
+    }
 }
 
 protocol ButtonViewDelegate {
@@ -26,7 +39,11 @@ class ButtonView: NibableView {
 
     @IBOutlet weak var label: UILabel!
     
-    var name: ViewButton?
+    var name: ViewButton? {
+        didSet {
+            self.label.text = name?.title
+        }
+    }
     
     let disposeBag = DisposeBag()
     var delegate: ButtonViewDelegate?
@@ -36,7 +53,7 @@ class ButtonView: NibableView {
         
         backgroundColor = .white
         layer.cornerRadius = 7
-        setTappable()
+        setTappable()                
     }
     
     private func setTappable() {
