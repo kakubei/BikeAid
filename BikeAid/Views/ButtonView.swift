@@ -17,25 +17,35 @@ public enum ViewButton {
     case foldingBike
 }
 
+protocol ButtonViewDelegate {
+    func viewButtonTapped(_ name: ViewButton?)
+}
+
 @IBDesignable
-class ButtonView: UIView {
+class ButtonView: NibableView {
 
     @IBOutlet weak var label: UILabel!
     
     var name: ViewButton?
     
     let disposeBag = DisposeBag()
-    var viewTapped = PublishSubject<Bool>()
+    var delegate: ButtonViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        backgroundColor = .white
+        layer.cornerRadius = 7
+        setTappable()
+    }
+    
+    private func setTappable() {
         self.rx
             .tapGesture()
             .when(.recognized)
             .subscribe(onNext: { [weak self] _ in
-                self?.viewTapped.onNext(true)
-        }).disposed(by: disposeBag)
+                self?.delegate?.viewButtonTapped(self?.name)
+            }).disposed(by: disposeBag)
     }
 
 }

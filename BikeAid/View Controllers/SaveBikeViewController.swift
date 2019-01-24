@@ -9,9 +9,13 @@
 import UIKit
 import RxSwift
 
-class SaveBikeViewController: UIViewController {
+class SaveBikeViewController: UIViewController, ButtonViewDelegate {
     
     @IBOutlet weak var roadBikeView: ButtonView!
+    @IBOutlet weak var mountainBikeView: ButtonView!
+    @IBOutlet weak var hybridBikeView: ButtonView!
+    @IBOutlet weak var foldingBikeView: ButtonView!
+    
     
     let disposeBag = DisposeBag()
 
@@ -24,16 +28,15 @@ class SaveBikeViewController: UIViewController {
     private func setupButtonViews() {
         roadBikeView.label.text = "Road Bike"
         roadBikeView.name = .roadBike
+        roadBikeView.delegate = self
         
-        roadBikeView.viewTapped.asObservable()
-            .skipWhile { $0 == false }
-            .subscribe(onNext: { [weak self] _ in
-                self?.viewButtonTapped(self?.roadBikeView.name)
-            }).disposed(by: disposeBag)
+        mountainBikeView.label.text = "Mountain Bike"
+        mountainBikeView.name = .mountainBike
+        mountainBikeView.delegate = self
         
     }
     
-    private func viewButtonTapped(_ name: ViewButton?) {
+    func viewButtonTapped(_ name: ViewButton?) {
         debugPrint("ViewButton:", name, "tapped")
     }
     

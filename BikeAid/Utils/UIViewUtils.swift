@@ -11,6 +11,19 @@ import UIKit
 
 extension UIView {
     
+    var globalNibName: String {
+        let thisType = type(of: self)
+        return String(describing: thisType)
+    }
+
+    func instantiateNibNamed(_ name: String) {
+        backgroundColor = .clear
+        let containerView =  UINib(nibName: name, bundle: nil).instantiate(withOwner: self, options: nil).first as? UIView
+        containerView?.frame = self.bounds
+        containerView?.backgroundColor = .clear
+        addSubview(containerView!)
+    }
+    
     func yellowGradient() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.darkYellow.cgColor, UIColor.lightYellow.cgColor]
@@ -22,42 +35,6 @@ extension UIView {
         layer.insertSublayer(gradientLayer, at: 0)
     }
 
-    // MARKER: Extensions from Ray Wenderlich tutorial
-    func lock() {
-        if let _ = viewWithTag(10) {
-            //View is already locked
-        }
-        else {
-            let lockView = UIView(frame: bounds)
-            lockView.backgroundColor = UIColor(white: 0.0, alpha: 0.75)
-            lockView.tag = 10
-            lockView.alpha = 0.0
-            let activity = UIActivityIndicatorView(style: .white)
-            activity.hidesWhenStopped = true
-            activity.center = lockView.center
-            lockView.addSubview(activity)
-            activity.startAnimating()
-            addSubview(lockView)
-            
-            UIView.animate(withDuration: 0.2, animations: {
-                lockView.alpha = 1.0
-            })
-        }
-    }
-    
-    func unlock() {
-        if let lockView = viewWithTag(10) {
-            UIView.animate(withDuration: 0.2, animations: {
-                lockView.alpha = 0.0
-            }, completion: { finished in
-                lockView.removeFromSuperview()
-            })
-        }
-    }
-    
-    // end of Ray Wenderlich extension
-
-    
     public func renderToImage(afterScreenUpdates: Bool = false) -> UIImage {
         let rendererFormat = UIGraphicsImageRendererFormat.default()
         rendererFormat.opaque = false
@@ -104,5 +81,20 @@ extension UIView {
         self.fadeOut(duration: duration) { _ in
             self.isHidden = true
         }
+    }
+    
+    
+}
+
+class NibableView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.instantiateNibNamed(globalNibName)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.instantiateNibNamed(globalNibName)
     }
 }

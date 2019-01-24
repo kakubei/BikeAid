@@ -378,6 +378,7 @@
                                     <color key="titleColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButtonTapped:" destination="1zR-WL-5Wa" eventType="touchUpInside" id="Adn-Qe-CNi"/>
                                     <action selector="closeButtonTapped:" destination="YDB-ir-Z1d" eventType="touchUpInside" id="Gwj-GJ-1dN"/>
                                     <action selector="closeButtonTapped:" destination="I61-Bg-gTw" eventType="touchUpInside" id="qj6-NL-D7V"/>
                                 </connections>
@@ -395,21 +396,54 @@
                                     <constraint firstAttribute="height" constant="45" id="yNr-iR-imL"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQN-N2-1XR" userLabel="Mountain Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="15" y="183" width="345" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XlR-vA-FLk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-Wc-cqK" userLabel="Hybrid Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="14" y="236" width="345" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="WlM-xL-XT5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKS-EJ-aca" userLabel="Folding Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
+                                <rect key="frame" x="14" y="289" width="345" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="1hG-xX-uoT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.69803921570000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Lut-Wc-cqK" firstAttribute="trailing" secondItem="OQN-N2-1XR" secondAttribute="trailing" id="6Wj-jq-AmQ"/>
                             <constraint firstItem="rPB-Rv-TyZ" firstAttribute="centerX" secondItem="dGL-33-bOB" secondAttribute="centerX" id="8nN-FP-J7Z"/>
                             <constraint firstItem="gRH-PN-o3E" firstAttribute="top" secondItem="kwY-Ti-Xnd" secondAttribute="top" constant="10" id="EM9-bT-iND"/>
+                            <constraint firstItem="JKS-EJ-aca" firstAttribute="trailing" secondItem="Lut-Wc-cqK" secondAttribute="trailing" id="Eoh-JL-mgs"/>
                             <constraint firstItem="kwY-Ti-Xnd" firstAttribute="trailing" secondItem="gRH-PN-o3E" secondAttribute="trailing" constant="15" id="Grq-8k-kQ4"/>
                             <constraint firstItem="kwY-Ti-Xnd" firstAttribute="trailing" secondItem="aJP-ck-HGW" secondAttribute="trailing" constant="15" id="LVk-Jx-tOM"/>
+                            <constraint firstItem="Lut-Wc-cqK" firstAttribute="leading" secondItem="OQN-N2-1XR" secondAttribute="leading" id="O7d-YC-dMI"/>
+                            <constraint firstItem="Lut-Wc-cqK" firstAttribute="top" secondItem="OQN-N2-1XR" secondAttribute="bottom" constant="11" id="Wib-z4-eVh"/>
+                            <constraint firstItem="JKS-EJ-aca" firstAttribute="top" secondItem="Lut-Wc-cqK" secondAttribute="bottom" constant="11" id="YYT-E8-s1k"/>
                             <constraint firstItem="aJP-ck-HGW" firstAttribute="top" secondItem="rPB-Rv-TyZ" secondAttribute="bottom" constant="20" id="agn-aQ-5Vh"/>
+                            <constraint firstItem="JKS-EJ-aca" firstAttribute="leading" secondItem="Lut-Wc-cqK" secondAttribute="leading" id="dqh-sy-47o"/>
+                            <constraint firstItem="OQN-N2-1XR" firstAttribute="leading" secondItem="aJP-ck-HGW" secondAttribute="leading" id="eqF-QQ-Rnh"/>
                             <constraint firstItem="rPB-Rv-TyZ" firstAttribute="top" secondItem="gRH-PN-o3E" secondAttribute="bottom" constant="20" id="gDa-Jd-ird"/>
+                            <constraint firstItem="OQN-N2-1XR" firstAttribute="trailing" secondItem="aJP-ck-HGW" secondAttribute="trailing" id="kZT-gi-Zfn"/>
                             <constraint firstItem="aJP-ck-HGW" firstAttribute="leading" secondItem="kwY-Ti-Xnd" secondAttribute="leading" constant="15" id="nkr-dq-lmZ"/>
+                            <constraint firstItem="OQN-N2-1XR" firstAttribute="top" secondItem="aJP-ck-HGW" secondAttribute="bottom" constant="11" id="qrC-1Y-Z3t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kwY-Ti-Xnd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="accountIcon" selectedImage="accountIcon" id="z75-Us-esh"/>
                     <connections>
+                        <outlet property="foldingBikeView" destination="JKS-EJ-aca" id="Gwg-Wp-O6m"/>
+                        <outlet property="hybridBikeView" destination="Lut-Wc-cqK" id="jc6-fh-DwD"/>
+                        <outlet property="mountainBikeView" destination="OQN-N2-1XR" id="18a-yf-Uug"/>
                         <outlet property="roadBikeView" destination="aJP-ck-HGW" id="LEq-7b-Toz"/>
                     </connections>
                 </viewController>
