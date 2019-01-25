@@ -15,6 +15,7 @@ public enum ViewButton {
     case mountainBike
     case hybridBike
     case foldingBike
+    case other
     case twentyNine
     case twentySeven
     case twentySix
@@ -29,6 +30,8 @@ public enum ViewButton {
             return "Hybrid Bike"
         case .foldingBike:
             return "Folding Bike"
+        case .other:
+            return "Other"
         case .twentyNine:
             return "29 - ?"
         case .twentySeven:

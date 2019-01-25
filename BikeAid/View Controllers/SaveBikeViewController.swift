@@ -27,17 +27,11 @@ class SaveBikeViewController: UIViewController, ButtonViewDelegate {
     
     private func setupButtonViews() {
         roadBikeView.name = .roadBike
-        roadBikeView.delegate = self
-        
         mountainBikeView.name = .mountainBike
-        mountainBikeView.delegate = self
-        
         hybridBikeView.name = .hybridBike
-        hybridBikeView.delegate = self
-        
         foldingBikeView.name = .foldingBike
-        foldingBikeView.delegate = self
         
+        [roadBikeView, mountainBikeView, hybridBikeView, foldingBikeView].forEach { $0?.delegate = self }        
     }
     
     func viewButtonTapped(_ name: ViewButton?) {

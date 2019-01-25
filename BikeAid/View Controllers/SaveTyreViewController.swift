@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SaveTyreViewController: UIViewController {
-
+class SaveTyreViewController: UIViewController, ButtonViewDelegate {
+    
     @IBOutlet weak var twentyNineButton: ButtonView!
     @IBOutlet weak var twentySevenButton: ButtonView!
     @IBOutlet weak var twentySixButton: ButtonView!
@@ -18,10 +18,18 @@ class SaveTyreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupButtons()
+    }
+    
+    private func setupButtons() {
         twentyNineButton.name = .twentyNine
         twentySevenButton.name = .twentySeven
         twentySixButton.name = .twentySix
+        otherButton.name = .other
+        [twentyNineButton, twentySevenButton, twentySixButton, otherButton].forEach { $0?.delegate = self }
     }
-    
 
+    func viewButtonTapped(_ name: ViewButton?) {
+        // TODO: Save tyre size
+    }
 }

@@ -383,34 +383,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJP-ck-HGW" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="15" y="112.5" width="345" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="yNr-iR-imL"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQN-N2-1XR" userLabel="Mountain Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="15" y="183" width="345" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="XlR-vA-FLk"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-Wc-cqK" userLabel="Hybrid Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="14" y="236" width="345" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="WlM-xL-XT5"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKS-EJ-aca" userLabel="Folding Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
-                                <rect key="frame" x="14" y="289" width="345" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="1hG-xX-uoT"/>
-                                </constraints>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Ano-iH-OU5">
+                                <rect key="frame" x="15" y="112.5" width="386" height="261.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJP-ck-HGW" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
+                                        <rect key="frame" x="21" y="20" width="345" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="yNr-iR-imL"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQN-N2-1XR" userLabel="Mountain Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
+                                        <rect key="frame" x="21" y="90.5" width="345" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="XlR-vA-FLk"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-Wc-cqK" userLabel="Hybrid Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="143.5" width="345" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="WlM-xL-XT5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKS-EJ-aca" userLabel="Folding Bike View" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="196.5" width="345" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="1hG-xX-uoT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFV-MN-2HY">
                                 <rect key="frame" x="134.5" y="610" width="106" height="30"/>
                                 <state key="normal" title="SKIP FOR NOW">
@@ -423,24 +428,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.69803921570000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Lut-Wc-cqK" firstAttribute="trailing" secondItem="OQN-N2-1XR" secondAttribute="trailing" id="6Wj-jq-AmQ"/>
+                            <constraint firstItem="Ano-iH-OU5" firstAttribute="leading" secondItem="kwY-Ti-Xnd" secondAttribute="leading" constant="15" id="11V-dW-fqw"/>
+                            <constraint firstItem="Ano-iH-OU5" firstAttribute="top" secondItem="rPB-Rv-TyZ" secondAttribute="bottom" constant="20" id="5PK-Hq-gU1"/>
                             <constraint firstItem="rPB-Rv-TyZ" firstAttribute="centerX" secondItem="dGL-33-bOB" secondAttribute="centerX" id="8nN-FP-J7Z"/>
                             <constraint firstItem="gRH-PN-o3E" firstAttribute="top" secondItem="kwY-Ti-Xnd" secondAttribute="top" constant="10" id="EM9-bT-iND"/>
-                            <constraint firstItem="JKS-EJ-aca" firstAttribute="trailing" secondItem="Lut-Wc-cqK" secondAttribute="trailing" id="Eoh-JL-mgs"/>
                             <constraint firstItem="kwY-Ti-Xnd" firstAttribute="trailing" secondItem="gRH-PN-o3E" secondAttribute="trailing" constant="15" id="Grq-8k-kQ4"/>
-                            <constraint firstItem="kwY-Ti-Xnd" firstAttribute="trailing" secondItem="aJP-ck-HGW" secondAttribute="trailing" constant="15" id="LVk-Jx-tOM"/>
-                            <constraint firstItem="Lut-Wc-cqK" firstAttribute="leading" secondItem="OQN-N2-1XR" secondAttribute="leading" id="O7d-YC-dMI"/>
                             <constraint firstItem="WFV-MN-2HY" firstAttribute="centerX" secondItem="dGL-33-bOB" secondAttribute="centerX" id="U5E-ho-UeI"/>
-                            <constraint firstItem="Lut-Wc-cqK" firstAttribute="top" secondItem="OQN-N2-1XR" secondAttribute="bottom" constant="11" id="Wib-z4-eVh"/>
-                            <constraint firstItem="JKS-EJ-aca" firstAttribute="top" secondItem="Lut-Wc-cqK" secondAttribute="bottom" constant="11" id="YYT-E8-s1k"/>
-                            <constraint firstItem="aJP-ck-HGW" firstAttribute="top" secondItem="rPB-Rv-TyZ" secondAttribute="bottom" constant="20" id="agn-aQ-5Vh"/>
-                            <constraint firstItem="JKS-EJ-aca" firstAttribute="leading" secondItem="Lut-Wc-cqK" secondAttribute="leading" id="dqh-sy-47o"/>
-                            <constraint firstItem="OQN-N2-1XR" firstAttribute="leading" secondItem="aJP-ck-HGW" secondAttribute="leading" id="eqF-QQ-Rnh"/>
+                            <constraint firstItem="kwY-Ti-Xnd" firstAttribute="trailing" secondItem="Ano-iH-OU5" secondAttribute="trailing" constant="15" id="a6V-yg-f68"/>
                             <constraint firstItem="rPB-Rv-TyZ" firstAttribute="top" secondItem="gRH-PN-o3E" secondAttribute="bottom" constant="20" id="gDa-Jd-ird"/>
                             <constraint firstItem="kwY-Ti-Xnd" firstAttribute="bottom" secondItem="WFV-MN-2HY" secondAttribute="bottom" constant="27" id="kE0-jj-dMp"/>
-                            <constraint firstItem="OQN-N2-1XR" firstAttribute="trailing" secondItem="aJP-ck-HGW" secondAttribute="trailing" id="kZT-gi-Zfn"/>
-                            <constraint firstItem="aJP-ck-HGW" firstAttribute="leading" secondItem="kwY-Ti-Xnd" secondAttribute="leading" constant="15" id="nkr-dq-lmZ"/>
-                            <constraint firstItem="OQN-N2-1XR" firstAttribute="top" secondItem="aJP-ck-HGW" secondAttribute="bottom" constant="11" id="qrC-1Y-Z3t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kwY-Ti-Xnd"/>
                     </view>
@@ -477,7 +473,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="iQT-JY-kfZ">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="iQT-JY-kfZ">
                                 <rect key="frame" x="15" y="447" width="345" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qr6-T3-9D7" customClass="ButtonView" customModule="BikeAid" customModuleProvider="target">
@@ -516,7 +512,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.69803921570000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YyV-bE-DPR" firstAttribute="bottom" secondItem="iQT-JY-kfZ" secondAttribute="bottom" constant="40" id="3vn-Aw-7AH"/>
                             <constraint firstItem="iQT-JY-kfZ" firstAttribute="leading" secondItem="YyV-bE-DPR" secondAttribute="leading" constant="15" id="4jB-nL-X2b"/>
                             <constraint firstItem="iQT-JY-kfZ" firstAttribute="top" secondItem="CoG-xK-FQY" secondAttribute="bottom" constant="20" id="7SP-oH-GQH"/>
                             <constraint firstItem="YyV-bE-DPR" firstAttribute="trailing" secondItem="NGf-Tc-cwY" secondAttribute="trailing" constant="15" id="CVM-d1-m0e"/>
