@@ -417,6 +417,15 @@
                                     <constraint firstAttribute="height" constant="45" id="1hG-xX-uoT"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFV-MN-2HY">
+                                <rect key="frame" x="133" y="623" width="106" height="30"/>
+                                <state key="normal" title="SKIP FOR NOW">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="1zR-WL-5Wa" eventType="touchUpInside" id="uz7-5a-74R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.69803921570000005" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -427,12 +436,14 @@
                             <constraint firstItem="kwY-Ti-Xnd" firstAttribute="trailing" secondItem="gRH-PN-o3E" secondAttribute="trailing" constant="15" id="Grq-8k-kQ4"/>
                             <constraint firstItem="kwY-Ti-Xnd" firstAttribute="trailing" secondItem="aJP-ck-HGW" secondAttribute="trailing" constant="15" id="LVk-Jx-tOM"/>
                             <constraint firstItem="Lut-Wc-cqK" firstAttribute="leading" secondItem="OQN-N2-1XR" secondAttribute="leading" id="O7d-YC-dMI"/>
+                            <constraint firstItem="WFV-MN-2HY" firstAttribute="centerX" secondItem="dGL-33-bOB" secondAttribute="centerX" id="U5E-ho-UeI"/>
                             <constraint firstItem="Lut-Wc-cqK" firstAttribute="top" secondItem="OQN-N2-1XR" secondAttribute="bottom" constant="11" id="Wib-z4-eVh"/>
                             <constraint firstItem="JKS-EJ-aca" firstAttribute="top" secondItem="Lut-Wc-cqK" secondAttribute="bottom" constant="11" id="YYT-E8-s1k"/>
                             <constraint firstItem="aJP-ck-HGW" firstAttribute="top" secondItem="rPB-Rv-TyZ" secondAttribute="bottom" constant="20" id="agn-aQ-5Vh"/>
                             <constraint firstItem="JKS-EJ-aca" firstAttribute="leading" secondItem="Lut-Wc-cqK" secondAttribute="leading" id="dqh-sy-47o"/>
                             <constraint firstItem="OQN-N2-1XR" firstAttribute="leading" secondItem="aJP-ck-HGW" secondAttribute="leading" id="eqF-QQ-Rnh"/>
                             <constraint firstItem="rPB-Rv-TyZ" firstAttribute="top" secondItem="gRH-PN-o3E" secondAttribute="bottom" constant="20" id="gDa-Jd-ird"/>
+                            <constraint firstItem="kwY-Ti-Xnd" firstAttribute="bottom" secondItem="WFV-MN-2HY" secondAttribute="bottom" constant="27" id="kE0-jj-dMp"/>
                             <constraint firstItem="OQN-N2-1XR" firstAttribute="trailing" secondItem="aJP-ck-HGW" secondAttribute="trailing" id="kZT-gi-Zfn"/>
                             <constraint firstItem="aJP-ck-HGW" firstAttribute="leading" secondItem="kwY-Ti-Xnd" secondAttribute="leading" constant="15" id="nkr-dq-lmZ"/>
                             <constraint firstItem="OQN-N2-1XR" firstAttribute="top" secondItem="aJP-ck-HGW" secondAttribute="bottom" constant="11" id="qrC-1Y-Z3t"/>
