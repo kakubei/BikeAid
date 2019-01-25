@@ -29,6 +29,22 @@ enum BikeClass {
     case mountain(subtype: BikeType)
     case hybrid
     case electric
+    case folding
+    
+    init(fromButton: ViewButton) {
+        switch fromButton {
+        case .foldingBike:
+            self = .folding
+        case .hybridBike:
+            self = .hybrid
+        case .mountainBike:
+            self = .mountain(subtype: .enduro)
+        case .roadBike:
+            self = .road
+        default:
+            self = .hybrid
+        }
+    }
     
     init(rawValue: String) {
         switch rawValue {
@@ -40,7 +56,9 @@ enum BikeClass {
             self = .hybrid
         case "electric":
             self = .electric
-            
+        case "folding":
+            self = .folding
+
         // TODO: Handle error and not default value
         default:
             self = .hybrid

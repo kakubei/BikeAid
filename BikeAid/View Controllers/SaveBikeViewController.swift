@@ -42,6 +42,11 @@ class SaveBikeViewController: UIViewController, ButtonViewDelegate {
     
     func viewButtonTapped(_ name: ViewButton?) {
         debugPrint("ViewButton:", name as Any, "tapped")
+        guard let name = name else { return }
+        let bike = BikeClass(fromButton: name)
+        debugPrint("BikeClass is:", bike)
+        // TODO: Save bike to Realm
+        performSegue(withIdentifier: "tyreSegue", sender: nil) // TODO: use enums for segue names
     }
     
     @IBAction func closeButtonTapped(_ sender: CloseButton) {

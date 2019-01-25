@@ -15,6 +15,9 @@ public enum ViewButton {
     case mountainBike
     case hybridBike
     case foldingBike
+    case twentyNine
+    case twentySeven
+    case twentySix
     
     var title: String {
         switch self {
@@ -26,6 +29,12 @@ public enum ViewButton {
             return "Hybrid Bike"
         case .foldingBike:
             return "Folding Bike"
+        case .twentyNine:
+            return "29 - ?"
+        case .twentySeven:
+            return "27 - ?"
+        case .twentySix:
+            return "26 - ?"
         }
     }
 }
