@@ -22,6 +22,8 @@ class SaveBikeViewController: UIViewController, ButtonViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "1/2"
 
         setupButtonViews()
     }
