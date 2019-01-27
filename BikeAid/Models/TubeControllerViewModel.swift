@@ -30,7 +30,7 @@ struct TubeVCModel: TubeModelable {
     func tubeSizeText(for row: Int) -> String {
         let tube = tubesArray[row]
         
-        return tube.number
+        return tube.numberString
     }
     
     public mutating func setTubeSize(for row: Int) {

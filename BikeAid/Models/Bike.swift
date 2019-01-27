@@ -9,18 +9,45 @@
 import Foundation
 import UIKit
 
-enum WheelSize: Double {
-    case twentyNine = 29
-    case twentySeven = 27.5
-    case twentySix = 26
+enum WheelSize {
+    case twentyNine
+    case twentySeven
+    case twentySix
+    case other(size: Double)
+    
+    init(size: Double) {
+        switch size {
+        case 29:
+            self = .twentyNine
+        case 27.5:
+            self = .twentySeven
+        case 26:
+            self = .twentySix
+        default:
+            self = .other(size: size)
+        }
+    }
 
     // WARNING: if using String(describint: self) do NOT conform to CustomStringCovertible or it will cause and endless loop
     var description: String {
         return String(describing: self).capitalized
     }
     
-    var number: String {
-        return self.rawValue.cleanString
+    var doubleValue: Double {
+        switch self {
+        case .twentyNine:
+            return 29
+        case .twentySeven:
+            return 27.5
+        case .twentySix:
+            return 26
+        case .other(let size):
+            return size
+        }
+    }
+    
+    var numberString: String {
+        return self.doubleValue.cleanString
     }
 }
 
@@ -87,7 +114,11 @@ enum BikeSuspension: String {
     case full
     
     var description: String {
-        return String(describing: self).capitalized
+        return self.rawValue
+    }
+    
+    var prettyPrint: String {
+        return self.rawValue.capitalized
     }
 }
 
@@ -105,7 +136,7 @@ protocol Bikeable {
     var name: String { get set }
     var bikeClass: BikeClass { get }
     var wheelSize: WheelSize { get }
-    var suspension: BikeSuspension? { get }
+    var suspension: BikeSuspension { get }
 }
 
 protocol Electricable: Bikeable {
@@ -133,9 +164,9 @@ class Bike: Bikeable {
     var name: String    
     var bikeClass: BikeClass
     var wheelSize: WheelSize
-    var suspension: BikeSuspension?
+    var suspension: BikeSuspension
     
-    init(name: String, bikeClass: BikeClass, wheelSize: WheelSize = .twentySeven, suspension: BikeSuspension? = nil) {
+    init(name: String, bikeClass: BikeClass, wheelSize: WheelSize = .twentySeven, suspension: BikeSuspension = .rigid) {
         self.name = name
         self.bikeClass = bikeClass
         self.wheelSize = wheelSize

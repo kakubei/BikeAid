@@ -12,6 +12,7 @@ import Foundation
 
 import RealmSwift
 
+// Note we use this object instead of Bike since we're conforming to a Bikeable protocol which includes Bike and EBike
 final class RealmBike: Object {
     @objc dynamic var name = ""
     @objc dynamic var bikeClass: String = BikeClass.hybrid.description
@@ -49,7 +50,7 @@ final class RealmDatabase: DatabaseStoring {
         
         realmBike.name = bike.name
         realmBike.bikeClass = bike.bikeClass.description
-        realmBike.suspension = bike.bikeClass.description
+        realmBike.suspension = bike.suspension.description
         realmBike.wheelSize = bike.wheelSize.description
         
         return realmBike
@@ -57,8 +58,8 @@ final class RealmDatabase: DatabaseStoring {
     
     private func realmBikeToBike(realmBike: RealmBike) -> Bike {
         let bikeClass = BikeClass(rawValue: realmBike.bikeClass)
-        let wheelSize = WheelSize(rawValue: Double(realmBike.wheelSize) ?? 27.5)!
-        let suspension = BikeSuspension(rawValue: realmBike.suspension)
+        let wheelSize = WheelSize(size: Double(realmBike.wheelSize) ?? 27.5)
+        let suspension = BikeSuspension(rawValue: realmBike.suspension) ?? .rigid
         
         let bike = Bike(name: realmBike.name, bikeClass: bikeClass, wheelSize: wheelSize, suspension: suspension)
         
@@ -68,8 +69,13 @@ final class RealmDatabase: DatabaseStoring {
     func storeBike(_ bike: Bikeable) {
         let realmBike = self.bikeToRealmBike(bike: bike)
         
-        try! realm.write {
-            realm.add(realmBike)
+        do {
+            try realm.write {
+                realm.add(realmBike)
+                debugPrint("Stored \(realmBike) in realm")
+            }
+        } catch {
+            debugPrint("Error storing object in realm:", error)
         }
     }
     
