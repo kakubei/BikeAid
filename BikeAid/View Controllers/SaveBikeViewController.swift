@@ -16,6 +16,7 @@ class SaveBikeViewController: UIViewController, ButtonViewDelegate {
     @IBOutlet weak var hybridBikeView: ButtonView!
     @IBOutlet weak var foldingBikeView: ButtonView!
     
+    var currentBike: Bike?
     
     let disposeBag = DisposeBag()
 
@@ -34,15 +35,17 @@ class SaveBikeViewController: UIViewController, ButtonViewDelegate {
         [roadBikeView, mountainBikeView, hybridBikeView, foldingBikeView].forEach { $0?.delegate = self }        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! SaveTyreViewController
+        destinationVC.bike = currentBike
+    }
+    
     func viewButtonTapped(_ name: ViewButton?) {
         debugPrint("ViewButton:", name as Any, "tapped")
         guard let name = name else { return }
         let bike = Bike(name: name.title, bikeClass: BikeClass(fromButton: name))
-        
+        currentBike = bike        
         debugPrint("BikeClass is:", bike.bikeClass)
-        let database = RealmDatabase()
-        database.storeBike(bike)
-        
         performSegue(withIdentifier: "tyreSegue", sender: nil) // TODO: use enums for segue names
     }
     

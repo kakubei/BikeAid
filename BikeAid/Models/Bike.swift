@@ -161,12 +161,14 @@ extension Electricable {
 }
 
 class Bike: Bikeable {
+    var id: String
     var name: String    
     var bikeClass: BikeClass
     var wheelSize: WheelSize
     var suspension: BikeSuspension
     
     init(name: String, bikeClass: BikeClass, wheelSize: WheelSize = .twentySeven, suspension: BikeSuspension = .rigid) {
+        self.id = UUID().uuidString
         self.name = name
         self.bikeClass = bikeClass
         self.wheelSize = wheelSize

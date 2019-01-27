@@ -9,7 +9,7 @@
 import Foundation
 
 class BikeModel {
-    var bikes: [Bikeable] = []
+    var bikes: [Bike] = []
     
     init(testBikes: Bool = false) {
         // Generate bikes if necessary
@@ -34,11 +34,11 @@ class BikeModel {
         let snake = Bike(name: "Snake", bikeClass: .mountain(subtype: .downhill), suspension: .full)
         let specialized = Bike(name: "Specialzed Hybrid", bikeClass: .hybrid)
         let kaku = Bike(name: "Kaku", bikeClass: .mountain(subtype: .enduro), wheelSize: .twentyNine, suspension: .hardTail)
-        let moustache = Ebike(name: "Samedi", motor: .hub, battery: 2, mileage: 30)
-        let mysteryEbike = Ebike(name: "Mystery")
+//        let moustache = Ebike(name: "Samedi", motor: .hub, battery: 2, mileage: 30)
+//        let mysteryEbike = Ebike(name: "Mystery")
         
         // Hacky way to shup up the compiler otherwise we get error. This smells like a bug
-        bikes += [snake, specialized, kaku, moustache, mysteryEbike]
+        bikes += [snake, specialized, kaku /*, moustache, mysteryEbike */]
         
         // Store test bikes in Realm
         bikes.forEach { newBike in

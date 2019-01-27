@@ -14,16 +14,21 @@ import RealmSwift
 
 // Note we use this object instead of Bike since we're conforming to a Bikeable protocol which includes Bike and EBike
 final class RealmBike: Object {
+    @objc dynamic var id: String = ""
     @objc dynamic var name = ""
     @objc dynamic var bikeClass: String = BikeClass.hybrid.description
     @objc dynamic var wheelSize: String = WheelSize.twentySeven.description
     @objc dynamic var suspension: String = BikeSuspension.hardTail.description
     @objc dynamic var createdDate: Date = Date()
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 protocol DatabaseStoring {
     
-    func storeBike(_ bike: Bikeable)
+    func storeBike(_ bike: Bike)
     func retrieveBikes() -> [Bike]
     func deleteBike(_ bike: Bike)
     
@@ -35,7 +40,7 @@ final class RealmDatabase: DatabaseStoring {
     var realm: Realm { // Note: Avoid storing realm in a class property as instances cannot be used safely between threads
         
         let config = Realm.Configuration(
-            schemaVersion: 1,
+            schemaVersion: 3,
             migrationBlock: { migration, oldSchemaVersion in
                 migration.deleteData(forType: "BikeObject")
         })
@@ -66,17 +71,39 @@ final class RealmDatabase: DatabaseStoring {
         return bike
     }
     
-    func storeBike(_ bike: Bikeable) {
+    func storeBike(_ bike: Bike) {
         let realmBike = self.bikeToRealmBike(bike: bike)
-        
+
         do {
             try realm.write {
-                realm.add(realmBike)
+                realm.add(realmBike, update: true)
                 debugPrint("Stored \(realmBike) in realm")
             }
         } catch {
             debugPrint("Error storing object in realm:", error)
         }
+    }
+    
+    func updateBike(_ bike: Bike) {
+        guard let realmBike = retrieveRealmBike(bike.id) else {
+            assertionFailure("Cannot retrieve RealmBike from Bike: \(bike)")
+            return
+        }
+        
+        do {
+            try realm.write {
+                realm.add(realmBike, update: true)
+                debugPrint("Updated \(realmBike) in realm")
+            }
+        } catch {
+            debugPrint("Error updating object in realm:", error)
+        }
+    }
+    
+    func retrieveRealmBike(_ id: String) -> RealmBike? {
+        guard let realmBike = realm.object(ofType: RealmBike.self, forPrimaryKey: id) else { return nil }
+        
+        return realmBike
     }
     
     // Retrieve a RealmObject and then create Bike objects out of them.
@@ -92,6 +119,12 @@ final class RealmDatabase: DatabaseStoring {
         }
         
         return bikes
+    }
+    
+    func getBike(_ id: String) -> Bike? {
+        guard let realmBike = realm.object(ofType: RealmBike.self, forPrimaryKey: id) else { return nil }
+        let bike = realmBikeToBike(realmBike: realmBike)
+        return bike
     }
     
     func deleteBike(_ bike: Bike) {

@@ -15,7 +15,7 @@ public enum ViewButton {
     case mountainBike
     case hybridBike
     case foldingBike
-    case other
+    case other(size: Double)
     case twentyNine
     case twentySeven
     case twentySix
@@ -38,6 +38,21 @@ public enum ViewButton {
             return "27 - ?"
         case .twentySix:
             return "26 - ?"
+        }
+    }
+    
+    var doubleValue: Double? {
+        switch self {
+        case .twentyNine:
+            return 29
+        case .twentySeven:
+            return 27.5
+        case .twentySix:
+            return 26
+        case .other(let size):
+            return size
+        default:
+            return nil
         }
     }
 }
