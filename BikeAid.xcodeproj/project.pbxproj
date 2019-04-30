@@ -14,8 +14,6 @@
 		CA1DCBFB1FAA52A10049DAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1DCBF91FAA52A10049DAE7 /* LaunchScreen.storyboard */; };
 		CA1DCC111FAA52B60049DAE7 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC101FAA52B60049DAE7 /* Bike.swift */; };
 		CA1DCC131FAA6C690049DAE7 /* BikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1DCC121FAA6C690049DAE7 /* BikeModel.swift */; };
-		CA26652A2163916E00A9746F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665242163905F00A9746F /* Quick.framework */; };
-		CA26652B2163918500A9746F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2665252163905F00A9746F /* Nimble.framework */; };
 		CA2C40A221623070001383BF /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A121623070001383BF /* CustomMarkerView.swift */; };
 		CA2C40A6216233A9001383BF /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2C40A5216233A9001383BF /* MapViewModel.swift */; };
 		CA2C40A821625869001383BF /* CustomMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2C40A721625869001383BF /* CustomMarkerView.xib */; };
@@ -191,8 +189,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA26652A2163916E00A9746F /* Quick.framework in Frameworks */,
-				CA26652B2163918500A9746F /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,11 +400,12 @@
 				TargetAttributes = {
 					CA1DCBEC1FAA52A10049DAE7 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					CA1DCC001FAA52A10049DAE7 = {
 						CreatedOnToolsVersion = 9.0.1;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CA1DCBEC1FAA52A10049DAE7;
 					};
@@ -699,7 +696,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -719,7 +716,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -743,7 +740,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BikeAidTests/BikeAidTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikeAid.app/BikeAid";
 			};
@@ -767,7 +764,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexDearden.BikeAidTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BikeAidTests/BikeAidTests-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BikeAid.app/BikeAid";
 			};
