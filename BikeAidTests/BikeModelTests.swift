@@ -5,6 +5,7 @@
 //  Created by Alex Dearden on 01/01/2018.
 //  Copyright © 2018 Alex Dearden. All rights reserved.
 //
+/*
 
 import UIKit
 import Quick
@@ -99,3 +100,4 @@ class DatabaseTests: QuickSpec {
         }
     }
 }
+*/

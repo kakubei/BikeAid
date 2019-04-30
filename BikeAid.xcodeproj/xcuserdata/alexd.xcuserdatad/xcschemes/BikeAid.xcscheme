@@ -37,6 +37,14 @@
                BlueprintName = "BikeAidTests"
                ReferencedContainer = "container:BikeAid.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "BikeModelTests">
+               </Test>
+               <Test
+                  Identifier = "DatabaseTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
